@@ -15,14 +15,14 @@ body{
 }
 
 .container{
-    width: 85%;
+    width: 90%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 5px 20px;
     background-color: #FFFFFF;
     position: relative;
     border: 1px solid #ccc;
-
 }
 
 .menu{
@@ -55,38 +55,35 @@ body{
     color: #0B7285; 
 }
 
-
-
- /*
-
-
 #home{
     display: flex;
-    height: 80vh;
-    width: 70%;
+    width: 90%;
+    height: 85vh;
+    margin-bottom: 10px;
 }
 
-.detel{
+.descri{
     margin-left: 8%;
     margin-top: 13%;
-}
-
-.detel h1{
-    font-size: 50px;
-    color: #1F2F46;
-    margin-bottom: 20px;
+    height: 100vh;
 }
 
 span{
     color: #0B7285; 
 }
 
-.detel p{
+.descri h1{
+    font-size: 50px;
+    color: #1F2F46;
+    margin-bottom: 20px;
+}
+
+.descri p{
     color: #555;
     line-height: 22px;
 }
 
-.detel a{
+.descri a{
     background: #212121;
     padding: 10px 18px;
     text-decoration: none;
@@ -98,7 +95,7 @@ span{
     transition: transform 0.5s;
 }
 
-.detel a:hover{
+.descri a:hover{
     transform: scale(1.1);
 }
 
@@ -126,23 +123,86 @@ span{
     left: 45%;
 }
 
-
-
- ------------ Section Sobre ------------
+/* ------------------ Sobre ------------------ */ 
 
 #sobre{
-    width: 86%;
-    padding: 10px 0;
-    height: 90vh;
-    margin-left: 50px;
-    background-color: #ccc;
+   width: 90%;
+   height: 100vh;
 }
-
-
 
 .row{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-*/
+.img-sobre{
+    flex-basis: 35%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-sobre img{
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.sobre-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #1F2F46;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px 40px;
+  }
+  
+  .tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tab-links::after {
+    content: '';
+    width: 0;
+    height: 6px;
+    background: red;
+    left: 0;
+    bottom: -8px;
+    border-radius: 10px;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  .tab-links.active-link::after {
+    width: 50%;
+  } 
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color:#b54769;
+    font-size: 14px;  
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
