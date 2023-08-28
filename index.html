@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>PedroPenha</title>
 </head>
@@ -13,12 +14,22 @@
         <div class="menu">   
             <nav>
                 <img src="./img/logo.png" class="logo">
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
+
+                <div class="menu-select">
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+    
+                    <div class="language-selector">
+                        <a href="#" class="language-option"><img src="./img/brazil-flag.png" alt="Português"></a>
+                        <a href="#" class="language-option"><img src="./img/usa-flag.png" alt="English"></a>
+                    </div>
+                </div>
+                
+                
+
             </nav>
         </div>
 
@@ -28,18 +39,16 @@
                 <p>Este é o meu site oficial de portfólio para mostrar todos
                     <br> os detalhes e experiências de trabalho em desenvolvimento web.
                 </p> 
-
-                <div class="link-home">
-                    <button><a href="#">DOWNLOAD CV</a></button>
-                    <button><a href="#">DOWNLOAD CV</a></button>
-                </div>
-              
+                
+                <div class="btn-home-link">
+                    <button class="link-home">Download CV</button>
+                    <button class="link-home btn-linkedin">Linkedin</button>
+                </div>           
                    
-
             </div>
 
             <div class="images">
-                <img src="./img/shape.png" alt="" class="shape">
+                <img src="./img/shape1.png" alt="" class="shape">
                 <img src="./img/profile.png" alt="" class="img_pedro">
             </div>
         </section>
@@ -52,38 +61,38 @@
                 <div class="sobre-col-2">
                     <h1 class="sub-title">Sobre</h1>
                     <p>
-                        Sou formado em técnico em informática pelo Instituto Federal do Sul de Minas e no momento estou cursando Engenharia de computação (10º/10). Tenho experiência com atendimento e suporte ao usuário, voltado ao desenvolvimento. Atualmente, trabalho com desenvolvimento de aplicações Web e suporte a usuários de um ERP onde fico por conta de debug's no sistema além de correções na base de dados dos clientes. Tenho experiência com desenvolvimento mobile e no momento estou emprenhado em expandir cada vez mais meu conhecimento no desenvolvimento Full-Stack, onde através de cursos e projetos tenho praticado e aplicado novas metodologias de programação. 
+                            Sou formado em técnico em informática pelo Instituto Federal do Sul de Minas e no momento estou cursando Engenharia de computação (10º/10). Tenho experiência com atendimento e suporte ao usuário, voltado ao desenvolvimento. Atualmente, trabalho com desenvolvimento de aplicações Web e suporte a usuários de um ERP onde fico por conta de debug's no sistema além de correções na base de dados dos clientes. Tenho experiência com desenvolvimento mobile e no momento estou emprenhado em expandir cada vez mais meu conhecimento no desenvolvimento Full-Stack, onde através de cursos e projetos tenho praticado e aplicado novas metodologias de programação. 
                         
                     </p>
 
                     <div class="nav-sobre">
                         <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Competências</p>
                             <p class="tab-links" onclick="opentab('experience')">Experiência</p>
                             <p class="tab-links" onclick="opentab('education')">Educação</p>
                         </div>
     
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
-                                <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
-                                <li><span>Web Development</span><br>Web app Development</li>
-                                <li><span>App Development</span><br>Building Android/iOs apps</li>
+                                <li><span>Manipulação de Dados</span><br>Designing Web/App interfaces</li>
+                                <li><span>Desenvolvimento FrontEnd</span><br>Web app Development</li>
+                                <li><span>Desenvolvimento Mobile</span><br>Building Android/iOs apps</li>
                             </ul>
                         </div>
     
                         <div class="tab-contents" id="experience">
                             <ul>
-                                <li><span>Empresa X</span><br>Designing Web/App interfaces</li>
-                                <li><span>Empresa Y</span><br>Web app Development</li>
-                                <li><span>App Development</span><br>Building Android/iOs apps</li>
+                                <li><span>Hardnet Soluções em Informática</span><br> Contribuição com o desenvolvimento de uma aplicação web utilizando PHP, JavaScript e SQL para o gerenciamento da base de conhecimento dos prestadores de serviço da empresa oferecendo uma abordagem organizada sobre a resolução de desafios internos da empresa;</li>
+                                <li><span>Instituto Federal, Campus Poços</span><br>Desenvolvimento de uma aplicação mobile que atendesse a demanda do Centro de Divulgação e Popularização da Ciência (CDPC), do Instituto Federal, Campus Poços de Caldas. O projeto teve como intuito disponibilizar Kits portáteis de experimentos na área da ciências da natureza, que são emprestados por um aplicativo para professores da rede pública de ensino de Poços de Caldas.</li>
+                                <li><span>Alpha Web</span><br>Pesquisa de campo realizada na cidade de Poços de Caldas e Machado para a realização de análises que conduzirão para melhores opções de expansão.</li>
                             </ul>
                         </div>
     
                         <div class="tab-contents" id="education">
                             <ul>
-                                <li><span>2015</span><br>Designing Web/App interfaces</li>
-                                <li><span>2018</span><br>Web app Development</li>
-                                <li><span>App Development</span><br>Building Android/iOs apps</li>
+                                <li><span>2018</span><br>Bacharelado em Engenharia de Computação</li>
+                                <li><span>2015</span><br>Curso Técnico de Informática integrado ao Ensino Médio</li>
+                              <!-- <li><span>App Development</span><br>Building Android/iOs apps</li>  --> 
                             </ul>
                         </div>
                     </div>
