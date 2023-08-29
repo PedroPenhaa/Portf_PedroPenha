@@ -18,8 +18,8 @@
                 <div class="menu-select">
                     <ul>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#">Projetos</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
     
                     <div class="language-selector">
@@ -174,13 +174,21 @@
                         <input type="text" name="Name" placeholder="Seu nome" required>
                         <input type="text" name="email" placeholder="Seu email" required>
                         <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
-                        <button></button>
+                        <button type="submit" class="btn-linkedin">Enviar</button>
                     </form>
                   </div>
             </div>
-
+            <div class="copyright">
+                <p>
+                    Copyright 2023 - Todos direitos reservados a Pedro Penha
+                </p>
+            </div>
 
         </section>
+
+        <div class="scroll-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
 
     </div>
 
@@ -240,6 +248,29 @@
 
     updateCarousel(); // Initialize the carousel
 </script>
+
+
+
+
+
+
+
+<script>
+const scrollToTopBtn = document.querySelector(".scroll-to-top");
+
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+</script>
+
+
+
+
 
 
 </body>
