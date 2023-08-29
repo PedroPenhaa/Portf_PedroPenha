@@ -26,10 +26,7 @@
                         <a href="#" class="language-option"><img src="./img/brazil-flag.png" alt="Português"></a>
                         <a href="#" class="language-option"><img src="./img/usa-flag.png" alt="English"></a>
                     </div>
-                </div>
-                
-                
-
+                </div> 
             </nav>
         </div>
 
@@ -105,37 +102,83 @@
         <section id="projects">
             <h1 class="sub-title">Projetos</h1>
 
-            <div class="work-list">
-                <div class="work">
-                    <img src="./img/work1.jpg.png" alt="">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connects you yo the talented people around teh world.
-                        Download ir from play store</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/work2.png" alt="">
-                    <div class="layer">
-                        <h3>Music App</h3>
-                        <p>The app connects you yo the talented people around teh world.
-                        Download ir from play store</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>  <div class="work">
-                    <img src="./img/work3.png" alt="">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you yo the talented people around teh world.
-                        Download ir from play store</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <div class="carousel">                
+                    <div class="work-list">
+
+                        <div class="work">
+                            <div class="background-image" style="background-image: url('./img/work1.jpg.png')"></div>
+                            <div class="layer">
+                                <h3>Aplicativo de Mídias Sociais</h3>
+                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="background-image" style="background-image: url('./img/work2.png')"></div>
+                            <div class="layer">
+                                <h3>Aplicativo de Mídias Sociais</h3>
+                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="background-image" style="background-image: url('./img/work3.png')"></div>
+                            <div class="layer">
+                                <h3>Aplicativo de Mídias Sociais</h3>
+                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="background-image" style="background-image: url('./img/work4.png')"></div>
+                            <div class="layer">
+                                <h3>Aplicativo de Mídias Sociais</h3>
+                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="background-image" style="background-image: url('./img/work1.jpg.png')"></div>
+                            <div class="layer">
+                                <h3>Aplicativo de Mídias Sociais</h3>
+                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+        </section>
 
-                
+        <section id="contact">
+            <div class="row">
+                  <div class="contact-left">
+                        <h1 class="sub-title">Contate-me</h1>
+                        <p><i class="fas fa-paper-plane"></i> pedro.eng98@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt"></i>(35)999028971</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-github"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <a href="./img/Pedro Afonso da Costa Penha.pdf" download>
+                            <button class="link-home">Download CV</button>
+                        </a>
+                  </div>
+                  <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Seu nome" required>
+                        <input type="text" name="email" placeholder="Seu email" required>
+                        <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
+                        <button></button>
+                    </form>
+                  </div>
             </div>
+
 
         </section>
 
@@ -169,6 +212,34 @@
 
     </script>
 
+
+
+<script>
+    const workList = document.querySelector('.work-list');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const workWidth = 410; // Largura da work + margem
+    const visibleWorks = 2; // Número de works visíveis de cada vez
+    const totalWorks = document.querySelectorAll('.work').length;
+    let currentIndex = 0;
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalWorks) % totalWorks;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalWorks;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        const translateX = -currentIndex * workWidth;
+        workList.style.transform = `translateX(${translateX}px)`;
+    }
+
+    updateCarousel(); // Initialize the carousel
+</script>
 
 
 </body>
