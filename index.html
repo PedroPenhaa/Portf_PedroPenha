@@ -192,7 +192,6 @@
 
     </div>
 
-
 <!-- Table content -->
     <script>
 
@@ -220,58 +219,45 @@
 
     </script>
 
+<!-- Carrousel -->
+    <script>
+        const workList = document.querySelector('.work-list');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const workWidth = 410; // Largura da work + margem
+        const visibleWorks = 2; // Número de works visíveis de cada vez
+        const totalWorks = document.querySelectorAll('.work').length;
+        let currentIndex = 0;
 
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalWorks) % totalWorks;
+            updateCarousel();
+        });
 
-<script>
-    const workList = document.querySelector('.work-list');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const workWidth = 410; // Largura da work + margem
-    const visibleWorks = 2; // Número de works visíveis de cada vez
-    const totalWorks = document.querySelectorAll('.work').length;
-    let currentIndex = 0;
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalWorks;
+            updateCarousel();
+        });
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalWorks) % totalWorks;
-        updateCarousel();
-    });
+        function updateCarousel() {
+            const translateX = -currentIndex * workWidth;
+            workList.style.transform = `translateX(${translateX}px)`;
+        }
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalWorks;
-        updateCarousel();
-    });
+        updateCarousel(); // Initialize the carousel
+    </script>
 
-    function updateCarousel() {
-        const translateX = -currentIndex * workWidth;
-        workList.style.transform = `translateX(${translateX}px)`;
-    }
+<!-- Scroll Init -->
+    <script>
+        const scrollToTopBtn = document.querySelector(".scroll-to-top");
 
-    updateCarousel(); // Initialize the carousel
-</script>
-
-
-
-
-
-
-
-<script>
-const scrollToTopBtn = document.querySelector(".scroll-to-top");
-
-scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
-
-</script>
-
-
-
-
-
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 
 </body>
 </html>
