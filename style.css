@@ -100,6 +100,7 @@ body{
     transform: scale(1.2);
 }
 
+/* -------------------------------- home -------------------------------- */
 #home{
     display: flex;
     width: 100%;
@@ -112,7 +113,6 @@ body{
     flex-direction: column;
     margin-left: 8%;
     margin-top: 13%;
-
 }
 
 span{
@@ -255,7 +255,6 @@ span{
 }
 
 .sobre-col-2{
- /*   flex-basis: 60%;  */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -285,8 +284,6 @@ span{
     align-items: center;
     justify-content: center;
     width: 100%;
-
- /*   margin: 20px 0 40px 40px; */
   }
   
   .tab-links {
@@ -340,6 +337,124 @@ span{
 
 
 
+/* ------------------ HardSkills ------------------ */ 
+
+#competencia{
+    max-width: 100%;
+    min-height: 90vh;
+    background-color: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 60px; 
+}
+
+
+
+.cabecalho-compe{
+    display: flex;
+    flex-direction: row;
+    gap: 340px;
+    justify-content: space-between;
+}
+
+.cabecalho-compe h1{
+    font-size: 45px;
+}
+
+.cabecalho-compe p{
+    max-width: 630px;
+    font-family: "Inter",sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #78797a;
+    text-align: left;
+}
+
+.cabecalho-compe strong{
+    font-family: "Inter",sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #030e15;
+}      
+
+.sec1-compe .sec2-compe{
+    margin-top: 50px;
+    width: 100%;
+    max-height: 50%;
+  /*  background-color: red;    */
+}
+
+.sec1-compe, ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 60px;
+    justify-content: center;
+}
+
+.sec1-compe ul li{
+    max-width: 250px;
+    border: 1px solid #555;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.sec1-compe .icon-compe{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sec1-compe .info-compe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sec1-compe .info-compe p{
+    padding: 0 10px 20px 10px;
+}
+
+/* */
+
+.sec1-compe, .sec2-compe{
+    margin-top: 30px;
+}
+
+.sec2-compe, ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 60px;
+    justify-content: center;
+}
+
+.sec2-compe ul li{
+    max-width: 250px;
+    border: 1px solid #555;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.sec2-compe .icon-compe{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sec2-compe .info-compe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sec2-compe .info-compe p{
+    padding: 0 10px 20px 10px;
+}
+
 
 
 
@@ -350,7 +465,7 @@ span{
 #projects{
     max-width: 100%;
     min-height: 90vh;
-    background-color: #FFFFFF;
+    background-color: #E0E0E0;
     position: relative;
     display: flex;
     flex-direction: column;
