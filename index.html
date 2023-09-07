@@ -13,7 +13,10 @@
 
         <div class="menu">   
             <nav>
-                <img src="./img/logo.png" class="logo">
+                <a href="#home" class="logo">
+                    <img src="./img/logo.png">
+                </a>
+                
 
                 <div class="menu-select">
                     <ul>
@@ -54,9 +57,50 @@
         <section id="competencia">
             <div class="cabecalho-compe">
                 <h1 class="sub-title">Meus Diferenciais</h1>
-                <p data-aos="fade-left" data-aos-once="true" class="aos-init aos-animate"><strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong></p>
+                <p id="animate-paragraph" class="hidden"><strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong></p>
+
             </div>
 
+            <div class="sec1-compe">
+                <ul>
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-desktop fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3>Além do Front-End</h3>
+                                <p>Altamente qualificado em desenvolvimento de interfaces.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-code fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3>Code</h3>
+                                <p>Experiência nas principais linguagens de programação para desenvolvimento web</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-mobile-alt fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3>Design Responsivo</h3>
+                                <p>Olhar vigilante sobre os detalhes e uma compreensão sólida da experiência do usuário.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          
             <div class="sec1-compe">
                 <ul>
                     <li>
@@ -96,66 +140,34 @@
                     </li>
                 </ul>
             </div>
-            
-            <div class="sec1-compe">
-                <ul>
-                    <li>
-                        <div>
-                            <div class="icon-compe">
-                                <i class="fas fa-cogs  fa-2x"></i>
-                            </div>
-                            <div class="info-compe">
-                                <h3>Desenvolvimento FrontEnd</h3>
-                                <p>Altamente qualificado em desenvolvimento de interface</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <div class="icon-compe">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <div class="info-compe">
-                                <h3>Desenvolvimento FrontEnd</h3>
-                                <p>Altamente qualificado em desenvolvimento de interface</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <div class="icon-compe">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <div class="info-compe">
-                                <h3>Desenvolvimento FrontEnd</h3>
-                                <p>Altamente qualificado em desenvolvimento de interface</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>        
         </section>
 
         <section id="sobre">
             <div class="row">
                 <div class="img-sobre">
-                    <img src="./img/profile_sobre_bg_black.png" alt="">
+                    <img src="./img/sobre1.jpg" alt="" class="imagem-sobre">
                 </div>
                 <div class="sobre-col-2">
 
                     <span></span>
 
                     <h1 class="sub-title">Sobre</h1>
+
                     <p>
-                            Sou formado em técnico em informática pelo Instituto Federal do Sul de Minas e no momento estou cursando Engenharia de computação (10º/10). Tenho experiência com atendimento e suporte ao usuário, voltado ao desenvolvimento. Atualmente, trabalho com desenvolvimento de aplicações Web e suporte a usuários de um ERP onde fico por conta de debug's no sistema além de correções na base de dados dos clientes. <br>
-                    </p>
-                    
-                    <p class="p_space">
-                            Tenho experiência com desenvolvimento mobile e no momento estou emprenhado em expandir cada vez mais meu conhecimento no desenvolvimento Full-Stack, onde através de cursos e projetos tenho praticado e aplicado novas metodologias de programação. 
+                        Sou um profissional com formação em informática e atualmente sou graduando do curso de Engenharia de 
+                        Computação. Iniciei minha trajetória profissional no atendimento e suporte ao usuário, onde desenvolvi 
+                        habilidades fundamentais de comunicação. Com o tempo, essa jornada me levou ao universo do desenvolvimento 
+                        de aplicações web e ao suporte de sistemas ERP.
                     </p>
 
+                    <br>
+
+                    <p>
+                        Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, 
+                        adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor 
+                        full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as 
+                        mais recentes metodologias de programação do mercado.
+                    </p>
                     <div class="nav-sobre">
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Competências</p>
@@ -190,8 +202,6 @@
                 </div>
             </div> 
         </section>
-
-       
 
         <section id="projects">
             <h1 class="sub-title">Projetos</h1>
@@ -272,16 +282,18 @@
                     </form>
                   </div>
             </div>
-            <div class="copyright">
-                <p>
-                    Copyright 2023 - Todos direitos reservados a Pedro Penha
-                </p>
-            </div>
+           
 
         </section>
 
         <div class="scroll-to-top">
             <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <div class="copyright">
+            <p>
+                Copyright 2023 - Todos direitos reservados a Pedro Penha
+            </p>
         </div>
 
     </div>
@@ -351,10 +363,6 @@
                 behavior: "smooth"
             });
         });
-    </script>
-
-    <script>
-   
     </script>
 
 </body>
