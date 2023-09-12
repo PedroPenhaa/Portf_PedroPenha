@@ -61,6 +61,11 @@ header nav {
     font-weight: bold;
 }
 
+header nav ul{
+    align-items: center;
+    justify-content: center;
+}
+
 header nav ul li a {
     text-decoration: none;
     color: #1F2F46;
