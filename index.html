@@ -203,9 +203,64 @@
         </section>
 
         <section id="projects">
-            <h1 class="sub-title">Projetos</h1>
+            <div class="cabecalho-proj">
+                <h1 class="sub-title">Projetos</h1>
+            </div>
+     
+            <div class="projetos_apresentation">
+                <div class="slider">
 
-                <div class="carousel">                
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                        <div class="slide first">
+                            <img src="./img/work1.jpg.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="./img/work2.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="./img/work3.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="./img/work4.png" alt="">
+                        </div>
+
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            
+                        </div>
+
+
+                    </div>
+
+                    <div class="manual-navigation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        <!--   
+            <div class="carousel">                
                     <div class="work-list">
 
                         <div class="work">
@@ -250,10 +305,12 @@
                         </div>
                         
                     </div>
-                </div>
+            </div>
 
             <button class="prev-btn">&lt;</button>
             <button class="next-btn">&gt;</button>
+        -->
+
         </section>
 
         <section id="contact">
@@ -324,7 +381,19 @@
 
     </script>
 
-<!-- Carrousel -->
+<!-- Scroll Init -->
+<script>
+    const scrollToTopBtn = document.querySelector(".scroll-to-top");
+
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>    
+
+<!-- Carrousel 
     <script>
         const workList = document.querySelector('.work-list');
         const prevBtn = document.querySelector('.prev-btn');
@@ -351,18 +420,31 @@
 
         updateCarousel(); // Initialize the carousel
     </script>
+-->
 
-<!-- Scroll Init -->
-    <script>
-        const scrollToTopBtn = document.querySelector(".scroll-to-top");
 
-        scrollToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
+<script>
+    let count = 1;
+    document.getElementById("radio1").checked = true;
+
+    setInterval( function(){
+        nextImage();
+    }, 2000)
+
+    function nextImage(){
+        count++;
+        if(count>4){
+            count = 1;
+        }
+
+        document.getElementById("radio"+count).checked = true;
+
+
+    }
+   
+</script>
+
+
 
 </body>
 </html>
