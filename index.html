@@ -559,6 +559,7 @@
 
 
 
+
 <script>
     let count = 1;
     const slideDuration = 5000; // 5 segundos
@@ -578,8 +579,13 @@
         }, slideDuration);
     }
 
+    function resetProgressBar() {
+        progressBar.style.transition = "none"; // Remova qualquer transição existente
+        progressBar.style.width = "0px"; // Redefina a largura da barra de carregamento para 0px
+    }
+
     setInterval(function () {
-        updateProgressBar();
+        resetProgressBar();
         nextImage();
     }, slideDuration);
 
@@ -590,6 +596,7 @@
         }
 
         document.getElementById("radio" + count).checked = true;
+        updateProgressBar();
     }
 </script>
 
