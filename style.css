@@ -568,7 +568,6 @@ span {
     margin-top: 30px;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .cabecalho-proj h1{
@@ -580,16 +579,18 @@ span {
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: red;
+    background-color: #E0E0E0;
+    margin-top: -40px;
 }
 
 
 .slider{
     margin: 0 auto;
     width: 1000px;
-    height: 400px;
+    height: 100%;
     overflow: hidden;
     margin-top: 40px;
+    align-items: center;
 }
 
 .slides{
@@ -604,14 +605,14 @@ span {
 
 
 .slide{
-    width: 25%;
+    width: 40%;
     position: relative;
     transition: 2s;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 70px;
 }
 
 .slide .img{
@@ -620,30 +621,66 @@ span {
 }
 
 .slide img{
-    width: 400px;
-    height: 350px;
+    width: 450px;
+    height: auto;
 }
 
 .slide .conteudo{
     display: flex;
     flex-direction: column;
-    gap: 50px;
     text-align: center;
     justify-content: center;
     width: 50%;
     height: 100%;
 }
 
-.manual-navigation{
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
+.slide .conteudo h1{
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.slide .conteudo p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.icons-slide ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  /*  background-color: #20a6ff; */
+    padding: 20px;
+    border-radius: 20px;
+    width: 60px;
+}
+
+.icons-slide ul li span{
+    color: #262626;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.slide .conteudo a{
+    margin-top: 40px;
+    width: 100%;
     display: flex;
     justify-content: center;
+    text-decoration: none;
+}
+
+
+.manual-navigation{
+    position: absolute;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .manual-btn{
-    border: 2px solid #fff;
+    border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -655,7 +692,7 @@ span {
 }
 
 .manual-btn:hover{
-    background-color: #fff;
+    background-color: black;
 }
 
 #radio1:checked ~ .first{
@@ -680,12 +717,14 @@ span {
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
+    margin-top: 430px;
+
 }
 
 .navigation-auto{
     position: absolute;
-    width: 800px;
-    margin-top: 360px;
+    width: 1000px;
+    
     display: flex;
     justify-content: center;
 }
@@ -695,19 +734,19 @@ span {
 }
 
 #radio1:checked ~.navigation-auto .auto-btn1{
-    background-color: #fff;
+    background-color: black;
 }
 
 #radio2:checked ~.navigation-auto .auto-btn2{
-    background-color: #fff;
+    background-color: black;
 }
 
 #radio3:checked ~.navigation-auto .auto-btn3{
-    background-color: #fff;
+    background-color: black;
 }
 
 #radio4:checked ~.navigation-auto .auto-btn4{
-    background-color: #fff;
+    background-color: black;
 }
 
 
