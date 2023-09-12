@@ -8,6 +8,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: #1F2F46 ;
+  overflow-x: hidden;
 }
 
 .container{
@@ -19,6 +20,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .scroll-to-top {
@@ -168,6 +170,7 @@ span {
     border-radius: 5px;
     transition: transform 0.5s;
     margin-right: 50px;
+    cursor: pointer;
 }
 
 .link-home{
@@ -201,7 +204,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 182px;
+    margin-top: 170px;
 }
 
 .images img {
@@ -299,11 +302,9 @@ span {
 
 /* ------------------ HardSkills ------------------ */ 
 
-
-
 #competencia{
     width: 100%;
-    min-height:100vh;
+    min-height:110vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -315,9 +316,11 @@ span {
     display: flex;
     flex-direction: row;
     min-height: 20%;
-    padding: 90px;
+    padding: 0 90px;
+    margin-top: 30px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .cabecalho-compe h1{
@@ -345,18 +348,13 @@ span {
     color: #030e15;
 }      
 
-.sec1-compe{
+.sec-compe{
     max-height: 40%;
+    margin-top: 20px;
+    margin-right: 50px;
 }
 
-.sec1-compe{
-    margin-top: 30px;
-    width: 100%;
-  /*     max-height: 50%;
- background-color: red;    */
-}
-
-.sec1-compe, ul{
+.sec-compe, ul{
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -364,19 +362,14 @@ span {
     justify-content: center;
 }
 
-.sec1-compe ul li{
+.sec-compe ul li{
     max-width: 260px;
     background-color: #d0d0d0;
     border-radius: 20px;
     padding: 15px 25px;
 }
 
-.sec1-compe ul li:hover{
-    background-color: #b0b0b0;
-}   
-
-
-.sec1-compe .icon-compe{
+.sec-compe .icon-compe{
     width: 100%;
     display: flex;
     justify-content: left;
@@ -384,13 +377,13 @@ span {
 
 }
 
-.sec1-compe .info-compe{
+.sec-compe .info-compe{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.sec1-compe h3{
+.sec-compe h3{
     font-family: "Poppins",sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -400,7 +393,7 @@ span {
     margin-bottom: 10px;
 }
 
-.sec1-compe .info-compe p{
+.sec-compe .info-compe p{
     font-family: "Inter",sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -408,57 +401,44 @@ span {
     color: #78797a;
 }
 
-
-
-
-
 /* ------------------ Sobre ------------------ */ 
-
-
-
 
 
 #sobre{
     width: 100%;
-    height: 110vh;
+    height: 100vh;
+    padding: 20px;
     background-color: #FFFFFF  ;
     display: flex; 
-    position: relative;
     align-items: center;
-    flex-direction: row;
-    padding: 0 110px;
-    
+    flex-direction: row;    
  }
 
 .row-s{
     display: flex;
     gap: 60px;
-    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-
-    padding: 0px 100px; 
+    justify-content: center;
+    padding: 0 60px;
 }
 
 .img-sobre{
-    margin-left: -40px;
     width: 35%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    justify-content: center;
     background-position: center;
     background-size: cover;
 }
 
 .img-sobre img{
-  /*  filter: brightness(80%); */
+  /*  filter: brightness(80%);  */
     width: 100%;
     height: auto;
     border-radius: 15px;
     transition: all 1.1s;
-    margin-bottom: 35px;
-  
 }
 
 .imagem-sobre:hover{
