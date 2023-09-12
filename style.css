@@ -985,3 +985,33 @@ form .btn-linkedin{
     color: white;
     font-weight: 500;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progress-bar {
+    width: 50px; /* Largura fixa da barra de carregamento */
+    height: 10px;
+    background-color: #ccc;
+    overflow: hidden; /* Garante que a largura fixa seja respeitada */
+}
+
+.progress {
+    height: 100%;
+    background-color: #00f;
+    width: 0; /* Começa com largura 0 */
+}

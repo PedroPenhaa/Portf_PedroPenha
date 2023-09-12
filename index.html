@@ -375,6 +375,12 @@
                         <label for="radio4" class="manual-btn"></label>
                     </div>
 
+
+
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
                 </div>
             </div>
 
@@ -547,8 +553,7 @@
     </script>
 
 
-
-
+-->
 
 
 
@@ -556,25 +561,37 @@
 
 <script>
     let count = 1;
-    document.getElementById("radio1").checked = true;
+    const slideDuration = 5000; // 5 segundos
+    const progressBar = document.querySelector(".progress");
 
-    setInterval( function(){
+    function updateProgressBar() {
+        progressBar.style.transition = "none"; // Remova qualquer transição existente
+        progressBar.style.width = "0px"; // Redefina a largura da barra de carregamento para 0px
+
+        // Começa a carregar a barra de carregamento com a largura definida
+        progressBar.style.transition = `width ${slideDuration}ms linear`;
+        progressBar.style.width = "100%"; // Define a largura da barra de carregamento como 100%
+
+        setTimeout(function () {
+            progressBar.style.transition = "none"; // Remova a transição
+            progressBar.style.width = "0px"; // Redefina a largura para 0px
+        }, slideDuration);
+    }
+
+    setInterval(function () {
+        updateProgressBar();
         nextImage();
-    }, 5000)
+    }, slideDuration);
 
-    function nextImage(){
+    function nextImage() {
         count++;
-        if(count>4){
+        if (count > 4) {
             count = 1;
         }
 
-        document.getElementById("radio"+count).checked = true;
-
-
+        document.getElementById("radio" + count).checked = true;
     }
-   
 </script>
 
--->
 </body>
 </html>
