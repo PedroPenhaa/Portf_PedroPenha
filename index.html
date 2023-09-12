@@ -211,7 +211,7 @@
                 <div class="slider">
 
                     <div class="slides">
-                        <input type="radio" name="radio-btn" id="radio1" >
+                        <input type="radio" name="radio-btn" id="radio1">
                         <input type="radio" name="radio-btn" id="radio2">
                         <input type="radio" name="radio-btn" id="radio3">
                         <input type="radio" name="radio-btn" id="radio4">
@@ -366,7 +366,14 @@
                         </div>
 
 
+                        
                     </div>
+                    
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+
+
 
                     <div class="manual-navigation">
                         <label for="radio1" class="manual-btn"></label>
@@ -378,9 +385,6 @@
 
 
 
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
                 </div>
             </div>
 
@@ -560,10 +564,13 @@
 
 
 
+
+
 <script>
     let count = 1;
     const slideDuration = 5000; // 5 segundos
     const progressBar = document.querySelector(".progress");
+    let progressInterval;
 
     function updateProgressBar() {
         progressBar.style.transition = "none"; // Remova qualquer transição existente
@@ -572,22 +579,12 @@
         // Começa a carregar a barra de carregamento com a largura definida
         progressBar.style.transition = `width ${slideDuration}ms linear`;
         progressBar.style.width = "100%"; // Define a largura da barra de carregamento como 100%
-
-        setTimeout(function () {
-            progressBar.style.transition = "none"; // Remova a transição
-            progressBar.style.width = "0px"; // Redefina a largura para 0px
-        }, slideDuration);
     }
 
     function resetProgressBar() {
-        progressBar.style.transition = "none"; // Remova qualquer transição existente
-        progressBar.style.width = "0px"; // Redefina a largura da barra de carregamento para 0px
+        progressBar.style.transition = "none"; // Remova a transição
+        progressBar.style.width = "0px"; // Redefina a largura para 0px
     }
-
-    setInterval(function () {
-        resetProgressBar();
-        nextImage();
-    }, slideDuration);
 
     function nextImage() {
         count++;
@@ -596,8 +593,18 @@
         }
 
         document.getElementById("radio" + count).checked = true;
+        clearInterval(progressInterval); // Limpa o intervalo anterior
         updateProgressBar();
+        progressInterval = setInterval(resetProgressBar, slideDuration);
     }
+
+    // Inicializa o carregamento da primeira imagem e a barra de progresso
+    updateProgressBar();
+    progressInterval = setInterval(resetProgressBar, slideDuration);
+
+    setInterval(function () {
+        nextImage();
+    }, slideDuration);
 </script>
 
 </body>
