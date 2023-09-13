@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>Pedro Penha | Front-End Developer</title>
 </head>
 <body>
@@ -431,12 +431,16 @@
 
                 </div>
 
+                <div class="progress-bar"></div> <!-- Adicione esta linha -->
+
                 <div class="controle-slide">
                     <i class="fas fa-arrow-left" id="prevBtn"></i>
                     <span id="slideCounter">1/4</span>
                     <i class="fas fa-arrow-right" id="nextBtn"></i>
                 </div>
                
+
+
             </div>
 
 
@@ -647,31 +651,30 @@
 
 
 
-
 <script>
     var prevBtn = document.getElementById('prevBtn');
     var nextBtn = document.getElementById('nextBtn');
     var slides = document.querySelector('.slides');
     var slideCounter = document.getElementById('slideCounter'); // Elemento para exibir o número do slide
- 
+
     var currentSlide = 0;
     var totalSlides = 4; // Defina o número total de slides aqui
-    var slideInterval = 2000; // Intervalo de 2 segundos entre os slides (em milissegundos)
- 
+    var slideInterval = 5000; // Intervalo de 2 segundos entre os slides (em milissegundos)
+
     // Função para atualizar o número do slide
     function updateSlideCounter() {
         slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
     }
- 
-    // Atualize a exibição do número do slide
-    function updateSlidePosition() {
-        var slideWidth = 1000; // Largura de cada slide
-        var newPosition = -currentSlide * slideWidth;
-        slides.style.transition = 'transform 1s ease'; // Adicionando transição suave
-        slides.style.transform = 'translateX(' + newPosition + 'px)';
-        updateSlideCounter(); // Atualize o número do slide após mover
-    }
- 
+
+    // Adicione ouvintes de evento para os botões de próxima e anterior
+    prevBtn.addEventListener('click', function () {
+        prevSlide();
+    });
+
+    nextBtn.addEventListener('click', function () {
+        nextSlide();
+    });
+
     // Função para navegar para o próximo slide
     function nextSlide() {
         currentSlide++;
@@ -680,7 +683,7 @@
         }
         updateSlidePosition();
     }
- 
+
     // Função para navegar para o slide anterior
     function prevSlide() {
         currentSlide--;
@@ -689,37 +692,55 @@
         }
         updateSlidePosition();
     }
- 
-    // Adicione ouvintes de evento para os botões de próxima e anterior
-    prevBtn.addEventListener('click', function () {
-        prevSlide();
-    });
- 
-    nextBtn.addEventListener('click', function () {
-        nextSlide();
-    });
- 
-    // Inicialize a exibição do número do slide
+
+    // Atualize a exibição do número do slide
     updateSlideCounter();
- 
+
     // Configurar a troca automática de slides a cada 2 segundos
     var autoSlideInterval = setInterval(function () {
         nextSlide();
     }, slideInterval);
- 
+
     // Parar o intervalo automático quando o mouse estiver sobre os slides
     slides.addEventListener('mouseover', function () {
         clearInterval(autoSlideInterval);
     });
- 
+
     // Retomar o intervalo automático quando o mouse sair dos slides
     slides.addEventListener('mouseout', function () {
         autoSlideInterval = setInterval(function () {
             nextSlide();
         }, slideInterval);
     });
- 
- </script>
+
+    // Função para atualizar a posição dos slides
+    function updateSlidePosition() {
+        var slideWidth = 1000; // Largura de cada slide
+        var newPosition = -currentSlide * slideWidth;
+        slides.style.transition = 'transform 1s ease'; // Adicionando transição suave
+        slides.style.transform = 'translateX(' + newPosition + 'px)';
+        updateSlideCounter(); // Atualize o número do slide após mover
+
+        // Redefina a barra de carregamento
+        var progressBar = document.querySelector('.progress-bar');
+        progressBar.style.width = '0%';
+
+        // Inicie a animação da barra de carregamento
+        var progressValue = 0;
+        var progressInterval = setInterval(function () {
+            progressValue += (100 / slideInterval) * 1000; // Atualize a barra a cada 1000 ms
+            progressBar.style.width = progressValue + '%';
+
+            if (progressValue >= 100) {
+                clearInterval(progressInterval); // Pare o temporizador quando a barra de progresso estiver completa
+            }
+        }, 1000);
+    }
+
+    // Inicialize a exibição do número do slide
+    updateSlideCounter();
+</script>
+
  
  
 

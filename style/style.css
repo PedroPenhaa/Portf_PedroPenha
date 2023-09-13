@@ -886,16 +886,11 @@ form .btn-linkedin{
 
 
 
-
 .progress-bar {
-    width: 50px; /* Largura fixa da barra de carregamento */
-    height: 10px;
-    background-color: #ccc;
-    overflow: hidden; /* Garante que a largura fixa seja respeitada */
-}
-
-.progress {
-    height: 100%;
-    background-color: #00f;
-    width: 0; /* Começa com largura 0 */
+    width: 0; /* Inicialmente, a largura é 0 para que não seja visível */
+    height: 4px; /* Altura da barra de carregamento */
+    background-color: #007bff; /* Cor de fundo da barra de carregamento */
+    position: absolute; /* Posição absoluta para sobrepor os slides */
+    bottom: 0; /* Alinhar a barra de carregamento na parte inferior do slide */
+    transition: width 1s ease; /* Adicionar transição suave à largura */
 }
