@@ -660,6 +660,7 @@ span {
     top: 0;
     left: 0;
 }
+
 .slide .conteudo{
     display: flex;
     padding: 0 10px;
@@ -672,7 +673,6 @@ span {
      /*   border: 1px solid black; */
 }
 
-
 .progress-sec{
     width: 100%;
     height: 10px;
@@ -681,12 +681,12 @@ span {
     justify-content: flex-end;
 }
 
-
 .progress-container {
     width: 70px;
-    height: 10px;
+    height: 5px;
     background-color: #ccc;
-    margin-right: 175px;
+    margin-right: 120px;
+    margin-top: 50px;
     border-radius: 20px;
 }
 
@@ -733,87 +733,23 @@ span {
     text-decoration: none;
 }
 
-.manual-navigation{
-    position: absolute;
-    width: 1000px;
+.controle-slide{
+    margin-top: -50px;
     display: flex;
-    justify-content: center;
-    margin-top: 380px;
-}
-
-.manual-btn{
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:not(:Last-child){
-    margin-right: 40px;
-}
-
-.manual-btn:hover{
-    background-color: black;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
-
-.navigation-auto div{
-    border: 2px solid #20a6ff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-    
-  /*  margin-top: 430px;*/
+    flex-direction: row;
+    gap: 50px;
+    z-index: 5000000;
 
 }
 
-.navigation-auto{
-    position: absolute;
-    width: 1000px;
-    margin-top: 458px;
-    display: flex;
-    justify-content: center;
+.btn-slide {
+    font-size: 24px; 
+    transition: transform 0.3s ease; /* Adicione uma transição suave para o efeito */
 }
 
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
+.btn-slide:hover {
+    transform: scale(1.5); /* Aumenta o tamanho em 1,5x ao passar o mouse */
 }
-
-#radio1:checked ~.navigation-auto .auto-btn1{
-    background-color: black;
-}
-
-#radio2:checked ~.navigation-auto .auto-btn2{
-    background-color: black;
-}
-
-#radio3:checked ~.navigation-auto .auto-btn3{
-    background-color: black;
-}
-
-#radio4:checked ~.navigation-auto .auto-btn4{
-    background-color: black;
-}
-
-
-
 /* ------------------ Contact ------------------ */ 
 
 #contact{

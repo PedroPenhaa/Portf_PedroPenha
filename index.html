@@ -208,8 +208,7 @@
             </div>
      
             <div class="projetos_apresentation">
-
-              
+      
                 <div class="progress-sec">
                     <div class="progress-container">
                         <div class="progress-bar" id="progressBar"></div>
@@ -217,16 +216,7 @@
                 </div>
 
                 <div class="slider">
-
-                   
-
                     <div class="slides">
-                      <!--  <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio4">
-                        -->
-                
                         <!--Slide 1-->
                         <div class="slide first">
                             <div class="img">
@@ -403,50 +393,14 @@
                                 </a>
                             </div>   
                         </div>
-
-
-
-
-
-
-
-                          <!--   <div class="navigation-auto">
-                                <div class="auto-btn1"></div>
-                                <div class="auto-btn2"></div>
-                                <div class="auto-btn3"></div>
-                                <div class="auto-btn4"></div>
-                            </div>
-                    -->
-
-
                     </div>
-
-                            <!--        <div class="progress-bar">
-                                        <div class="progress"></div>
-                                        </div>
-                                    
-
-                    <div class="manual-navigation">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                    </div>
-
-                        -->
-
-
                 </div>
-
-            
             
                 <div class="controle-slide">
-                    <i class="fas fa-arrow-left" id="prevBtn"></i>
+                    <i class="fas fa-arrow-left btn-slide" id="prevBtn"></i>
                     <span id="slideCounter">1/4</span>
-                    <i class="fas fa-arrow-right" id="nextBtn"></i>
+                    <i class="fas fa-arrow-right btn-slide" id="nextBtn"></i>
                 </div>
-               
-
 
             </div>
 
@@ -607,7 +561,7 @@
 
         var currentSlide = 0;
         var totalSlides = 4;
-        var slideInterval = 5000;
+        var slideInterval = 9000;
 
         function updateSlideCounter() {
             slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
@@ -627,7 +581,7 @@
             progressBar.style.width = '0%'; // Redefina a barra de progresso
             progressBar.style.transition = 'none'; // Remova a transição para redefinir instantaneamente
             setTimeout(function () {
-                progressBar.style.transition = 'width 7s ease'; // Reaplique a transição para a animação
+                progressBar.style.transition = 'width 8s ease'; // Reaplique a transição para a animação
                 progressBar.style.width = '100%';
             }, 10); // Aguarde um pequeno atraso para a redefinição instantânea funcionar
         }
