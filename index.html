@@ -431,8 +431,10 @@
 
                 </div>
 
-                <div class="progress-bar"></div> <!-- Adicione esta linha -->
-
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            
                 <div class="controle-slide">
                     <i class="fas fa-arrow-left" id="prevBtn"></i>
                     <span id="slideCounter">1/4</span>
@@ -572,16 +574,16 @@
     </script>
 
 <!-- Scroll Init -->
-<script>
-    const scrollToTopBtn = document.querySelector(".scroll-to-top");
+    <script>
+        const scrollToTopBtn = document.querySelector(".scroll-to-top");
 
-    scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>    
+    </script>    
 
 <!-- Carrousel 
     <script>
@@ -648,103 +650,82 @@
 
 
 -->
+    <script>
+        var prevBtn = document.getElementById('prevBtn');
+        var nextBtn = document.getElementById('nextBtn');
+        var slides = document.querySelector('.slides');
+        var slideCounter = document.getElementById('slideCounter');
+        var progressBar = document.getElementById('progressBar'); // Elemento da barra de progresso
 
+        var currentSlide = 0;
+        var totalSlides = 4;
+        var slideInterval = 5000;
 
-
-<script>
-    var prevBtn = document.getElementById('prevBtn');
-    var nextBtn = document.getElementById('nextBtn');
-    var slides = document.querySelector('.slides');
-    var slideCounter = document.getElementById('slideCounter'); // Elemento para exibir o número do slide
-
-    var currentSlide = 0;
-    var totalSlides = 4; // Defina o número total de slides aqui
-    var slideInterval = 5000; // Intervalo de 2 segundos entre os slides (em milissegundos)
-
-    // Função para atualizar o número do slide
-    function updateSlideCounter() {
-        slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
-    }
-
-    // Adicione ouvintes de evento para os botões de próxima e anterior
-    prevBtn.addEventListener('click', function () {
-        prevSlide();
-    });
-
-    nextBtn.addEventListener('click', function () {
-        nextSlide();
-    });
-
-    // Função para navegar para o próximo slide
-    function nextSlide() {
-        currentSlide++;
-        if (currentSlide >= totalSlides) {
-            currentSlide = 0;
+        function updateSlideCounter() {
+            slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
         }
-        updateSlidePosition();
-    }
 
-    // Função para navegar para o slide anterior
-    function prevSlide() {
-        currentSlide--;
-        if (currentSlide < 0) {
-            currentSlide = totalSlides - 1;
+        function updateSlidePosition() {
+            var slideWidth = 1000;
+            var newPosition = -currentSlide * slideWidth;
+            slides.style.transition = 'transform 1s ease';
+            slides.style.transform = 'translateX(' + newPosition + 'px)';
+            updateSlideCounter();
+            startProgressBar(); // Inicie a animação da barra de progresso
         }
-        updateSlidePosition();
-    }
 
-    // Atualize a exibição do número do slide
-    updateSlideCounter();
+        function startProgressBar() {
+            progressBar.style.width = '0%'; // Redefina a barra de progresso
+            progressBar.style.transition = 'none'; // Remova a transição para redefinir instantaneamente
+            setTimeout(function () {
+                progressBar.style.transition = 'width 5s ease'; // Reaplique a transição para a animação
+                progressBar.style.width = '100%';
+            }, 10); // Aguarde um pequeno atraso para a redefinição instantânea funcionar
+        }
 
-    // Configurar a troca automática de slides a cada 2 segundos
-    var autoSlideInterval = setInterval(function () {
-        nextSlide();
-    }, slideInterval);
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            updateSlidePosition();
+        }
 
-    // Parar o intervalo automático quando o mouse estiver sobre os slides
-    slides.addEventListener('mouseover', function () {
-        clearInterval(autoSlideInterval);
-    });
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+            updateSlidePosition();
+        }
 
-    // Retomar o intervalo automático quando o mouse sair dos slides
-    slides.addEventListener('mouseout', function () {
-        autoSlideInterval = setInterval(function () {
+        prevBtn.addEventListener('click', function () {
+            prevSlide();
+        });
+
+        nextBtn.addEventListener('click', function () {
+            nextSlide();
+        });
+
+        updateSlideCounter();
+
+        var autoSlideInterval = setInterval(function () {
             nextSlide();
         }, slideInterval);
-    });
 
-    // Função para atualizar a posição dos slides
-    function updateSlidePosition() {
-        var slideWidth = 1000; // Largura de cada slide
-        var newPosition = -currentSlide * slideWidth;
-        slides.style.transition = 'transform 1s ease'; // Adicionando transição suave
-        slides.style.transform = 'translateX(' + newPosition + 'px)';
-        updateSlideCounter(); // Atualize o número do slide após mover
+        slides.addEventListener('mouseover', function () {
+            clearInterval(autoSlideInterval);
+        });
 
-        // Redefina a barra de carregamento
-        var progressBar = document.querySelector('.progress-bar');
-        progressBar.style.width = '0%';
+        slides.addEventListener('mouseout', function () {
+            autoSlideInterval = setInterval(function () {
+                nextSlide();
+            }, slideInterval);
+        });
 
-        // Inicie a animação da barra de carregamento
-        var progressValue = 0;
-        var progressInterval = setInterval(function () {
-            progressValue += (100 / slideInterval) * 1000; // Atualize a barra a cada 1000 ms
-            progressBar.style.width = progressValue + '%';
-
-            if (progressValue >= 100) {
-                clearInterval(progressInterval); // Pare o temporizador quando a barra de progresso estiver completa
-            }
-        }, 1000);
-    }
-
-    // Inicialize a exibição do número do slide
-    updateSlideCounter();
-</script>
-
- 
- 
-
-
+        // Inicie a animação da barra de progresso quando a página carregar
+        startProgressBar();
+    </script>
 
 </body>
 </html>
