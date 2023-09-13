@@ -595,7 +595,8 @@ span {
     height: 100%;
     overflow: hidden;
     display: flex;
-    align-items: center;    
+    align-items: center;  
+
  /*   border: 1px solid black; */
 }
 
@@ -671,6 +672,31 @@ span {
      /*   border: 1px solid black; */
 }
 
+
+.progress-sec{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+
+.progress-container {
+    width: 70px;
+    height: 10px;
+    background-color: #ccc;
+    margin-right: 175px;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 20px;
+}
+
 .slide .conteudo h1{
     font-weight: 700;
     margin-bottom: 40px;
@@ -706,7 +732,6 @@ span {
     justify-content: center;
     text-decoration: none;
 }
-
 
 .manual-navigation{
     position: absolute;
@@ -883,15 +908,3 @@ form .btn-linkedin{
 
 
 
-.progress-container {
-    width: 200px;
-    height: 10px;
-    background-color: #ccc;
-    margin: 10px auto;
-}
-
-.progress-bar {
-    width: 0%;
-    height: 100%;
-    background-color: #007bff;
-}

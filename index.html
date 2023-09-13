@@ -210,9 +210,15 @@
             <div class="projetos_apresentation">
 
               
-
+                <div class="progress-sec">
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
 
                 <div class="slider">
+
+                   
 
                     <div class="slides">
                       <!--  <input type="radio" name="radio-btn" id="radio1">
@@ -220,7 +226,7 @@
                         <input type="radio" name="radio-btn" id="radio3">
                         <input type="radio" name="radio-btn" id="radio4">
                         -->
-
+                
                         <!--Slide 1-->
                         <div class="slide first">
                             <div class="img">
@@ -228,7 +234,8 @@
                             </div>   
                             
                             <div class="conteudo">
-                                <h1>Aplicativo CDPC</h1>
+
+                               <h1>Aplicativo CDPC</h1>
 
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                                
@@ -431,9 +438,7 @@
 
                 </div>
 
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
+            
             
                 <div class="controle-slide">
                     <i class="fas fa-arrow-left" id="prevBtn"></i>
@@ -445,63 +450,6 @@
 
             </div>
 
-
-
-
-
-
-
-        <!--   
-            <div class="carousel">                
-                    <div class="work-list">
-
-                        <div class="work">
-                            <div class="background-image" style="background-image: url('./img/work1.jpg.png')"></div>
-                            <div class="layer">
-                                <h3>Aplicativo de Mídias Sociais</h3>
-                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                        <div class="work">
-                            <div class="background-image" style="background-image: url('./img/work2.png')"></div>
-                            <div class="layer">
-                                <h3>Aplicativo de Mídias Sociais</h3>
-                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                        <div class="work">
-                            <div class="background-image" style="background-image: url('./img/work3.png')"></div>
-                            <div class="layer">
-                                <h3>Aplicativo de Mídias Sociais</h3>
-                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                        <div class="work">
-                            <div class="background-image" style="background-image: url('./img/work4.png')"></div>
-                            <div class="layer">
-                                <h3>Aplicativo de Mídias Sociais</h3>
-                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                        <div class="work">
-                            <div class="background-image" style="background-image: url('./img/work1.jpg.png')"></div>
-                            <div class="layer">
-                                <h3>Aplicativo de Mídias Sociais</h3>
-                                <p>O aplicativo conecta você a pessoas talentosas ao redor do mundo. Baixe-o na loja de aplicativos</p>
-                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-                        
-                    </div>
-            </div>
-
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
-        -->
 
         </section>
 
@@ -668,17 +616,18 @@
         function updateSlidePosition() {
             var slideWidth = 1000;
             var newPosition = -currentSlide * slideWidth;
-            slides.style.transition = 'transform 1s ease';
+            slides.style.transition = 'transform 2s ease';
             slides.style.transform = 'translateX(' + newPosition + 'px)';
             updateSlideCounter();
             startProgressBar(); // Inicie a animação da barra de progresso
         }
+        
 
         function startProgressBar() {
             progressBar.style.width = '0%'; // Redefina a barra de progresso
             progressBar.style.transition = 'none'; // Remova a transição para redefinir instantaneamente
             setTimeout(function () {
-                progressBar.style.transition = 'width 5s ease'; // Reaplique a transição para a animação
+                progressBar.style.transition = 'width 7s ease'; // Reaplique a transição para a animação
                 progressBar.style.width = '100%';
             }, 10); // Aguarde um pequeno atraso para a redefinição instantânea funcionar
         }
