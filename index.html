@@ -208,13 +208,18 @@
             </div>
      
             <div class="projetos_apresentation">
+
+              
+
+
                 <div class="slider">
 
                     <div class="slides">
-                        <input type="radio" name="radio-btn" id="radio1">
+                      <!--  <input type="radio" name="radio-btn" id="radio1">
                         <input type="radio" name="radio-btn" id="radio2">
                         <input type="radio" name="radio-btn" id="radio3">
                         <input type="radio" name="radio-btn" id="radio4">
+                        -->
 
                         <!--Slide 1-->
                         <div class="slide first">
@@ -357,18 +362,62 @@
                             </div> 
                         </div>
 
-                        <div class="navigation-auto">
-                            <div class="auto-btn1"></div>
-                            <div class="auto-btn2"></div>
-                            <div class="auto-btn3"></div>
-                            <div class="auto-btn4"></div>
+                         <!--Slide 3-->
+                         <div class="slide">
+                            <div class="img">
+                                <img src="./img/work3.png" alt="">
+                            </div>   
                             
+                            <div class="conteudo">
+                                <h1>Simply dummy</h1>
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                               
+                                <div class="icons-slide">
+                                    <ul>
+                                        <li>
+                                            <i class="fab fa-html5"></i>
+                                            <span>HTML5</span>
+                                        </li>
+                                        <li>
+                                            <i class="fab fa-css3"></i>
+                                            <span>CSS3</span>
+                                        </li>
+                                        <li>
+                                            <i class="fab fa-js"></i>
+                                            <span>JS</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <a href="#">
+                                    <p>Ver Projeto <i class="far fa-hand-pointer"></i>
+                                    </p>
+                                </a>
+                            </div>   
                         </div>
+
+
+
+
+
+
+
+                          <!--   <div class="navigation-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                            </div>
+                    -->
+
+
                     </div>
 
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
+                            <!--        <div class="progress-bar">
+                                        <div class="progress"></div>
+                                        </div>
+                                    
 
                     <div class="manual-navigation">
                         <label for="radio1" class="manual-btn"></label>
@@ -377,7 +426,17 @@
                         <label for="radio4" class="manual-btn"></label>
                     </div>
 
+                        -->
+
+
                 </div>
+
+                <div class="controle-slide">
+                    <i class="fas fa-arrow-left" id="prevBtn"></i>
+                    <span id="slideCounter">1/4</span>
+                    <i class="fas fa-arrow-right" id="nextBtn"></i>
+                </div>
+               
             </div>
 
 
@@ -552,8 +611,6 @@
 
 
 
-
-
 <script>
     let count = 1;
     const slideDuration = 5000; // 5 segundos
@@ -587,6 +644,85 @@
 
 
 -->
+
+
+
+
+<script>
+    var prevBtn = document.getElementById('prevBtn');
+    var nextBtn = document.getElementById('nextBtn');
+    var slides = document.querySelector('.slides');
+    var slideCounter = document.getElementById('slideCounter'); // Elemento para exibir o número do slide
+ 
+    var currentSlide = 0;
+    var totalSlides = 4; // Defina o número total de slides aqui
+    var slideInterval = 2000; // Intervalo de 2 segundos entre os slides (em milissegundos)
+ 
+    // Função para atualizar o número do slide
+    function updateSlideCounter() {
+        slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
+    }
+ 
+    // Atualize a exibição do número do slide
+    function updateSlidePosition() {
+        var slideWidth = 1000; // Largura de cada slide
+        var newPosition = -currentSlide * slideWidth;
+        slides.style.transition = 'transform 1s ease'; // Adicionando transição suave
+        slides.style.transform = 'translateX(' + newPosition + 'px)';
+        updateSlideCounter(); // Atualize o número do slide após mover
+    }
+ 
+    // Função para navegar para o próximo slide
+    function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+        updateSlidePosition();
+    }
+ 
+    // Função para navegar para o slide anterior
+    function prevSlide() {
+        currentSlide--;
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        }
+        updateSlidePosition();
+    }
+ 
+    // Adicione ouvintes de evento para os botões de próxima e anterior
+    prevBtn.addEventListener('click', function () {
+        prevSlide();
+    });
+ 
+    nextBtn.addEventListener('click', function () {
+        nextSlide();
+    });
+ 
+    // Inicialize a exibição do número do slide
+    updateSlideCounter();
+ 
+    // Configurar a troca automática de slides a cada 2 segundos
+    var autoSlideInterval = setInterval(function () {
+        nextSlide();
+    }, slideInterval);
+ 
+    // Parar o intervalo automático quando o mouse estiver sobre os slides
+    slides.addEventListener('mouseover', function () {
+        clearInterval(autoSlideInterval);
+    });
+ 
+    // Retomar o intervalo automático quando o mouse sair dos slides
+    slides.addEventListener('mouseout', function () {
+        autoSlideInterval = setInterval(function () {
+            nextSlide();
+        }, slideInterval);
+    });
+ 
+ </script>
+ 
+ 
+
 
 
 </body>

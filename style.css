@@ -584,6 +584,7 @@ span {
     background-color: #E0E0E0;
     display: flex;
     align-items: center;
+    flex-direction: column;
  /*   border: 1px solid black; */
 }
 
@@ -602,7 +603,9 @@ span {
     width: 600%;
     height: 550px;
     display: flex;
-    gap: 50px;
+    transition: transform 2s ease; /* Adicionando transição suave */
+
+  /*  gap: 50px;  */
 }
 
 .slides input{
