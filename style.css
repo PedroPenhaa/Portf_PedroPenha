@@ -584,7 +584,7 @@ span {
     background-color: #E0E0E0;
     display: flex;
     align-items: center;
-    border: 1px solid black;
+ /*   border: 1px solid black; */
 }
 
 
@@ -595,13 +595,14 @@ span {
     overflow: hidden;
     display: flex;
     align-items: center;    
-    border: 1px solid black;
+ /*   border: 1px solid black; */
 }
 
 .slides{
     width: 600%;
     height: 550px;
     display: flex;
+    gap: 50px;
 }
 
 .slides input{
@@ -610,6 +611,7 @@ span {
 
 .slide{
     width: 1000px;
+    height: 90%;
     position: relative;
     transition: 2s;
     display: flex;
@@ -642,7 +644,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+     /*   border: 1px solid black; */
 }
 
 .slide img{
@@ -660,9 +662,10 @@ span {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
     width: 50%;
     height: 70%;
-    border: 1px solid black;
+     /*   border: 1px solid black; */
 }
 
 .slide .conteudo h1{
@@ -707,7 +710,7 @@ span {
     width: 1000px;
     display: flex;
     justify-content: center;
-    margin-top: 430px;
+    margin-top: 380px;
 }
 
 .manual-btn{
@@ -756,7 +759,7 @@ span {
 .navigation-auto{
     position: absolute;
     width: 1000px;
-    
+    margin-top: 458px;
     display: flex;
     justify-content: center;
 }
