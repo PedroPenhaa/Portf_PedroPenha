@@ -563,25 +563,28 @@ span {
 
 .cabecalho-proj{
     display: flex;
-    flex-direction: row;
-    min-height: 20%;
+    height: 100%;
+    max-height: 10vh;
     padding: 0 90px;
-    margin-top: 35px;
-    justify-content: space-between;
+    margin-top: 65px;
+    text-align: center;
+    justify-content: center;
     align-items: center;
 }
 
 .cabecalho-proj h1{
     font-size: 45px;
-    max-width: 20%;
 }
 
 .projetos_apresentation{
     height: 100%;
+    max-height: 75vh;
     width: 100%;
     position: relative;
     background-color: #E0E0E0;
-    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
 }
 
 
@@ -590,20 +593,20 @@ span {
     width: 1000px;
     height: 100%;
     overflow: hidden;
-    margin-top: 40px;
-    
+    display: flex;
+    align-items: center;    
+    border: 1px solid black;
 }
 
 .slides{
     width: 600%;
-    height: 400px;
+    height: 550px;
     display: flex;
 }
 
 .slides input{
     display: none;
 }
-
 
 .slide{
     width: 1000px;
@@ -634,9 +637,8 @@ span {
 
 .slide .img{
     position: relative;
-    width: 50%;
-    height: 200px;
-    margin-left: 100px;
+    width: 45%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -644,13 +646,17 @@ span {
 }
 
 .slide img{
-    width: 90%;
+    width: 100%;
     height: auto;
-    position: relative;
+    min-height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-
 .slide .conteudo{
     display: flex;
+    padding: 0 10px;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -701,7 +707,7 @@ span {
     width: 1000px;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 430px;
 }
 
 .manual-btn{
@@ -725,15 +731,15 @@ span {
 }
 
 #radio2:checked ~ .first{
-    margin-left: -17%;
+    margin-left: -25%;
 }
 
 #radio3:checked ~ .first{
-    margin-left: -34%;
+    margin-left: -50%;
 }
 
 #radio4:checked ~ .first{
-    margin-left: -50%;
+    margin-left: -75%;
 }
 
 .navigation-auto div{
@@ -866,15 +872,6 @@ form .btn-linkedin{
     color: white;
     font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
 
 
 
