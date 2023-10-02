@@ -450,6 +450,13 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+
+
+
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     
 <!-- Table content -->
     <script>
@@ -620,6 +627,31 @@
                 });
 
         });
+
+
+
+
+
+
+        emailjs.init("service_3jn4fcm");
+
+
+
+        // Após salvar os dados no Firebase, envie um email usando o EmailJS
+const templateParams = {
+    Nome: name,
+    Email: email,
+    Mensagem: message
+};
+
+emailjs.send("service_3jn4fcm", "template_t1jc78j", templateParams)
+    .then(function(response) {
+        console.log("Email enviado com sucesso:", response);
+    })
+    .catch(function(error) {
+        console.error("Erro ao enviar o email:", error);
+    });
+
     </script>
 
 
