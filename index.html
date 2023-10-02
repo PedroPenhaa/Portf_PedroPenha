@@ -426,13 +426,13 @@
                         </a>
                   </div>
                   <div class="contact-right">
-                    <form action="">
+                    <form id="contact-form">
                         <input type="text" name="Name" placeholder="Seu nome" required>
                         <input type="text" name="email" placeholder="Seu email" required>
                         <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
                         <button type="submit" class="btn-linkedin">Enviar</button>
                     </form>
-                  </div>
+                </div>
             </div>    
         </section>
 
@@ -447,7 +447,10 @@
         </div>
 
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    
 <!-- Table content -->
     <script>
 
@@ -487,71 +490,6 @@
         });
     </script>    
 
-<!-- Carrousel 
-    <script>
-        const workList = document.querySelector('.work-list');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        const workWidth = 410; // Largura da work + margem
-        const visibleWorks = 2; // Número de works visíveis de cada vez
-        const totalWorks = document.querySelectorAll('.work').length;
-        let currentIndex = 0;
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalWorks) % totalWorks;
-            updateCarousel();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalWorks;
-            updateCarousel();
-        });
-
-        function updateCarousel() {
-            const translateX = -currentIndex * workWidth;
-            workList.style.transform = `translateX(${translateX}px)`;
-        }
-
-        updateCarousel(); // Initialize the carousel
-    </script>
-
-
-
-
-
-<script>
-    let count = 1;
-    const slideDuration = 5000; // 5 segundos
-    const progressBar = document.querySelector(".progress");
-    
-    function updateProgressBar() {
-        progressBar.style.width = "0"; // Redefine a largura da barra de progresso
-        progressBar.style.transition = `width ${slideDuration}ms linear`;
-        progressBar.style.width = "100%"; // Define a largura da barra de progresso como 100%
-    }
-
-    function nextImage() {
-        count++;
-        if (count > 4) {
-            count = 1;
-        }
-
-        document.getElementById("radio" + count).checked = true;
-        updateProgressBar();
-    }
-
-    // Inicializa o carregamento da primeira imagem e a barra de progresso
-    updateProgressBar();
-
-    setInterval(function () {
-        nextImage();
-    }, slideDuration);
-</script>
-
-
-
-
--->
     <script>
         var prevBtn = document.getElementById('prevBtn');
         var nextBtn = document.getElementById('nextBtn');
@@ -629,6 +567,62 @@
         // Inicie a animação da barra de progresso quando a página carregar
         startProgressBar();
     </script>
+
+<!-- Conexão Firebase-->
+<script>
+    // Configurações do Firebase
+    const firebaseConfig = {
+  apiKey: "AIzaSyCXGxYV0U_q1V8FJqN_3NisIlpLHYqceMc",
+  authDomain: "site-pedro-penha.firebaseapp.com",
+  databaseURL: "https://site-pedro-penha-default-rtdb.firebaseio.com",
+  projectId: "site-pedro-penha",
+  storageBucket: "site-pedro-penha.appspot.com",
+  messagingSenderId: "765406115244",
+  appId: "1:765406115244:web:c83a2a4a402500e338f609",
+  measurementId: "G-DQBXK94SZB"
+};
+    
+        // Inicialize o Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Referência ao caminho no banco de dados onde os dados serão salvos
+        const databaseRef = firebase.database().ref('Contatos'); // 'Contatos' é o caminho onde os dados serão salvos
+
+        // Captura o formulário e define um ouvinte de evento para o envio
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+          
+            // Captura os valores dos campos do formulário
+            const name = form.querySelector('[name="Name"]').value;
+            const email = form.querySelector('[name="email"]').value;
+            const message = form.querySelector('[name="Message"]').value;
+
+            // Cria um objeto com os dados do formulário
+            const formData = {
+                Nome: name,
+                Email: email,
+                Mensagem: message
+            };
+
+            // Use o caminho "Contatos" no Firebase Realtime Database e deixe o Firebase gerar um ID
+            const databasePath = name;
+
+            // Salva os dados no Firebase Realtime Database com um ID gerado automaticamente
+            databaseRef.child(databasePath).set(formData)
+                .then(function () {
+                    alert('Dados enviados com sucesso!');
+                    form.reset(); // Limpa o formulário após o envio
+                })
+                .catch(function (error) {
+                    console.error('Erro ao enviar dados:', error);
+                });
+
+        });
+    </script>
+
+
 
 </body>
 </html>
