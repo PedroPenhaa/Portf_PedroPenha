@@ -976,7 +976,7 @@ form .btn-linkedin{
         max-width: 100%; /* Garanta que o texto não exceda a largura da tela */
         color: #1F2F46;
         margin-top: 45px;
-        margin-left: 62px; /* Remova a margem esquerda negativa */
+        margin-left: 72px; /* Remova a margem esquerda negativa */
         margin-bottom: 10px;
         white-space: nowrap;
         overflow: hidden; /* Para esconder o texto que ainda não foi revelado */
@@ -998,7 +998,7 @@ form .btn-linkedin{
     .images{
         width: 100%;
         height: 11.5%;
-        top: -270px; 
+        top: -260px; 
         left: 33px;
     }
 
