@@ -326,7 +326,7 @@ span {
         width: 0;
     }
     to {
-        width: 100%;
+        width: 150%;
     }
 }
 
@@ -941,7 +941,7 @@ form .btn-linkedin{
     }
 
     .logo img {
-        max-width: 100%; /* Garante que a imagem não exceda a largura da tela */
+        max-width: 80%; /* Garante que a imagem não exceda a largura da tela */
         height: auto;
         vertical-align: middle;
         margin-left: 50px;
@@ -951,35 +951,44 @@ form .btn-linkedin{
         min-width: 129vw;
     }
 
+    .container{
+        min-width: 60vw;
+        position: relative;
+    }
+
     /* ----------------------------------- Home ----------------------------------- */
 
-
     #home{
+        max-height: 100vw;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
     }
 
     .descri{
         margin-top: -10px;
         margin-left: 32%;
         min-width: 100vw;
+        padding: 0;
     }
 
     #home .descri h1 {
-        font-size: 17.8px;
+        font-size: 24px; /* Reduza o tamanho da fonte para caber na tela */
+        width: auto; /* Remova a largura fixa para que o texto se ajuste automaticamente */
+        max-width: 100%; /* Garanta que o texto não exceda a largura da tela */
         color: #1F2F46;
         margin-top: 45px;
+        margin-left: 62px; /* Remova a margem esquerda negativa */
         margin-bottom: 10px;
-        overflow: hidden;
         white-space: nowrap;
-        animation: typing 2s steps(60) forwards;
+        overflow: hidden; /* Para esconder o texto que ainda não foi revelado */
+        animation: typing 2s steps(60) forwards; /* Animação de máquina de escrever */
     }
 
+   
     
     .descri h3, .descri p {
-        font-size: 14px;
+        font-size: 16px;
+        width: auto; /* Remova a largura fixa para que o texto se ajuste automaticamente */
+        max-width: 60%;
     }
 
     .descri p{
@@ -988,11 +997,9 @@ form .btn-linkedin{
 
     .images{
         width: 100%;
-
-        right: 70px;
-        top: -250px;
-        margin-left: 25px;
-  
+        height: 11.5%;
+        top: -270px; 
+        left: 33px;
     }
 
 
