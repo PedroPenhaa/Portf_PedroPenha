@@ -897,7 +897,7 @@ form .btn-linkedin{
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     body {
         margin: 0;
         padding: 0;
@@ -907,7 +907,7 @@ form .btn-linkedin{
     }
 
     *{
-        max-width: 80vw;
+        max-width: 70vw;
         margin: 0;
         padding: 0;
 
