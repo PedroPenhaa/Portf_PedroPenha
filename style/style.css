@@ -907,7 +907,7 @@ form .btn-linkedin{
     }
 
     *{
-        max-width: 70vw;
+        max-width: 60vw;
         margin: 0;
         padding: 0;
 
@@ -952,10 +952,10 @@ form .btn-linkedin{
 
     .container{
 
-        max-width: 100vw;
+        max-width: 150vw;
     }
 
     section{
-        max-width: 100vw;
+        max-width: 150vw;
     }
 }
