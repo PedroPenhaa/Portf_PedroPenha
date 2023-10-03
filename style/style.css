@@ -48,6 +48,32 @@ header {
     z-index: 1000;
 }
 
+.menu-icon {
+    display: none; /* Oculta o ícone em telas maiores */
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para animação do ícone ao abrir o menu */
+.menu-open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 header nav {
     width: 100%; /* O nav ocupa toda a largura do header */
     max-width: 1200px; /* Defina a largura máxima para ser igual ao .container */
@@ -855,3 +881,54 @@ form .btn-linkedin{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    body{
+        max-width: 100%;
+    }
+
+
+    header{
+
+        width: 90%;
+        padding: 0 50px;
+    }
+  
+    .menu-icon {
+        display: block; /* Exibe o ícone do menu */
+      }
+    
+      ul {
+        display: none; /* Oculta a lista de links do menu por padrão em telas menores */
+      }
+
+
+
+
+
+
+
+
+
+
+
+}
