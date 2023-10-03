@@ -900,7 +900,7 @@ form .btn-linkedin{
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
 
     body{
         max-width: 100%;
@@ -908,20 +908,37 @@ form .btn-linkedin{
 
 
     header{
-
-        width: 90%;
-        padding: 0 50px;
+        width: 36%;    
+        padding: 0 15px;
     }
   
     .menu-icon {
         display: block; /* Exibe o ícone do menu */
-      }
+     }
+
+     .menu-select{
+        display: none;
+     }
+
+      
+    .bar {
+        width: 20px;
+        height: 3px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
     
       ul {
         display: none; /* Oculta a lista de links do menu por padrão em telas menores */
       }
 
-
+      .logo img {
+        width: 170px; 
+        height: auto;
+        vertical-align: middle;
+        margin-left: 50px;
+    }
 
 
 
