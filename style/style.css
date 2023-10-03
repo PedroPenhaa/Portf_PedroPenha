@@ -987,11 +987,12 @@ form .btn-linkedin{
     }
 
     .images{
-        min-width: 100%;
+        width: 100%;
+
         right: 70px;
         top: -295px;
         margin-left: 25px;
-
+  
     }
 
 
