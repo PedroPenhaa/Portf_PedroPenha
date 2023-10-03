@@ -578,16 +578,16 @@
 <!-- Conexão Firebase-->
 <script>
     // Configurações do Firebase
-    const firebaseConfig = {
-  apiKey: "AIzaSyCXGxYV0U_q1V8FJqN_3NisIlpLHYqceMc",
-  authDomain: "site-pedro-penha.firebaseapp.com",
-  databaseURL: "https://site-pedro-penha-default-rtdb.firebaseio.com",
-  projectId: "site-pedro-penha",
-  storageBucket: "site-pedro-penha.appspot.com",
-  messagingSenderId: "765406115244",
-  appId: "1:765406115244:web:c83a2a4a402500e338f609",
-  measurementId: "G-DQBXK94SZB"
-};
+        const firebaseConfig = {
+            apiKey: "AIzaSyCXGxYV0U_q1V8FJqN_3NisIlpLHYqceMc",
+            authDomain: "site-pedro-penha.firebaseapp.com",
+            databaseURL: "https://site-pedro-penha-default-rtdb.firebaseio.com",
+            projectId: "site-pedro-penha",
+            storageBucket: "site-pedro-penha.appspot.com",
+            messagingSenderId: "765406115244",
+            appId: "1:765406115244:web:c83a2a4a402500e338f609",
+            measurementId: "G-DQBXK94SZB"
+        };
     
         // Inicialize o Firebase
         firebase.initializeApp(firebaseConfig);
@@ -621,10 +621,57 @@
                 .then(function () {
                     alert('Dados enviados com sucesso!');
                     form.reset(); // Limpa o formulário após o envio
+
+                    // Após salvar os dados no Firebase, envie um email usando o EmailJS
+                    const templateParams = {
+                        Nome: name,
+                        Email: email,
+                        Mensagem: message
+                    };
+
+                    emailjs.send("service_3jn4fcm", "template_t1jc78j", templateParams)
+                        .then(function(response) {
+                            console.log("Email enviado com sucesso:", response);
+                        })
+                        .catch(function(error) {
+                            console.error("Erro ao enviar o email:", error);
+                        });
                 })
                 .catch(function (error) {
                     console.error('Erro ao enviar dados:', error);
                 });
+
+
+
+
+
+
+
+            // Inicialize o EmailJS com seu User ID
+            emailjs.init("service_b9a8idj");
+
+           // Defina os parâmetros do modelo de email com base nos dados do formulário
+            const templateParams = {
+                Nome: name,       // name é o valor do campo Nome do formulário
+                Email: email,     // email é o valor do campo Email do formulário
+                Mensagem: message // message é o valor do campo Mensagem do formulário
+            };
+
+            // Envie o email usando o serviço e modelo que você criou
+            emailjs.send("service_b9a8idj", "template_mai8b8r", templateParams)
+                .then(function(response) {
+                    console.log("Email enviado com sucesso:", response);
+                })
+                .catch(function(error) {
+                    console.error("Erro ao enviar o email:", error);
+                });
+
+
+                emailjs.debug = true;
+
+
+
+
 
         });
 
@@ -632,6 +679,12 @@
 
 
 
+
+
+
+
+
+/*
 
         emailjs.init("service_3jn4fcm");
 
@@ -652,9 +705,15 @@ emailjs.send("service_3jn4fcm", "template_t1jc78j", templateParams)
         console.error("Erro ao enviar o email:", error);
     });
 
+    */
     </script>
 
+<!--
 
+    Service ID: service_b9a8idj
+    Template ID: template_mai8b8r
+
+-->
 
 </body>
 </html>
