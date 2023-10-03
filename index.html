@@ -429,7 +429,7 @@
                     <form id="contact-form">
                         <input type="text" name="Name" placeholder="Seu nome" required>
                         <input type="text" name="email" placeholder="Seu email" required>
-                         <input type="tel" name="Phone" pattern="^\([1-9]{2}\)\s?[9]{1}[0-9]{4}-[0-9]{4}$" placeholder="(DDD) 9xxxx-xxxx" required>
+                        <input type="tel" name="Phone" pattern="^\(\d{2}\)\d{9}$" placeholder="(DDD)9xxxx-xxxx" required>
                         <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
                         <button type="submit" class="btn-linkedin">Enviar</button>
                     </form>
@@ -598,11 +598,12 @@
     const databaseRef = firebase.database().ref('Contatos');
 
     // Função para enviar o email
-    function enviarEmail(name, email, message) {
+    function enviarEmail(name, email, phone, message) {
         const templateParams = {
-            Name: name,       // Use "Name" em vez de "to_name"
-            email: email,     // Use "email" em vez de "from_Name"
-            Message: message // Use "Message" em vez de "Message"
+            Name: name,
+            email: email,
+            Phone: phone,
+            Message: message
         };
 
         // Envie o email usando o serviço e o modelo que você criou
@@ -617,45 +618,48 @@
     }
 
     // Função para salvar os dados no Firebase e enviar o email
-    function salvarDadosESubmeterFormulario(name, email, message) {
+    function salvarDadosESubmeterFormulario(name, email, phone, message) {
         // Cria um objeto com os dados do formulário
         const formData = {
             Nome: name,
             Email: email,
+            Phone: phone,
             Mensagem: message
         };
 
-        // Use o caminho "Contatos" no Firebase Realtime Database e deixe o Firebase gerar um ID
-        const databasePath = name;
+     // Use o caminho "Contatos" no Firebase Realtime Database e deixe o Firebase gerar um ID
+     const databasePath = name;
 
-        // Salva os dados no Firebase Realtime Database com um ID gerado automaticamente
-        return databaseRef.child(databasePath).set(formData)
-            .then(function () {
-                // Após salvar os dados no Firebase, envie o email
-                enviarEmail(name, email, message);
-            });
-    }
-
-    // Captura o formulário e define um ouvinte de evento para o envio
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Impede o envio padrão do formulário
-
-        // Captura os valores dos campos do formulário
-        const name = form.querySelector('[name="Name"]').value;
-        const email = form.querySelector('[name="email"]').value;
-        const message = form.querySelector('[name="Message"]').value;
-
-        // Salva os dados no Firebase e envia o email
-        salvarDadosESubmeterFormulario(name, email, message)
-            .then(function (response) {
-                alert('Dados enviados com sucesso!');
-                form.reset(); // Limpa o formulário após o envio
-            })
-            .catch(function (error) {
-                console.error("Erro ao salvar dados ou enviar o email:", error);
-            });
+// Salva os dados no Firebase Realtime Database com um ID gerado automaticamente
+return databaseRef.child(databasePath).set(formData)
+    .then(function () {
+        // Após salvar os dados no Firebase, envie o email
+        enviarEmail(name, email, phone, message);
     });
+}
+
+// Captura o formulário e define um ouvinte de evento para o envio
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function (e) {
+e.preventDefault(); // Impede o envio padrão do formulário
+
+// Captura os valores dos campos do formulário
+const name = form.querySelector('[name="Name"]').value;
+const email = form.querySelector('[name="email"]').value;
+const message = form.querySelector('[name="Message"]').value;
+const phone = form.querySelector('[name="Phone"]').value;
+
+// Salva os dados no Firebase e envia o email
+salvarDadosESubmeterFormulario(name, email, phone, message)
+    .then(function (response) {
+        alert('Dados enviados com sucesso!');
+        form.reset(); // Limpa o formulário após o envio
+    })
+    .catch(function (error) {
+        console.error("Erro ao salvar dados ou enviar o email:", error);
+    });
+});
+
 
     // Inicialize o EmailJS com seu User ID
     emailjs.init("CYHjP5SKBYVr56OZS");
