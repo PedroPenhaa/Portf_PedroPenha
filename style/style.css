@@ -987,15 +987,28 @@ form .btn-linkedin{
     }
 
     .images{
-        width: 100%;
-        height: 76.5%;
-    
+        min-width: 100%;
         right: 70px;
         top: -295px;
         margin-left: 25px;
-  
+
     }
 
+
+    .images .img_pedro {
+        left: 45%;
+        width: 105%;
+        height: auto;
+        height: auto;
+        margin-left: 0; /* Defina a posição inicial do margin-left */
+        transition: margin-left 0.5s ease-in-out; /* Transição suave para o margin-left */
+
+
+        animation: slideFromRightProfile 1.5s ease-in-out;
+        animation-delay: 1s;
+        animation-fill-mode: forwards; /* Mantém o estado final da animação */
+
+    }
 
 
 
