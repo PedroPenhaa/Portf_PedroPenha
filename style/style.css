@@ -973,10 +973,9 @@ form .btn-linkedin{
     #home .descri h1 {
         font-size: 24px; /* Reduza o tamanho da fonte para caber na tela */
         width: auto; /* Remova a largura fixa para que o texto se ajuste automaticamente */
-        max-width: 100%; /* Garanta que o texto não exceda a largura da tela */
+        max-width: 82%; /* Garanta que o texto não exceda a largura da tela */
         color: #1F2F46;
         margin-top: 45px;
-        margin-left: 72px; /* Remova a margem esquerda negativa */
         margin-bottom: 10px;
         white-space: nowrap;
         overflow: hidden; /* Para esconder o texto que ainda não foi revelado */
