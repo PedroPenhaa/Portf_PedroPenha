@@ -897,21 +897,20 @@ form .btn-linkedin{
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
     body {
         margin: 0;
         padding: 0;
-        background-color: #1F2F46;
-        max-width: 100vw; /* Usar a largura da viewport (tela) como máximo */
+        background-color: red;
+        width: 50%;
+        max-width: 80vw; /* Usar a largura da viewport (tela) como máximo */
         overflow-x: hidden; /* Evitar a rolagem horizontal */
     }
 
-    *{
-        max-width: 60vw;
+    *{  
+        max-width: 100vw;
         margin: 0;
         padding: 0;
-        justify-content: center;
-        align-items: center;
     }
 
     header {
@@ -969,7 +968,7 @@ form .btn-linkedin{
         margin-top: -10px;
         margin-left: 32%;
         width: 100%;
-        min-width: 50vw;
+        min-width: 100vw;
         padding: 0;
         justify-content: center;
         align-items: center;
@@ -980,15 +979,13 @@ form .btn-linkedin{
         width: 100%;
         max-width: 100vw;
         color: #1F2F46;
-        margin-top: 45px;
-        margin-bottom: 20px;
+        margin: 45px 0 20px 0; 
+        margin-top: 20px auto;
         white-space: nowrap;
         overflow: hidden;
         animation: typing 2s steps(60) forwards;
-    
         /* Centralizar verticalmente */
         position: relative;
-        left: 12%;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -999,7 +996,7 @@ form .btn-linkedin{
         white-space: nowrap;
         font-size: 18px;
         width: 100%;
-        max-width: 130px;
+        max-width: 110px;
         position: relative;
         justify-content: center;
         align-items: center;
@@ -1008,17 +1005,23 @@ form .btn-linkedin{
 
     .descri p {
         margin-top: 380px;
-    
+        width: 100%;
+        max-width: 20vw;
         text-align: justify;
         font-size: 14px; /* Reduza o tamanho da fonte, se necessário */
         line-height: 18px;
         word-wrap: break-word;
+        white-space: nowrap;
+    }
+
+    .descri p br{
+        display: none;
     }
 
     
 
     .images{
-        width: 120%;
+        width: 100%;
         height: 11.5%;
         top: -215px; 
         left: 37px;
@@ -1026,6 +1029,7 @@ form .btn-linkedin{
 
 
     .images .img_pedro {
+
         left: 45%;
         width: 150%;
         height: auto;
