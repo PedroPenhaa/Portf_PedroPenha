@@ -12,12 +12,6 @@
     
     <div class="container">
 
-
-
-
-ASDDDDDDDDDDDDDDDD
-
-
         <header>
 
             <div class="menu-icon">
@@ -462,14 +456,10 @@ ASDDDDDDDDDDDDDDDD
         </div>
 
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
-
-
-
-
-
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     
@@ -591,103 +581,93 @@ ASDDDDDDDDDDDDDDDD
     </script>
 
 <!-- Conexão Firebase-->
-<!-- Conexão Firebase-->
-<script>
-    // Configurações do Firebase
-    const firebaseConfig = {
-        apiKey: "AIzaSyCXGxYV0U_q1V8FJqN_3NisIlpLHYqceMc",
-        authDomain: "site-pedro-penha.firebaseapp.com",
-        databaseURL: "https://site-pedro-penha-default-rtdb.firebaseio.com",
-        projectId: "site-pedro-penha",
-        storageBucket: "site-pedro-penha.appspot.com",
-        messagingSenderId: "765406115244",
-        appId: "1:765406115244:web:c83a2a4a402500e338f609",
-        measurementId: "G-DQBXK94SZB"
-    };
-
-    // Inicialize o Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    // Referência ao caminho no banco de dados onde os dados serão salvos
-    const databaseRef = firebase.database().ref('Contatos');
-
-    // Função para enviar o email
-    function enviarEmail(name, email, phone, message) {
-        const templateParams = {
-            Name: name,
-            email: email,
-            Phone: phone,
-            Message: message
+    <script>
+        // Configurações do Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCXGxYV0U_q1V8FJqN_3NisIlpLHYqceMc",
+            authDomain: "site-pedro-penha.firebaseapp.com",
+            databaseURL: "https://site-pedro-penha-default-rtdb.firebaseio.com",
+            projectId: "site-pedro-penha",
+            storageBucket: "site-pedro-penha.appspot.com",
+            messagingSenderId: "765406115244",
+            appId: "1:765406115244:web:c83a2a4a402500e338f609",
+            measurementId: "G-DQBXK94SZB"
         };
 
-        // Envie o email usando o serviço e o modelo que você criou
-        emailjs.send("gmailMessagePedroDevProg", "template_mai8b8r", templateParams)
-            .then(function(response) {
-                console.log("Email enviado com sucesso:", response);
-                alert('Email enviado com sucesso!');
-            })
-            .catch(function(error) {
-                console.error("Erro ao enviar o email:", error);
-            });
+        // Inicialize o Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Referência ao caminho no banco de dados onde os dados serão salvos
+        const databaseRef = firebase.database().ref('Contatos');
+
+        // Função para enviar o email
+        function enviarEmail(name, email, phone, message) {
+            const templateParams = {
+                Name: name,
+                email: email,
+                Phone: phone,
+                Message: message
+            };
+
+            // Envie o email usando o serviço e o modelo que você criou
+            emailjs.send("gmailMessagePedroDevProg", "template_mai8b8r", templateParams)
+                .then(function(response) {
+                    console.log("Email enviado com sucesso:", response);
+                    alert('Email enviado com sucesso!');
+                })
+                .catch(function(error) {
+                    console.error("Erro ao enviar o email:", error);
+                });
+        }
+
+        // Função para salvar os dados no Firebase e enviar o email
+        function salvarDadosESubmeterFormulario(name, email, phone, message) {
+            // Cria um objeto com os dados do formulário
+            const formData = {
+                Nome: name,
+                Email: email,
+                Phone: phone,
+                Mensagem: message
+            };
+
+        // Use o caminho "Contatos" no Firebase Realtime Database e deixe o Firebase gerar um ID
+        const databasePath = name;
+
+    // Salva os dados no Firebase Realtime Database com um ID gerado automaticamente
+    return databaseRef.child(databasePath).set(formData)
+        .then(function () {
+            // Após salvar os dados no Firebase, envie o email
+            enviarEmail(name, email, phone, message);
+        });
     }
 
-    // Função para salvar os dados no Firebase e enviar o email
-    function salvarDadosESubmeterFormulario(name, email, phone, message) {
-        // Cria um objeto com os dados do formulário
-        const formData = {
-            Nome: name,
-            Email: email,
-            Phone: phone,
-            Mensagem: message
-        };
+    // Captura o formulário e define um ouvinte de evento para o envio
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
 
-     // Use o caminho "Contatos" no Firebase Realtime Database e deixe o Firebase gerar um ID
-     const databasePath = name;
+    // Captura os valores dos campos do formulário
+    const name = form.querySelector('[name="Name"]').value;
+    const email = form.querySelector('[name="email"]').value;
+    const message = form.querySelector('[name="Message"]').value;
+    const phone = form.querySelector('[name="Phone"]').value;
 
-// Salva os dados no Firebase Realtime Database com um ID gerado automaticamente
-return databaseRef.child(databasePath).set(formData)
-    .then(function () {
-        // Após salvar os dados no Firebase, envie o email
-        enviarEmail(name, email, phone, message);
+    // Salva os dados no Firebase e envia o email
+    salvarDadosESubmeterFormulario(name, email, phone, message)
+        .then(function (response) {
+            alert('Dados enviados com sucesso!');
+            form.reset(); // Limpa o formulário após o envio
+        })
+        .catch(function (error) {
+            console.error("Erro ao salvar dados ou enviar o email:", error);
+        });
     });
-}
-
-// Captura o formulário e define um ouvinte de evento para o envio
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function (e) {
-e.preventDefault(); // Impede o envio padrão do formulário
-
-// Captura os valores dos campos do formulário
-const name = form.querySelector('[name="Name"]').value;
-const email = form.querySelector('[name="email"]').value;
-const message = form.querySelector('[name="Message"]').value;
-const phone = form.querySelector('[name="Phone"]').value;
-
-// Salva os dados no Firebase e envia o email
-salvarDadosESubmeterFormulario(name, email, phone, message)
-    .then(function (response) {
-        alert('Dados enviados com sucesso!');
-        form.reset(); // Limpa o formulário após o envio
-    })
-    .catch(function (error) {
-        console.error("Erro ao salvar dados ou enviar o email:", error);
-    });
-});
 
 
-    // Inicialize o EmailJS com seu User ID
-    emailjs.init("CYHjP5SKBYVr56OZS");
-    emailjs.debug = true; // Habilita logs para depuração
-</script>
-
-
-
-<!--
-
-    Service ID: service_b9a8idj
-    Template ID: template_mai8b8r
-
--->
+        // Inicialize o EmailJS com seu User ID
+        emailjs.init("CYHjP5SKBYVr56OZS");
+        emailjs.debug = true; // Habilita logs para depuração
+    </script>
 
 </body>
 </html>
