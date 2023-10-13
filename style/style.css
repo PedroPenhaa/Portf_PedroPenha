@@ -1000,16 +1000,16 @@ form .btn-linkedin{
     
         .images {
             left: 10px;
-            top: 20px;
-            margin-top: 20px;
             width: 80%; /* Reduza a largura das imagens */
-            height: 500px;
+            top: 20px;
+            margin-bottom: 20px; /* Adicione um espaçamento entre a imagem e o texto */
+            height: 400px; /* Altura fixa para a imagem */
         }
     
         .images img {
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 1; /* Tornar as imagens visíveis */
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantenha a proporção da imagem */
         }
 
         .btn-home-link{
