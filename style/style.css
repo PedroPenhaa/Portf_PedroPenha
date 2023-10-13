@@ -1000,7 +1000,7 @@ form .btn-linkedin{
     
         .images {
             left: 10px;
-            top: 60px;
+            top: 20px;
             margin-top: 20px;
             width: 80%; /* Reduza a largura das imagens */
             height: 500px;
@@ -1012,10 +1012,15 @@ form .btn-linkedin{
             opacity: 1; /* Tornar as imagens visíveis */
         }
 
+        .btn-home-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
 
 
 
-        
 
         .scroll-to-top{
             display: none;
