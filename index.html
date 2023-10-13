@@ -256,7 +256,7 @@
                                     </ul>
                                 </div>
 
-                                <a href="#">
+                                <a href="#" id="click_project">
                                     <p>Ver Projeto <i class="far fa-hand-pointer"></i>
                                     </p>
                                 </a>
@@ -667,49 +667,41 @@
         emailjs.debug = true; // Habilita logs para depuração
     </script>
 
-
-
-
-
-
-<script>
-    // Verifica o tamanho da tela e reorganiza os elementos quando necessário
-    function rearrangeElements() {
-        if (window.innerWidth < 480) {
-            const descri = document.querySelector('.descri');
-            const h3 = descri.querySelector('h3');
-            const images = document.querySelector('.images');
-            descri.insertBefore(images, h3.nextSibling); // Move .images após h3
+    <script>
+        // Verifica o tamanho da tela e reorganiza os elementos quando necessário
+        function rearrangeElements() {
+            if (window.innerWidth < 480) {
+                const descri = document.querySelector('.descri');
+                const h3 = descri.querySelector('h3');
+                const images = document.querySelector('.images');
+                descri.insertBefore(images, h3.nextSibling); // Move .images após h3
+            }
         }
-    }
 
-    window.addEventListener('resize', rearrangeElements); // Verifica a cada redimensionamento
-    rearrangeElements(); // Verifica no carregamento da página
-
-
- 
+        window.addEventListener('resize', rearrangeElements); // Verifica a cada redimensionamento
+        rearrangeElements(); // Verifica no carregamento da página
 
 
-
-</script>
+    
 
 
 
+    </script>
 
-<script>
-    function updateText() {
-      const textElement = document.getElementById('textWithBreak');
-      if (window.innerWidth <= 768) {
-        textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos os detalhes e experiências de trabalho em desenvolvimento web.";
-      } else {
-        textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
-      }
-    }
-  
-    // Chama a função no carregamento da página e quando a janela for redimensionada
-    window.addEventListener('DOMContentLoaded', updateText);
-    window.addEventListener('resize', updateText);
-  </script>
+    <script>
+        function updateText() {
+        const textElement = document.getElementById('textWithBreak');
+        if (window.innerWidth <= 768) {
+            textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos os detalhes e experiências de trabalho em desenvolvimento web.";
+        } else {
+            textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
+        }
+        }
+    
+        // Chama a função no carregamento da página e quando a janela for redimensionada
+        window.addEventListener('DOMContentLoaded', updateText);
+        window.addEventListener('resize', updateText);
+    </script>
 
 
 
