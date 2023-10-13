@@ -965,100 +965,51 @@ form .btn-linkedin{
 
     /* ----------------------------------- Home ----------------------------------- */
 
-    #home{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0px;
-        left: -10px;
-        background-color: red;
-        overflow-x: hidden;
-        position: relative;
-    }
-
-    .descri{
-        background-color: yellow;
-        margin-top: 85px;
-        min-width: 100%;
-        height: 100vw;
-        padding: 0px;
-        padding: 0;
-        left: -10px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #home .descri h1 {
-        font-size: 1.4rem;
-        width: 70%;
-        max-width: 80vw;
-        color: #1F2F46;
-        margin: 45px 0 20px 0; 
-        margin-top: 20px auto;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 2s steps(60) forwards;
-        /* Centralizar verticalmente */
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+    @media (max-width: 480px) {
+        #home {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px; /* Adicione algum espaço de preenchimento */
+        }
     
-    .descri h3, .descri p {
-        white-space: nowrap;
-        font-size: 13px;
-        width: 100%;
-        max-width: 80vw;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-
-    .descri p {
-        margin-top: 185px;
-        width: 100%;
-        max-width: 80vw;
-        text-align:0 justify;
-        font-size: 14px; 
-        line-height: 18px;
-        word-wrap: break-word;
-        white-space: nowrap;
-    }
-
-    .descri p br{
-        display: none;
-    }
-
+        .descri {
+            position: relative;
+            left: -20px;
+            margin-top: 20px; /* Reduza a margem superior */
+        }
     
-
-    .images{
-        margin-top: 550px;
-        width: 70%;
-        height: 11.5%;
-        top: -215px; 
-        left: 37px;
+        #home .descri h1 {
+            font-size: 24px; /* Reduza o tamanho da fonte */
+            max-width: 100%; /* Certifique-se de que o texto não ultrapasse a largura da tela */
+            text-align: center; /* Centralize o texto */
+            margin: 20px 0;
+        }
+    
+        .descri h3 {
+            font-size: 16px; /* Reduza o tamanho da fonte */
+            text-align: center;
+            margin: 10px 0;
+        }
+    
+        .descri p {
+            font-size: 14px; /* Reduza o tamanho da fonte */
+            text-align: center;
+            margin: 400px 0 10px 0;
+        }
+    
+        .images {
+            left: 10px;
+            top: 80px;
+            margin-top: 20px;
+            width: 80%; /* Reduza a largura das imagens */
+            height: 500px;
+        }
+    
+        .images img {
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1; /* Tornar as imagens visíveis */
+        }
     }
-
-
-    .images .img_pedro {
-
-        left: 45%;
-        width: 100%;
-        height: auto;
-        height: auto;
-        margin-left: 0; /* Defina a posição inicial do margin-left */
-        transition: margin-left 0.5s ease-in-out; /* Transição suave para o margin-left */
-
-
-        animation: slideFromRightProfile 1.5s ease-in-out;
-        animation-delay: 1s;
-        animation-fill-mode: forwards; /* Mantém o estado final da animação */
-
-    }
-
-
-
-
 }
