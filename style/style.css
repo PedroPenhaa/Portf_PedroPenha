@@ -1025,8 +1025,6 @@ form .btn-linkedin{
             text-align: justify;
         } 
 
-    
-
         .images {
             margin-top: 190px;
             max-height: 250px;
@@ -1046,60 +1044,6 @@ form .btn-linkedin{
             max-height: 100%;
             object-fit: contain;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-        .shape, .img_pedro {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        
-        .images .shape {
-            left: 42%;
-            width: 100%;
-            height: auto;
-            animation: slideFromRightShape 1.5s ease-in-out;
-            animation-fill-mode: forwards; /* Mantém o estado final da animação */
-        }
-        
-        .images .img_pedro {
-            left: 45%;
-            width: 105%;
-            height: auto;
-            height: auto;
-            margin-left: 0; /* Defina a posição inicial do margin-left */
-            transition: margin-left 0.5s ease-in-out; /* Transição suave para o margin-left */
-            animation: slideFromRightProfile 1.5s ease-in-out;
-            animation-delay: 1s;
-            animation-fill-mode: forwards; /* Mantém o estado final da animação */
-        
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
         
         .btn-home-link{
             bottom: 0;
@@ -1111,12 +1055,71 @@ form .btn-linkedin{
             width: 100%;
         }
 
-
-
+        .link-home{
+            width: 150px;
+        }
 
         .scroll-to-top{
             display: none;
         }
+
+
+
+
+
+/* ----------------------------- Competência ----------------------------- */
+        #competencia{
+            padding: 10px 0;
+            flex-direction: column;
+            align-items: center;
+        }
+ 
+        .cabecalho-compe{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 300px;
+            height: auto;
+            width: 100%;
+        }
+
+        .cabecalho-compe .sub-title{
+            position: relative;
+            width: 100%;
+            max-width: 100vh;
+            font-size: 24px;
+            display: flex;
+            align-items:center;
+            justify-content:flex-start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cabecalho-compe p {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 100vh;
+            padding: 20px;
+            font-size: 12px;
+            text-align: justify; /* Alinhar o texto ao centro */
+        }
+        
+        .cabecalho-compe p strong {
+            font-weight: 700; /* Aplicar negrito ao texto dentro do strong */
+            font-size: 14px; /* Tamanho da fonte para o strong */
+            color: #030e15; /* Cor do texto dentro do strong */
+        }
+
+
+
+
+
+
+
+
 
 
     }
