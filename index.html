@@ -670,5 +670,42 @@
         emailjs.debug = true; // Habilita logs para depuração
     </script>
 
+
+
+
+
+
+
+<script>
+    window.addEventListener('resize', () => {
+        const descri = document.querySelector('.descri');
+        const images = document.querySelector('.images');
+        const p = document.querySelector('.text');
+
+        if (window.innerWidth <= 480) {
+            if (!descri.contains(p)) {
+                descri.removeChild(images);
+                descri.appendChild(p);
+                descri.appendChild(images);
+            }
+        } else {
+            // Se a largura da tela for maior que 480px, reverta a ordem original
+            if (!descri.contains(images)) {
+                descri.removeChild(p);
+                descri.appendChild(images);
+                descri.appendChild(p);
+            }
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
 </body>
 </html>

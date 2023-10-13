@@ -966,6 +966,15 @@ form .btn-linkedin{
     /* ----------------------------------- Home ----------------------------------- */
 
     @media (max-width: 480px) {
+
+
+        .menu-icon{
+            width: 20px;
+        }
+
+
+
+
         #home {
             flex-direction: column;
             align-items: center;
@@ -976,10 +985,15 @@ form .btn-linkedin{
         .descri {
             position: relative;
             left: -20px;
-            margin-top: 20px; /* Reduza a margem superior */
+            text-align: center; /* Centralize o texto na horizontal */
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* Alinhe os elementos verticalmente */
+            align-items: center; /* Centralize verticalmente */
         }
     
         #home .descri h1 {
+            order: 1;
             font-size: 24px; /* Reduza o tamanho da fonte */
             max-width: 100%; /* Certifique-se de que o texto não ultrapasse a largura da tela */
             text-align: center; /* Centralize o texto */
@@ -987,35 +1001,46 @@ form .btn-linkedin{
         }
     
         .descri h3 {
-            font-size: 16px; /* Reduza o tamanho da fonte */
+            order: 2;
+            font-size: 16px;
             text-align: center;
             margin: 10px 0;
+            margin-bottom: 50px;
         }
     
         .descri p {
-            font-size: 14px; /* Reduza o tamanho da fonte */
+            order: 4;
+            font-size: 14px;
             text-align: center;
-            margin: 400px 0 10px 0;
+            margin-top: 300px;
         }
     
         .images {
-            left: 10px;
+            top: -95px;
+            left: 0;
+            order: 3;
             width: 80%; /* Reduza a largura das imagens */
-            top: 20px;
             margin-bottom: 20px; /* Adicione um espaçamento entre a imagem e o texto */
-            height: 400px; /* Altura fixa para a imagem */
+            height: 350px; /* Altura fixa para a imagem */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     
         .images img {
             width: 100%;
-            height: 100%;
+            height: 80%;
             object-fit: cover; /* Mantenha a proporção da imagem */
         }
 
         .btn-home-link{
+            bottom: 0;
+            order: 5; 
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 20px;
             width: 100%;
         }
 
