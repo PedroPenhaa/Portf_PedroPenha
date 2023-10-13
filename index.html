@@ -45,9 +45,8 @@
                 <h1>Olá, eu sou <span>Pedro Afonso</span>
                     <h3>Especialista em desenvolvimento FrontEnd</h3>
               
-                    <p class="text">Este é o meu site oficial de portfólio para mostrar todos
-                        <br> os detalhes e experiências de trabalho em desenvolvimento web.
-                    </p>
+                    <p class="text" id="textWithBreak"></p>
+
                 
                 <div class="btn-home-link">
                     <button class="link-home">Download CV</button>
@@ -688,9 +687,31 @@
 
     window.addEventListener('resize', rearrangeElements); // Verifica a cada redimensionamento
     rearrangeElements(); // Verifica no carregamento da página
+
+
+ 
+
+
+
 </script>
 
 
+
+
+<script>
+    function updateText() {
+      const textElement = document.getElementById('textWithBreak');
+      if (window.innerWidth <= 768) {
+        textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos os detalhes e experiências de trabalho em desenvolvimento web.";
+      } else {
+        textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
+      }
+    }
+  
+    // Chama a função no carregamento da página e quando a janela for redimensionada
+    window.addEventListener('DOMContentLoaded', updateText);
+    window.addEventListener('resize', updateText);
+  </script>
 
 
 
