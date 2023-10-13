@@ -228,7 +228,7 @@
                 <div class="slider">
                     <div class="slides">
                         <!--Slide 1-->
-                        <div class="slide first">
+                        <div class="slide first  active-slide">
                             <div class="img">
                                 <img src="./img/work1.jpg.png" alt="">
                             </div>   
@@ -413,8 +413,6 @@
                 </div>
 
             </div>
-
-
         </section>
 
         <section id="contact">
@@ -511,7 +509,7 @@
 
         var currentSlide = 0;
         var totalSlides = 4;
-        var slideInterval = 9000;
+    //    var slideInterval = 9000;
 
         function updateSlideCounter() {
             slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
