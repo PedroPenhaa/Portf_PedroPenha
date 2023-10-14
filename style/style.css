@@ -53,6 +53,8 @@ header {
 .menu-icon {
     display: none; /* Oculta o ícone em telas maiores */
     cursor: pointer;
+    position: relative;
+    right: 20px;
 }
 
 .bar {
@@ -130,6 +132,17 @@ header nav ul li a:hover{
 
 .language-option img:hover {
     transform: scale(1.2);
+}
+
+
+#menu-dropdown {
+    display: none;
+}
+
+/* Estilo para mostrar o menu quando a classe show-menu está presente */
+#menu-dropdown.show-menu {
+    display: block;
+    height: 200px;
 }
 
 /* -------------------------------- home -------------------------------- */
@@ -662,21 +675,6 @@ span {
     gap: 60px;
 }
 
-.slide.slide1 {
-    width: 1000px;
-}
-
-.slide.slide2 {
-    width: 800px;
-}
-
-.slide.slide3 {
-    width: 600px;
-}
-
-.slide.slide4 {
-    width: 900px;
-}
 
 .slide .img{
     position: relative;
@@ -852,11 +850,15 @@ span {
     width: 100%;
 }
 
+.contact-right .social-icons{
+    display:none;
+}
+
 form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #F0F0F0  ;
     padding: 15px;
     margin: 15px 0;
     color: #fff;
@@ -864,12 +866,22 @@ form input, form textarea{
     border-radius: 6px;
 }
 
-form .btn-linkedin{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
+.btn-enviar {
+    background-color: #0B7285; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin: 30px 0 50px 0;
 }
+
+.btn-enviar:hover {
+    background-color: #0056b3; 
+}
+
+
 
 .copyright{
     min-width: 100%;
@@ -1261,6 +1273,7 @@ form .btn-linkedin{
             justify-content: center;
             height: 100%;
             overflow-y: hidden;
+   
 
         }
 
@@ -1273,6 +1286,7 @@ form .btn-linkedin{
             max-width: 100vw;
             margin: 0;
             overflow: hidden;
+  
 
         }
 
@@ -1437,6 +1451,21 @@ form .btn-linkedin{
             width: 100%;
             max-width: 100vw;
         }
+
+        .contact-left .social-icons{
+            display:none;
+        }
+
+        .contact-right .social-icons{
+            display:flex;
+            width: 100%;
+            max-width: 100vw;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+            left: 30px;
+            position: relative;
+        }
         
         .contact-right{
             order: 1;
@@ -1452,13 +1481,16 @@ form .btn-linkedin{
 
         .contact-right h1{
             display: flex;
-            margin: 45px auto;
+            margin: 45px 0 30px 0;
         }
 
         .contact-right p{
             color: #555;
             line-height: 22px;
             text-align: justify;
+            width: 100%;
+            max-width: 100vw;
+     
         }
 
         .contact-right form {

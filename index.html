@@ -14,32 +14,28 @@
     <div class="container">
 
         <header>
-
-            <div class="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-
             <nav>
                 <a href="#home" class="logo">
                     <img src="./img/logo.png">
                 </a>
-                
                 <div class="menu-select">
                     <ul>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#projects">Projetos</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
-    
                     <div class="language-selector">
                         <a href="#" class="language-option"><img src="./img/brazil-flag.png" alt="Português"></a>
                         <a href="#" class="language-option"><img src="./img/usa-flag.png" alt="English"></a>
                     </div>
-                </div> 
+                </div>
+                <div class="menu-icon" id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </nav>
-        </header>       
+        </header>
 
         <section id="home">
             <div class="descri">
@@ -379,7 +375,7 @@
                             <div class="conteudo">
                                 <h1>Simply dummy</h1>
 
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                <p>Lor.</p>
                                
                                 <div class="icons-slide">
                                     <ul>
@@ -429,12 +425,22 @@
                             <a href=""><i class="fab fa-instagram"></i></a>
                             <a href=""><i class="fab fa-linkedin"></i></a>
                         </div>
+                    <!--
                         <a href="./img/Pedro Afonso da Costa Penha.pdf" download>
                             <button class="link-home">Download CV</button>
                         </a>
+                    -->    
                   </div>
                   <div class="contact-right">
                     <h1 class="sub-title">Contate-me</h1>
+
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+
                     <p>
                         Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.
                     </p>
@@ -443,7 +449,7 @@
                         <input type="text" name="email" placeholder="Seu email" required>
                         <input type="text" name="Phone" placeholder="Seu celular" required>
                         <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
-                        <button type="submit" class="btn-linkedin">Enviar</button>
+                        <button type="submit" class="btn-enviar">Enviar</button>
                     </form>
                 </div>
             </div>    
@@ -515,19 +521,32 @@
 
         var currentSlide = 0;
         var totalSlides = 4;
-    //    var slideInterval = 9000;
+        var slideInterval = 9000;
 
         function updateSlideCounter() {
             slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
         }
 
         function updateSlidePosition() {
-            var slideWidth = 1000;
+            var slideWidth = window.innerWidth; // Calcula a largura do slide com base na largura da janela
             var newPosition = -currentSlide * slideWidth;
+
+            // Verifica se a largura da janela está abaixo de 480 pixels (modo responsivo)
+            if (window.innerWidth < 480) {
+                newPosition = 0;
+            }
+
             slides.style.transition = 'transform 2s ease';
             slides.style.transform = 'translateX(' + newPosition + 'px)';
             updateSlideCounter();
-            startProgressBar(); // Inicie a animação da barra de progresso
+            startProgressBar();
+
+            var allSlides = document.querySelectorAll('.slide');
+            allSlides.forEach(function (slide) {
+                slide.classList.remove('active-slide');
+            });
+
+            allSlides[currentSlide].classList.add('active-slide');
         }
         
 
@@ -708,6 +727,32 @@
         window.addEventListener('DOMContentLoaded', updateText);
         window.addEventListener('resize', updateText);
     </script>
+
+
+
+
+
+
+
+<!-- Abre Menu -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var menuIcon = document.getElementById('menu-icon');
+    var menuSelect = document.querySelector('.menu-select');
+
+    menuIcon.addEventListener('click', function() {
+        menuSelect.classList.toggle('show-menu');
+    });
+});
+
+</script>
+
+
+
+
+
+
 
 
 </body>
