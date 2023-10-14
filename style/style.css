@@ -622,6 +622,7 @@ span {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 30px;
  /*   border: 1px solid black; */
 }
 
@@ -679,11 +680,12 @@ span {
 
 .slide .img{
     position: relative;
-    width: 45%;
-    height: 70%;
+    width: 60%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 50px;
      /*   border: 1px solid black; */
 }
 
@@ -769,12 +771,11 @@ span {
 }
 
 .controle-slide{
-    margin-top: -50px;
+    margin-top: -40px;
     display: flex;
     flex-direction: row;
     gap: 50px;
-    z-index: 5000000;
-
+    z-index: 999;
 }
 
 .btn-slide {
