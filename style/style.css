@@ -1217,9 +1217,13 @@ form .btn-linkedin{
 /* ------------------ Projects ------------------ */ 
 
         #projects{
+            padding: 0 20px;
             width: 100%;
             max-width: 100vw;
+            height: 100%;
+            min-height: 150vh;
             padding: 0;
+            justify-content: flex-start;
         }
 
 
@@ -1230,23 +1234,20 @@ form .btn-linkedin{
 
         .projetos_apresentation{
             width: 100%;
-            max-width: 100vw;
+            height: 100%;
+            min-height: 200vh;
             position: relative;
             display: flex;
             background-color: #E0E0E0;
-            justify-content: center;
-            align-items: center;
+  
         }
 
         .slider{
             margin: 0 auto;
             width: 100%;
-            max-width: 100vw;
-            height: 80%;
             overflow: hidden;
             display: flex;
-          
-        
+            height: 150vh;        
          /*   border: 1px solid black; */
         }
 
@@ -1255,6 +1256,9 @@ form .btn-linkedin{
             max-width: 100vw;
             align-items: center;
             justify-content: center;
+            height: 100%;
+            max-height: 350vh;
+
         }
 
         .slide{
@@ -1266,38 +1270,58 @@ form .btn-linkedin{
             max-width: 100vw;
             margin: 0;
             overflow: hidden;
+
         }
 
-        .slide .img{
-            width: 100%;
+        .slide .img {
+            width: 90%;
             max-width: 100vw;
+            height: 40vh;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-left: 20px;
         }
-
-        .slide .img img{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 90%;
+        
+        .slide .img img {
+            max-width: 100%;
+            max-height: auto;
+            object-fit: cover;
         }
+      
       
         .slide.active-slide {
             display: block; /* Apenas o slide ativo é exibido */
-          }
+         }
           
-          .slide:not(.active-slide) {
+        .slide:not(.active-slide) {
             display: none; /* Esconde os slides não ativos */
-          }
+        }
 
+        .slide .conteudo{
+            width: 100%;
+            max-width: 100vw;
+            margin: 0 auto;
+        }
 
+        .slide .conteudo h1{  
+              font-weight: 700;
+              margin: 0 0 10px 20px;
+              display: flex;
+              text-align: left;
+              height: 100%;
+              max-height: 30px;
+        }
 
-
-
-
-
+        .slide .conteudo p{
+            overflow-y: scroll;  
+            width: 80%;
+            max-width: 100vh;
+            text-align: justify;
+            margin: 10px 0 20px 0;
+            height: 25vh;
+            padding: 0;
+        }
 
 
 
@@ -1313,6 +1337,7 @@ form .btn-linkedin{
             margin: 0 auto;
             width: 100%;
             max-width: 100vw;
+            margin-top: 50px;
             text-align: center;
         }
 
