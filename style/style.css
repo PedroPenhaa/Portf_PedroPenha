@@ -1233,10 +1233,11 @@ form .btn-linkedin{
         .projetos_apresentation{
             width: 100%;
             height: 100%;
-            min-height: 100vh;
+            min-height: 98vh;
             position: relative;
             display: flex;
             background-color: #E0E0E0;
+            overflow-y: hidden;
         }
 
         .slider{
@@ -1244,7 +1245,6 @@ form .btn-linkedin{
             width: 100%;
             overflow: hidden;
             display: flex;
-            height: 100%;     
             position: relative;
             top: -20px;
         }
@@ -1254,9 +1254,9 @@ form .btn-linkedin{
             max-width: 100vw;
             align-items: center;
             justify-content: center;
-            padding: 50px 0;
-            background-color: violet;
+            height: 100%;
             overflow-y: hidden;
+
         }
 
         .slide{
@@ -1280,6 +1280,7 @@ form .btn-linkedin{
             justify-content: center;
             margin-left: 20px;
             margin-bottom: 15px;
+            margin-top: 255px;
 
         }
         
@@ -1305,11 +1306,14 @@ form .btn-linkedin{
             height: 100%;
             overflow-y: hidden;
             max-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .slide .conteudo h1{  
               font-weight: 700;
-              margin: 0 0 10px 20px;
+              margin: 10px 0 10px 20px;
               display: flex;
               text-align: left;
               height: 100%;
@@ -1324,7 +1328,7 @@ form .btn-linkedin{
             text-align: justify;
             margin: 10px 0 20px 0;
             height: 30vh;
-            padding: 0;
+            padding: 0 20px;
             order: 3;
         }
 
@@ -1345,6 +1349,7 @@ form .btn-linkedin{
         }
 
         .icons-slide ul {
+            margin-top: 20px;
             width: 100%;
             gap: 5px;
             height: 50px;
@@ -1378,7 +1383,10 @@ form .btn-linkedin{
        }
 
        .slide .conteudo p {
-            width: 100%;
+            width: 90%;
+            max-width: 100vw;
+             left: -11px;
+             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1399,8 +1407,10 @@ form .btn-linkedin{
         .controle-slide{
             margin: 0 auto;
             width: 100%;
+            height: 50px;
             max-width: 66vw;
-            margin-top: -275px;
+            position: relative;
+            bottom: 25px;
             text-align: center;
         }
 
