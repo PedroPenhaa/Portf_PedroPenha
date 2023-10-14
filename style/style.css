@@ -818,6 +818,10 @@ span {
     max-width: 50%;
 }
 
+.contact-right h1{
+    display: none;
+}
+
 .contact-left p{
     margin-top: 30px;
 }
@@ -1419,8 +1423,7 @@ form .btn-linkedin{
 
 
         #contact{
-            width: 100%;
-            max-width: 100vw;
+       
         }
 
         .row{
@@ -1428,6 +1431,25 @@ form .btn-linkedin{
         }
 
 
+        .contact-left{
+            order: 2;
+            width: 100%;
+            max-width: 100vw;
+        }
+        
+        .contact-right{
+            order: 1;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .contact-right h1{
+            display: flex;
+        }
+
+        .contact-left h1{
+            display: none;
+        }
 
 
 
