@@ -251,11 +251,11 @@
                     <div class="slides">
                         <!--Slide 1-->
                         <div class="slide first  active-slide">
-                            <div class="img">
+                            <div class="img img-proj" >
                                 <img src="./img/work1.jpg.png" alt="">
                             </div>   
                             
-                            <div class="conteudo">
+                            <div class="conteudo conteudo-proj">
 
                                <h1>Aplicativo CDPC</h1>
 
@@ -288,11 +288,11 @@
                         <!--Slide 2-->
                         <div class="slide ">
                     
-                            <div class="img">
+                            <div class="img img-proj" >
                                 <img src="./img/work2.png" alt="">
                             </div>   
                             
-                            <div class="conteudo">
+                            <div class="conteudo conteudo-proj">
                                 <h1>Lorem Ipsum</h1>
 
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
@@ -323,11 +323,11 @@
 
                         <!--Slide 3-->
                         <div class="slide">
-                            <div class="img">
+                            <div class="img img-proj" >
                                 <img src="./img/work3.png" alt="">
                             </div>   
                             
-                            <div class="conteudo">
+                            <div class="conteudo conteudo-proj">
                                 <h1>Simply dummy</h1>
 
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
@@ -358,11 +358,11 @@
 
                          <!--Slide 4-->
                         <div class="slide">
-                            <div class="img">
+                            <div class="img img-proj" >
                                 <img src="./img/work4.png" alt="">
                             </div>   
                             
-                            <div class="conteudo">
+                            <div class="conteudo conteudo-proj">
                                 <h1>Electronic typesetting</h1>
 
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
@@ -391,40 +391,6 @@
                             </div> 
                         </div>
 
-                         <!--Slide 3-->
-                         <div class="slide">
-                            <div class="img">
-                                <img src="./img/work3.png" alt="">
-                            </div>   
-                            
-                            <div class="conteudo">
-                                <h1>Simply dummy</h1>
-
-                                <p>Lor.</p>
-                               
-                                <div class="icons-slide">
-                                    <ul>
-                                        <li>
-                                            <i class="fab fa-html5"></i>
-                                            <span>HTML5</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-css3"></i>
-                                            <span>CSS3</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-js"></i>
-                                            <span>JS</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <a href="#">
-                                    <p>Ver Projeto <i class="far fa-hand-pointer"></i>
-                                    </p>
-                                </a>
-                            </div>   
-                        </div>
                     </div>
                 </div>
             
@@ -441,20 +407,18 @@
             <div class="row">
                   <div class="contact-left">
                         <h1 class="sub-title">Contate-me</h1>
-                    <!--<p><i class="fas fa-paper-plane"></i> pedro.eng98@gmail.com</p>
-                        <p><i class="fas fa-phone-square-alt"></i>(35)999028971</p>
-                    -->  
+                  
+                        <p>
+                            Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.
+                        </p>
+
                         <div class="social-icons">
                             <a href=""><i class="fab fa-facebook"></i></a>
                             <a href=""><i class="fa-brands fa-github"></i></a>
                             <a href=""><i class="fab fa-instagram"></i></a>
                             <a href=""><i class="fab fa-linkedin"></i></a>
                         </div>
-                    <!--
-                        <a href="./img/Pedro Afonso da Costa Penha.pdf" download>
-                            <button class="link-home">Download CV</button>
-                        </a>
-                    -->    
+                
                   </div>
                   <div class="contact-right">
                     <h1 class="sub-title">Contate-me</h1>
@@ -548,7 +512,7 @@
 
         var currentSlide = 0;
         var totalSlides = 4;
-        var slideInterval = 9000;
+        //var slideInterval = 9000;
 
         function updateSlideCounter() {
             slideCounter.textContent = (currentSlide + 1) + '/' + totalSlides;
@@ -763,65 +727,37 @@
 
 <!-- Abre Menu -->
 
-<script>
-   var ul = document.querySelector('nav ul');
-var menuBtn = document.querySelector('.menu-btn i');
+    <script>
+    var ul = document.querySelector('nav ul');
+    var menuBtn = document.querySelector('.menu-btn i');
 
-function menuShow() {
-    if (ul.classList.contains('open')) {
-        ul.classList.remove('open');
-        menuBtn.classList.remove('fa-times');
-        menuBtn.classList.add('fa-bars');
-    } else {
-        ul.classList.add('open');
-        menuBtn.classList.remove('fa-bars');
-        menuBtn.classList.add('fa-times');
+    function menuShow() {
+        if (ul.classList.contains('open')) {
+            ul.classList.remove('open');
+            menuBtn.classList.remove('fa-times');
+            menuBtn.classList.add('fa-bars');
+        } else {
+            ul.classList.add('open');
+            menuBtn.classList.remove('fa-bars');
+            menuBtn.classList.add('fa-times');
+        }
     }
-}
-</script>
+    </script>
 
 <!-- Scroll Navegação -->
-<!-- Scroll Navegação -->
-<script>
+    <script>
     const header = document.getElementById('js-header');
     
-    // Inicialize o ScrollReveal para dispositivos com largura maior que 480px
-    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
-      origin: 'left',
-      distance: '100px',
-      duration: 2500,
-      delay: 200,
-      reset: true,
-      mobile: false,
-      useDelay: 'always',
-    });
-    /*
-    ScrollReveal().reveal('.cabecalho-compe p, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
-      origin: 'right',
-      distance: '100px',
-      duration: 2500,
-      delay: 200,
-      reset: true,
-      mobile: false,
-      useDelay: 'always',
-    });
 
-    ScrollReveal().reveal(' .sec-compe, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
-      origin: 'bottom',
-      distance: '100px',
-      duration: 2500,
-      delay: 200,
-      reset: true,
-      mobile: false,
-      useDelay: 'always',
-    });
+/*
+ ,
+  .projetos_apresentation
 */
 
-
     // Inicialize o ScrollReveal para dispositivos com largura menor ou igual a 480px
-    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-compe p, .sec-compe, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
+    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .cabecalho-proj', {
       origin: 'left',
-      distance: '100px',
+      distance: '200px',
       duration: 2500,
       delay: 200,
       reset: true,
@@ -829,6 +765,43 @@ function menuShow() {
       useDelay: 'always',
     });
     
+    // Inicialize o ScrollReveal para dispositivos com largura menor ou igual a 480px
+    ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progress-container', {
+        origin: 'right',
+        distance: '100px',
+        duration: 2500,
+        delay: 200,
+        reset: true,
+        mobile: true, // Ative para dispositivos móveis
+        useDelay: 'always',
+    });
+
+    ScrollReveal().reveal('.sec-compe li, .img-proj ', {
+        origin: 'bottom',
+        distance: '100px',
+        duration: 2500,
+        delay: 200,
+        reset: true,
+        mobile: true, // Ative para dispositivos móveis
+        useDelay: 'always',
+    });
+
+    ScrollReveal().reveal(' ', {
+        origin: 'top',
+        distance: '100px',
+        duration: 2500,
+        delay: 200,
+        reset: true,
+        mobile: true, // Ative para dispositivos móveis
+        useDelay: 'always',
+    });
+
+
+
+
+
+
+
     </script>
     
 

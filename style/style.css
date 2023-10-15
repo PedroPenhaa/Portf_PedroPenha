@@ -889,9 +889,9 @@ span {
 
 #contact{
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     padding: 20px;
-    background-color: #E0E0E0  ;
+    background-color: #FFFFFF  ;
     display: flex; 
     flex-direction: column;    
     justify-content: center;
@@ -909,19 +909,31 @@ span {
 }
 
 .contact-left{
-    max-width: 40%;
+    width: 100%;
+    max-width: 30vw;
+    height: 100%;
 }
 
 .contact-right{
-    max-width: 50%;
+    width: 100%;
+    max-width: 32vw;
 }
 
 .contact-right h1{
     display: none;
 }
 
+.contact-right p{
+    display: none;
+}
+
+.contact-left h1{
+    margin-top: 65px;
+}
+
 .contact-left p{
-    margin-top: 30px;
+    margin-top: 50px;
+    text-align: justify;
 }
 
 .contact-left p i {
@@ -929,14 +941,17 @@ span {
 }
 
 .social-icons{
-    margin-top:30px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: #0B7285;
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -948,6 +963,7 @@ span {
 
 .contact-right form{
     width: 100%;
+    padding-top: 140px;
 }
 
 .contact-right .social-icons{
@@ -960,8 +976,8 @@ form input, form textarea{
     outline: none;
     background: #F0F0F0  ;
     padding: 15px;
-    margin: 15px 0;
-    color: #fff;
+    margin: 0 0 15px 0;
+    color: #0B7285;
     font-size: 18px;
     border-radius: 6px;
 }
@@ -970,11 +986,15 @@ form input, form textarea{
     background-color: #0B7285; 
     color: #fff; 
     border: none;
-    padding: 10px 20px; 
-    border-radius: 5px; 
+    width: 100%;
+    max-width: 145px;
+    padding: 15px 20px; 
+    border-radius: 10px; 
     font-size: 16px; 
+    left: -50px;
+    position: relative;
     cursor: pointer; 
-    margin: 30px 0 50px 0;
+    margin: 40px 0 50px 0;
 }
 
 .btn-enviar:hover {
@@ -1695,6 +1715,14 @@ form input, form textarea{
 
         .contact-left .social-icons{
             display:none;
+        }
+
+        .contact-left p{
+            display: none;
+        }
+
+        .contact-right p{
+            display: flex;
         }
 
         .contact-right .social-icons{
