@@ -433,7 +433,7 @@
                     <p>
                         Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.
                     </p>
-                    <form id="contact-form">
+                    <form id="contact-form" class="contact-form">
                         <input type="text" name="Name" placeholder="Seu nome" required>
                         <input type="text" name="email" placeholder="Seu email" required>
                         <input type="text" name="Phone" placeholder="Seu celular" required>
@@ -755,7 +755,7 @@
 */
 
     // Inicialize o ScrollReveal para dispositivos com largura menor ou igual a 480px
-    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .cabecalho-proj', {
+    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .cabecalho-proj,.contact-left h1, .contact-right h1, .contact-left p, .contact-right p ', {
       origin: 'left',
       distance: '200px',
       duration: 2500,
@@ -766,7 +766,7 @@
     });
     
     // Inicialize o ScrollReveal para dispositivos com largura menor ou igual a 480px
-    ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progress-container', {
+    ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progress-container, .contact-form', {
         origin: 'right',
         distance: '100px',
         duration: 2500,
@@ -776,7 +776,7 @@
         useDelay: 'always',
     });
 
-    ScrollReveal().reveal('.sec-compe li, .img-proj ', {
+    ScrollReveal().reveal('.sec-compe li, .img-proj, .social-icons ', {
         origin: 'bottom',
         distance: '100px',
         duration: 2500,
