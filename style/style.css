@@ -1408,6 +1408,7 @@ form input, form textarea{
             justify-content: center;
             flex-direction: column;
             width: 100%;
+            overflow-y: hidden;
         }
         
         .sec-compe ul li {
