@@ -1108,14 +1108,18 @@ form input, form textarea{
         top: 80px;
         left: -100%;
         background: #E0E0E0;
-        height: 60vh;
         border: 1px solid #78797a;
-        border-radius: 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         width: 100%;
         max-width: 100vw;
-        text-align: center;
-        display: block;
+        display: flex;
         transition: all 1s ease;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
     }
 
 
@@ -1125,33 +1129,46 @@ form input, form textarea{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 23px;
+        font-size: 16px;
         color: #1F2F46;
         transition: all 0.3s ease;
+        margin-top: 50px;
     }
     
     nav ul.open{
         left: 0;
+        gap: 0;
+        margin: 0;
+        padding: 0;
     }
+
     nav ul li{
         width: 100%;
-        margin: 50px 0;
-    }
+        max-width: 100vw;
+        margin: 0 auto;    
+    } 
     nav ul li a {
         font-size: 23px;
+        width: 100%;
+        max-width: 100vw;
         color: #1F2F46;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
     }
-    nav ul li a.active,
-    nav ul li a:hover{
-        background: none;
-        color: #1F2F46;
-        
-    }  
+    nav ul li.active,
+    nav ul li:hover{
+        background: #0B7285;
+        color: white;
+        width: 100%;
+        max-width: 100vw;
+    } 
     
    
 
     .language-selector{
-        margin-top: 20px;
+        margin: 20px 0;
         width: 100%;
         max-width: 100vw;
         display: flex;
