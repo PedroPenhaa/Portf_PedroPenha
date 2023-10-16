@@ -135,15 +135,6 @@ header nav ul li a:hover{
 }
 
 
-#menu-dropdown {
-    display: none;
-}
-
-/* Estilo para mostrar o menu quando a classe show-menu está presente */
-#menu-dropdown.show-menu {
-    display: block;
-    height: 200px;
-}
 
 /* -------------------------------- home -------------------------------- */
 
