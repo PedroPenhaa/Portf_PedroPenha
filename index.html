@@ -13,13 +13,14 @@
     
     <div class="container">
 
+    <!--    
         <header>
             <nav>
                 <a href="#home" class="logo">
                     <img src="./img/logo.png">
                 </a>
                 <div class="menu-select">
-                    <ul>
+                    <ul class="nav-list">
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#projects">Projetos</a></li>
                         <li><a href="#contact">Contato</a></li>
@@ -29,13 +30,38 @@
                         <a href="#" class="language-option"><img src="./img/usa-flag.png" alt="English"></a>
                     </div>
                 </div>
-                <div class="menu-icon" id="menu-icon">
+                <div class="menu-icon  mobile-menu" id="menu-icon">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
             </nav>
         </header>
+    -->
+
+    <header>
+        <nav>
+            <div class="logo">  <img src="./img/logo.png"> </div>
+    
+            <div class="menu-btn">
+                <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+            </div>
+    
+            <ul>
+                <li><a href="#sobre"  class="active">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+
+                <div class="language-selector">
+                    <a href="#" class="language-option"><img src="./img/brazil-flag.png" alt="Português"></a>
+                    <a href="#" class="language-option"><img src="./img/usa-flag.png" alt="English"></a>
+                </div>
+            </ul>
+        </nav>
+      </header>
+
+
+
 
         <section id="home">
             <div class="descri">
@@ -737,15 +763,16 @@
 <!-- Abre Menu -->
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var menuIcon = document.getElementById('menu-icon');
-    var menuSelect = document.querySelector('.menu-select');
+   var ul = document.querySelector('nav ul');
+var menuBtn = document.querySelector('.menu-btn i');
 
-    menuIcon.addEventListener('click', function() {
-        menuSelect.classList.toggle('show-menu');
-    });
-});
-
+function menuShow() {
+    if (ul.classList.contains('open')) {
+        ul.classList.remove('open');
+    }else{
+        ul.classList.add('open');
+    }
+}
 </script>
 
 
