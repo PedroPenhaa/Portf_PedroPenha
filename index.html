@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pedro Penha | Front-End Developer</title>
 </head>
-<body>
+
 
     
     <div class="container" >
@@ -816,7 +816,7 @@ let sections = document.querySelectorAll('section');
 window.addEventListener('scroll', () => {
     sections.forEach(section => {
         let top = window.scrollY;
-        let offset = section.offsetTop - 80;
+        let offset = section.offsetTop - 88;
         let heightSection = section.offsetHeight;
         let idSection = section.getAttribute('id');
 
@@ -827,11 +827,7 @@ window.addEventListener('scroll', () => {
             
             document.querySelector(`header nav a[href*='${idSection}']`).classList.add('active');
 
-            // Scroll suave para a seção
-            window.scrollTo({
-                top: offset,
-                behavior: 'smooth'
-            });
+           
         }
     });
 });

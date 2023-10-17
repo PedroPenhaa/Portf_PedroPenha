@@ -12,11 +12,6 @@ body{
   overflow-x: hidden;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-
 .container{
     width: 100%;
     max-width: 100v;
@@ -42,114 +37,10 @@ html {
     cursor: pointer;
 }
 
-
-/* Animações */ 
-
-/* Classe para animação da esquerda para a direita */
-/* Classe para animação de entrada da esquerda */
-/* Classe para animação de entrada da esquerda */
-
-  
-
-
-
-/*
-header {
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
+section{
     width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1000000000000000000000;
+    max-width: 100vw;
 }
-
-.menu-icon {
-    display: none; 
-    cursor: pointer;
-    position: relative;
-    right: 20px;
-}
-
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-
-.menu-open .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-open .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-open .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-header nav {
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-weight: bold;
-}
-
-header nav ul{
-    align-items: center;
-    justify-content: center;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #1F2F46;
-}
-
-header nav ul li a:hover{
-    color: #0B7285; 
-}
-
-.logo img {
-    width: 222px; 
-    height: auto;
-    vertical-align: middle;
-    margin-left: 50px;
-}
-
-.menu-select{
-    display: flex;
-    flex-direction: row;
-    gap: 80px;
-}
-
-.language-selector {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-}
-
-.language-option img {
-    margin-left: 10px;
-    display: inline-block;
-    max-width: 30px; 
-    height: auto;
-    transition: transform .3s;
-}
-
-.language-option img:hover {
-    transform: scale(1.2);
-}
-*/
 
 header {
     background-color: #FFFFFF;
@@ -162,7 +53,6 @@ header {
     top: 0;
     z-index: 1000000000000000000000;
 }
-
 
 nav{
     display: flex;
@@ -180,7 +70,6 @@ nav .logo{
     font-size: 35px;
     font-weight: 600;
 }
-
 
 .logo img {
     width: 222px; 
@@ -203,7 +92,7 @@ nav ul p{
 }
 
 nav ul li a:last-child {
-    margin-right: 40px; /* Ajuste o valor da margem conforme necessário */
+    margin-right: 40px; 
 }
 
 nav ul li a {
@@ -216,7 +105,6 @@ nav ul li a {
     transition: all 0.5s ease;
 }
 
-/* Estilos para links ativos e em hover */
 nav ul li a.active,
 nav ul li a:hover {
     padding: 15px 10px;
@@ -229,33 +117,19 @@ nav ul li a:hover {
     bottom: 0;
     border-radius: 5px;
     position: relative;
-    transition: all 0.8s ease; /* Use "all" para abranger todas as propriedades que mudam */
+    transition: all 0.8s ease; 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 nav .menu-btn i{
     cursor: pointer;
     display: none;
 }
 
-
 .language-selector {
     display: flex;
     align-items: center;
     margin-right: 30px;
 }
-
-
 
 .language-option img {
     margin-left: 10px;
@@ -276,13 +150,14 @@ nav .menu-btn i{
     display: flex;
     background-color: #FFFFFF;
     min-height:100vh;
-    width: 100%;
+    width: 110%;
+    max-width: 110vw;
 }
 
 .descri{
     display: flex;
     flex-direction: column;
-    margin-left: 8%;
+    margin-left: 230px;
     margin-top: 15%;
     min-height: 100%;
 }
@@ -296,9 +171,9 @@ span {
     color: #1F2F46;
     margin-top: 45px;
     margin-bottom: 10px;
-    overflow: hidden; /* Para esconder o texto que ainda não foi revelado */
-    white-space: nowrap; /* Para manter o texto em uma única linha */
-    animation: typing 2s steps(30) forwards; /* Animação de máquina de escrever */
+    overflow: hidden; 
+    white-space: nowrap;
+    animation: typing 2s steps(30) forwards;
 }
 
 .descri h3, .descri p {
@@ -318,14 +193,14 @@ span {
     color: #555;
     line-height: 22px;
     white-space: pre-wrap; 
-    animation: slideInLeft 1.2s ease-in-out 0.5s forwards; /* Inicia a animação do parágrafo após 0.5s */
+    animation: slideInLeft 1.2s ease-in-out 0.5s forwards; 
 }
 
 .btn-home-link{
     display: flex;
     gap: 15px;
     padding: 0 10px;
-    animation: slideInLeft 1.6s ease-in-out 0.5s forwards; /* Inicia a animação do parágrafo após 0.5s */
+    animation: slideInLeft 1.6s ease-in-out 0.5s forwards; 
 }
 
 .link-home{
@@ -384,7 +259,7 @@ span {
     bottom: 0;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
-    opacity: 0; /* Inicialmente, as imagens estão invisíveis */
+    opacity: 0;
 }
 
 .shape, .img_pedro {
@@ -399,7 +274,7 @@ span {
     width: 100%;
     height: auto;
     animation: slideFromRightShape 1.5s ease-in-out;
-    animation-fill-mode: forwards; /* Mantém o estado final da animação */
+    animation-fill-mode: forwards; 
 }
 
 .images .img_pedro {
@@ -407,11 +282,11 @@ span {
     width: 105%;
     height: auto;
     height: auto;
-    margin-left: 0; /* Defina a posição inicial do margin-left */
-    transition: margin-left 0.5s ease-in-out; /* Transição suave para o margin-left */
+    margin-left: 0; 
+    transition: margin-left 0.5s ease-in-out; 
     animation: slideFromRightProfile 1.5s ease-in-out;
     animation-delay: 1s;
-    animation-fill-mode: forwards; /* Mantém o estado final da animação */
+    animation-fill-mode: forwards; 
 
 }
 
@@ -423,28 +298,27 @@ span {
 
 .images:hover .img_pedro {
     margin-left: 5%;
-   /* animation-delay: 1s; */
 }
 
 @keyframes slideFromRightShape {
     from {
         left: 100%;
-        opacity: 0; /* Mantém a opacidade inicial durante a animação */
+        opacity: 0;
     }
     to {
         left: 45%;
-        opacity: 1; /* Torna a imagem "shape1" visível no final da animação */
+        opacity: 1;
     }
 }
 
 @keyframes slideFromRightProfile {
     from {
         left: 100%;
-        opacity: 0; /* Mantém a opacidade inicial durante a animação */
+        opacity: 0; 
     }
     to {
         left: 45%;
-        opacity: 1; /* Torna a imagem "profile" visível no final da animação */
+        opacity: 1; 
     }
 }
 
@@ -471,9 +345,11 @@ span {
 /* ------------------ HardSkills ------------------ */ 
 
 #competencia{
-    width: 100%;
-    min-height:100vh;
+    width: 110%;
+    max-width: 110vw;
     padding: 20px;
+    height: 100%;
+    min-height:110vh;
     display: flex;
     flex-direction: column;
     background-color: #E0E0E0;   
@@ -486,6 +362,11 @@ span {
     margin-top: 10px;
     justify-content: space-between;
     align-items: center;
+    width: 78%;
+    max-width: 110vw;
+    padding: 20px;
+	margin-left: 160px;
+
 }
 
 .cabecalho-compe h1{
@@ -527,9 +408,13 @@ span {
     list-style: none;
     gap: 50px;
     justify-content: center;
+    width: 84%;
+    max-width: 110vw;
+    margin-left: 95px;
 }
 
 .sec-compe ul li{
+    width: 100%;
     max-width: 260px;
     background-color: #d0d0d0;
     border-radius: 20px;
@@ -571,8 +456,8 @@ span {
 /* ------------------ Sobre ------------------ */ 
 
 #sobre{
-    width: 100%;
-    min-height: 80vh;
+    width: 110%;
+    max-width: 110vw;
     padding: 20px;
     background-color: #FFFFFF  ;
     display: flex; 
@@ -595,17 +480,23 @@ span {
     font-size: 50px;
     font-weight: 600;
     color: #1F2F46;
+    margin-left: 50px;
 }
 
 .row-s{
     display: flex;
     gap: 80px;
     flex-direction: row;
-    width: 100%;
+ 
     justify-content: center;
     padding: 0 60px;
     margin-top: 20px;
     margin-bottom: 50px;
+
+    width: 100%;
+    max-width: 100vw;
+    margin-left: 4%;
+
 }
 
 .img-sobre{
@@ -622,7 +513,6 @@ span {
 }
 
 .img-sobre img{
-  /*  filter: brightness(80%);  */
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -630,7 +520,7 @@ span {
 }
 
 .img-sobre:hover img {
-    transform: scale(1.05); /* Aumentando a escala da imagem quando o mouse passar por cima */
+    transform: scale(1.05); 
 }
 
 .sobre-col-2{
@@ -728,7 +618,8 @@ span {
 
 #projects{
     width: 100%;
-    height: 90vh;
+    height: 100%;
+    min-height: 100vh;
     padding: 20px;
     background-color: #E0E0E0  ;
     display: flex; 
@@ -738,14 +629,16 @@ span {
 }
 
 .cabecalho-proj{
+    position: relative;
+    top: -30px;
     display: flex;
     height: 100%;
     max-height: 10vh;
     padding: 0 90px;
-    margin-top: 90px;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-left: 50px;
 }
 
 .cabecalho-proj h1{
@@ -772,6 +665,8 @@ span {
     overflow: hidden;
     display: flex;
     align-items: center;  
+    position: relative;
+    top: -100px;
 
  /*   border: 1px solid black; */
 }
@@ -895,7 +790,8 @@ span {
 }
 
 .controle-slide{
-    margin-top: -40px;
+    margin-top: -95px;
+    margin-left: 20px;
     display: flex;
     flex-direction: row;
     gap: 50px;
