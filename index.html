@@ -763,7 +763,7 @@
 <script>
 const header = document.getElementById('js-header');
 
-ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .cabecalho-proj,.contact-left h1, .contact-right h1, .contact-left p, .contact-right p, .social-icons', {
+ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .img-proj, .cabecalho-proj,.contact-left h1, .contact-right h1, .contact-left p, .contact-right p, .social-icons', {
   origin: 'left',
   distance: '200px',
   duration: 2500,
@@ -773,7 +773,7 @@ ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .cabec
   useDelay: 'always',
 });
 
-ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progress-container, .contact-form', {
+ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progress-container, .contact-form, .controle-slide', {
   origin: 'right',
   distance: '200px',
   duration: 2500,
@@ -783,7 +783,7 @@ ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progr
   useDelay: 'always',
 });
 
-ScrollReveal().reveal('.sec-compe li, .img-proj ', {
+ScrollReveal().reveal('.sec-compe li ', {
   origin: 'bottom',
   distance: '200px',
   duration: 2500,
@@ -841,7 +841,7 @@ window.addEventListener('scroll', () => {
 
         const section = document.querySelector(href)
 
-        let topSection = section.offsetTop - 80;
+        let topSection = section.offsetTop - 30;
 
         window.scrollTo({
             top: topSection,
