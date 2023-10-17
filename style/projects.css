@@ -82,7 +82,7 @@ header h1 {
     padding: 20px 0;
     border-bottom: 1px solid #D3D3D3;
     padding-bottom: 50px;
-    background-color: #E0E0E0;
+  /*  background-color: #E0E0E0; */
 }
 
 .image-gallery{
@@ -141,11 +141,12 @@ iframe{
 
 .project-details {
     padding: 20px 0;
-    background-color: #FFFFFF;
+   /* background-color: #FFFFFF; */
 }
 
 .project-details h2 {
     font-size: 24px;
+    display: none;
 }
 
 .project-details ul {
@@ -168,8 +169,13 @@ iframe{
 }
 
 .project-details ul li ul li{ 
-    padding: 0 20px;
+    padding:20px;
     border-right: 1px solid #D3D3D3;
+}
+
+.project-details ul li ul li:hover{ 
+    background-color: cadetblue;
+    border-right: 0px
 }
 
 .project-details li {
