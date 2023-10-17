@@ -66,7 +66,7 @@
 
             <div class="images">
                 <img src="./img/shape1.png" alt="" class="shape">
-                <img src="./img/profile.png" alt="" class="img_pedro">
+                <img src="./img/profile.png" alt="" class="img_pedro" >
             </div>
         </section>
 
@@ -942,50 +942,60 @@
 
             }else{
 
+               
                 if (currentLanguage === 'en') {
-                    // ----- Header
-                    menuSobre.innerHTML = "About";
-                    menuProjetos.innerHTML = "Projects";
-                    menuContato.innerHTML = "Contact";
-                    menuSelecioneIdioma.innerHTML = "Select the language:";
-                    // ----- Sec1
-                    h1Home.innerHTML = "Hello, I am <span>Pedro Afonso</span>";
-                    h3Home.innerHTML = "FrontEnd Development Specialist";
-                    textElement.innerHTML = "This is my official portfolio website to showcase all the details and work experiences in web development.";
-                    // ----- Sec2 
-                    h1Competencia.innerHTML = "My Differentiators";
-                    pCompetencia.innerHTML = "<strong>My commitment</strong> is to deliver high-quality services with speed and exceptional performance in converting <strong>designs into web pages.</strong>";
-                    h3competitle1.innerHTML = "Modern Web Development";
-                    h3competitle2.innerHTML = "Performance Optimization";
-                    h3competitle3.innerHTML = "Responsive Mobile Applications";
-                    h3competitle4.innerHTML = "Advanced Tools";
-                    h3competitle5.innerHTML = "Seamless Integration";
-                    h3competitle6.innerHTML = "Creative Thinking";
-                    pcompe1.innerHTML = "Creating web applications with the latest and most practical development technologies.";
-                    pcompe2.innerHTML = "Improving site speed and performance for a superior user experience.";
-                    pcompe3.innerHTML = "Developing mobile applications that adapt seamlessly to different devices and screen sizes.";
-                    pcompe4.innerHTML = "Utilizing the latest development tools for efficiency and quality.";
-                    pcompe5.innerHTML = "Creating integrated web solutions that streamline processes and enhance productivity.";
-                    pcompe6.innerHTML = "Addressing complex problems with innovative solutions and creativity.";
-                    // ----- Sec3
-                    h1Sobre.innerHTML = "About";
-                    pSobre1.innerHTML = "I am a professional with a background in computer science, and I am currently pursuing a degree in Computer Engineering. I began my professional journey in user support and assistance, where I developed essential communication skills. Over time, this path led me into the world of web application development and ERP system support.";
-                    pSobre2.innerHTML = "My experiences in the programming field have turned this activity into my favorite hobby. Additionally, I have gained experience in mobile development and am committed to expanding my knowledge as a full-stack developer. I am always seeking new courses and projects to enhance my skills and apply the latest programming methodologies in the market.";
-                    // ----- Sec4
-                    h1Projetos.innerHTML = "Projects";
-                    // ----- Sec5
-                    h1contato.innerHTML = "Contact me";
-                    h1contato2.innerHTML = "Contact me";
-                    pContato.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
-                    pContato2.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
-                    document.getElementById('nameinput').setAttribute('placeholder', 'Your name');
-                    document.getElementById('emailinput').setAttribute('placeholder', 'Your email');
-                    document.getElementById('phoneinput').setAttribute('placeholder', 'Your phone');
-                    document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
-                    btnenviar.innerHTML = "Send";
-                    // ----- Copyright
-                    pcopyrigth.innerHTML = "Copyright 2023 - All rights reserved to Pedro Penha";
+                // ----- Header
+                menuSobre.innerHTML = "About";
+                menuProjetos.innerHTML = "Projects";
+                menuContato.innerHTML = "Contact";
+                menuSelecioneIdioma.innerHTML = "Select the language:";
+                // ----- Sec1
+                h1Home.innerHTML = "Hello, I am <span>Pedro Afonso</span>";
+                h3Home.innerHTML = "FrontEnd Development Specialist";
+                textElement.innerHTML = "This is my official portfolio website to showcase all the details and work experiences in web development.";
+                // ----- Sec2 
+                h1Competencia.innerHTML = "My Differentiators";
+                pCompetencia.innerHTML = "<strong>My commitment</strong> is to deliver high-quality services with speed and exceptional performance in converting <strong>designs into web pages.</strong>";
+                h3competitle1.innerHTML = "Modern Web Development";
+                h3competitle2.innerHTML = "Performance Optimization";
+                h3competitle3.innerHTML = "Responsive Mobile Applications";
+                h3competitle4.innerHTML = "Advanced Tools";
+                h3competitle5.innerHTML = "Seamless Integration";
+                h3competitle6.innerHTML = "Creative Thinking";
+                pcompe1.innerHTML = "Creating web applications with the latest and most practical development technologies.";
+                pcompe2.innerHTML = "Improving site speed and performance for a superior user experience.";
+                pcompe3.innerHTML = "Developing mobile applications that adapt seamlessly to different devices and screen sizes.";
+                pcompe4.innerHTML = "Utilizing the latest development tools for efficiency and quality.";
+                pcompe5.innerHTML = "Creating integrated web solutions that streamline processes and enhance productivity.";
+                pcompe6.innerHTML = "Addressing complex problems with innovative solutions and creativity.";
+                // ----- Sec3
+                h1Sobre.innerHTML = "About";
+                pSobre1.innerHTML = "I am a professional with a background in computer science, and I am currently pursuing a degree in Computer Engineering. I began my professional journey in user support and assistance, where I developed essential communication skills. Over time, this path led me into the world of web application development and ERP system support.";
+                pSobre2.innerHTML = "My experiences in the programming field have turned this activity into my favorite hobby. Additionally, I have gained experience in mobile development and am committed to expanding my knowledge as a full-stack developer. I am always seeking new courses and projects to enhance my skills and apply the latest programming methodologies in the market.";
+                // ----- Sec4
+                h1Projetos.innerHTML = "Projects";
 
+                h1cdpc.innerHTML = "Center for Science Outreach and Popularization Mobile App";
+                pcdpc.innerHTML = "Final project for the Web Development Continuing Education course, conducted at the Poços de Caldas campus. The project involved the development of a complete website for a fictional restaurant, Sabor Brasileiro (Brazilian Flavor). This website was meticulously designed to provide an exceptional experience for visitors, focusing on usability, attractive design, and interactivity.";
+                checkcdpc.innerHTML = " Check out the Project";
+
+                h1restauranteSabor.innerHTML = " Brazilian Flavor Restaurant";
+                prestauranteSabor.innerHTML = "Final project for the Web Development Continuing Education course, conducted at the Poços de Caldas campus. The project involved the development of a complete website for a fictional restaurant, Sabor Brasileiro (Brazilian Flavor). This website was meticulously designed to provide an exceptional experience for visitors, focusing on usability, attractive design, and interactivity.";
+                checkrestauranteSabor.innerHTML = " Check out the Project";
+               
+                // ----- Sec5
+                h1contato.innerHTML = "Contact me";
+                h1contato2.innerHTML = "Contact me";
+                pContato.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
+                pContato2.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
+                document.getElementById('nameinput').setAttribute('placeholder', 'Your name');
+                document.getElementById('emailinput').setAttribute('placeholder', 'Your email');
+                document.getElementById('phoneinput').setAttribute('placeholder', 'Your phone');
+                document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
+                btnenviar.innerHTML = "Send";
+                // ----- Copyright
+                pcopyrigth.innerHTML = "Copyright 2023 - All rights reserved to Pedro Penha";
+          
                 } else if (currentLanguage === 'pt') {
                     // ----- Header
                     menuSobre.innerHTML = "Sobre";
@@ -1017,6 +1027,17 @@
                     pSobre2.innerHTML = "Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as mais recentes metodologias de programação do mercado.";
                     // ----- Sec4
                     h1Projetos.innerHTML = "Projetos";
+
+                    h1cdpc.innerHTML = "Aplicativo Centro de Divulgação e Popularização da Ciência";
+                    pcdpc.innerHTML = "Aplicação mobile que atende a demanda do Centro de Divulgação e Popularização da Ciência (CDPC), do Instituto Federal, Campus Poços de Caldas. O projeto teve como intuito disponibilizar Kits portáteis de experimentos na área da ciências da natureza, que são reservador por um aplicativo para professores da rede pública de ensino de Poços de Caldas.";
+                    checkcdpc.innerHTML = "Confira o Projeto";
+
+                    h1restauranteSabor.innerHTML = "Restaurante Sabor Brasileiro";
+                    prestauranteSabor.innerHTML = "Projeto de conclusão do curso FIC de Desenvolvimento Web, realizado no campus de Poços de Caldas. O projeto consistiu no desenvolvimento de um site completo para um restaurante fictício, o Sabor Brasileiro. Este site foi cuidadosamente concebido para proporcionar uma experiência excepcional aos visitantes, com foco na usabilidade, design atraente e interatividade";
+                    checkrestauranteSabor.innerHTML = "Confira o Projeto";
+
+
+
                     // ----- Sec5
                     h1contato.innerHTML = "Contate-me";
                     h1contato2.innerHTML = "Contate-me";
@@ -1029,7 +1050,6 @@
                     btnenviar.innerHTML = "Enviar";
                     // ----- Copyright
                     pcopyrigth.innerHTML = "Copyright 2023 - Todos direitos reservados a Pedro Penha";
-
                 }
             }
 
