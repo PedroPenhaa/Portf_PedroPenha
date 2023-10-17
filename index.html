@@ -833,6 +833,27 @@ ScrollReveal().reveal('.sec-compe li, .img-proj ', {
         })
     })
 
+    function scrollSection(event){
+        event.preventDefault();
+        
+        const href = event.currentTarget.getAttribute('href');
+
+        console.log(href)
+
+        const section = document.querySelector(href)
+
+        let topSection = section.offsetTop - 80;
+
+        window.scrollTo({
+            top: topSection,
+            behavior: 'smooth'
+        })
+    }
+
+    links.forEach(link => {
+        link.addEventListener('click', scrollSection)
+    })
+
 </script>
 
 
