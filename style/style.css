@@ -12,9 +12,14 @@ body{
   overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 .container{
     width: 100%;
-    max-width: 100%;
+    max-width: 100v;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -190,31 +195,53 @@ nav ul{
     list-style: none;
     justify-content: center;
     align-items: center;
+    gap: 25px;
 }
 
 nav ul p{
     display: none;
 }
 
-nav ul li{
-
+nav ul li a:last-child {
+    margin-right: 40px; /* Ajuste o valor da margem conforme necessário */
 }
 
-nav ul li a{
+nav ul li a {
     color: #1F2F46;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
+
+/* Estilos para links ativos e em hover */
 nav ul li a.active,
-nav ul li a:hover{
+nav ul li a:hover {
+    padding: 15px 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #0B7285;
     color: white;
     bottom: 0;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.8s ease; /* Use "all" para abranger todas as propriedades que mudam */
 }
+
+
+
+
+
+
+
+
+
+
+
 
 nav .menu-btn i{
     cursor: pointer;

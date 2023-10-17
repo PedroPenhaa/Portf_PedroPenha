@@ -810,28 +810,31 @@ ScrollReveal().reveal('.sec-compe li, .img-proj ', {
 
 
 <script>
-    let links = document.querySelectorAll('.js-link');
-    let sections = document.querySelectorAll('section');
+   let links = document.querySelectorAll('.js-link');
+let sections = document.querySelectorAll('section');
 
-    window.addEventListener('scroll', () => {
-        sections.forEach(section => {
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 80;
+        let heightSection = section.offsetHeight;
+        let idSection = section.getAttribute('id');
 
-            let top = window.scrollY;
-            let offset = section.offsetTop - 80;
-            let heightSection = section.offsetHeight;
-            let idSection = section.getAttribute('id');
+        if (top >= offset && top < offset + heightSection) {
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.querySelector(`header nav a[href*='${idSection}']`).classList.add('active');
 
-            if(top >= offset && top < offset + heightSection){
-                links.forEach(link => {
-                    link.classList.remove('active');
-
-                    document.querySelector(`header nav a[href*='${idSection}']`).classList.add('active');
-
-                })
-            }
-
-        })
-    })
+            // Scroll suave para a seção
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
     function scrollSection(event){
         event.preventDefault();
