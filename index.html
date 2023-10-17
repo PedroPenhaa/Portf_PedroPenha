@@ -199,7 +199,7 @@
                         </div>   
                         
                         <div class="conteudo-proj">
-                            <h1>Aplicativo Centro de Divulgação e Popularização da Ciência</h1>
+                            <h1 id="h1cdpc">Aplicativo Centro de Divulgação e Popularização da Ciência</h1>
 
                             <div class="icons-slide">
                                 <ul>
@@ -218,9 +218,9 @@
                                 </ul>
                             </div>
 
-                            <p>Aplicação mobile que atende a demanda do Centro de Divulgação e Popularização da Ciência (CDPC), do Instituto Federal, Campus Poços de Caldas. O projeto teve como intuito disponibilizar Kits portáteis de experimentos na área da ciências da natureza, que são reservador por um aplicativo para professores da rede pública de ensino de Poços de Caldas.</p>
+                            <p id="pcdpc">Aplicação mobile que atende a demanda do Centro de Divulgação e Popularização da Ciência (CDPC), do Instituto Federal, Campus Poços de Caldas. O projeto teve como intuito disponibilizar Kits portáteis de experimentos na área da ciências da natureza, que são reservador por um aplicativo para professores da rede pública de ensino de Poços de Caldas.</p>
                         
-                            <a href="cdpc.html" target="_Blank" class="btn-acesso-projeto">
+                            <a href="cdpc.html" target="_Blank" class="btn-acesso-projeto" id="checkcdpc">
                                 <i class="fas fa-external-link-alt"></i> Confira o Projeto
                             </a>
 
@@ -237,7 +237,7 @@
                         </div>   
                         
                         <div class="conteudo-proj">
-                            <h1>Restaurante Sabor Brasileiro</h1>
+                            <h1 id="h1restauranteSabor">Restaurante Sabor Brasileiro</h1>
 
                             <div class="icons-slide">
                                 <ul>
@@ -256,11 +256,11 @@
                                 </ul>
                             </div>
 
-                            <p>
+                            <p id="prestauranteSabor">
                                 Projeto de conclusão do curso FIC de Desenvolvimento Web, realizado no campus de Poços de Caldas. O projeto consistiu no desenvolvimento de um site completo para um restaurante fictício, o "Sabor Brasileiro." Este site foi cuidadosamente concebido para proporcionar uma experiência excepcional aos visitantes, com foco na usabilidade, design atraente e interatividade
                             </p>
                         
-                            <a href="./saborBrasileiro.html" target="_Blank" class="btn-acesso-projeto">
+                            <a href="./saborBrasileiro.html" target="_Blank" class="btn-acesso-projeto" id="checkrestauranteSabor">
                                 <i class="fas fa-external-link-alt"></i> Confira o Projeto
                             </a>
 
@@ -808,6 +808,16 @@
         // ---------------------------------------------- Section Projetos ---------------------------------------------- 
         const h1Projetos = document.getElementById('h1Projetos');
 
+        const h1cdpc = document.getElementById('h1cdpc');
+        const pcdpc = document.getElementById('pcdpc');
+        const checkcdpc = document.getElementById('checkcdpc');
+        
+        const h1restauranteSabor = document.getElementById('h1restauranteSabor');
+        const prestauranteSabor = document.getElementById('prestauranteSabor');
+        const checkrestauranteSabor = document.getElementById('checkrestauranteSabor');
+
+
+
         // ---------------------------------------------- Section Contato ---------------------------------------------- 
         const h1contato = document.getElementById('h1contato');
         const h1contato2 = document.getElementById('h1contato2');
@@ -852,6 +862,15 @@
                 pSobre2.innerHTML = "My experiences in the programming field have turned this activity into my favorite hobby. Additionally, I have gained experience in mobile development and am committed to expanding my knowledge as a full-stack developer. I am always seeking new courses and projects to enhance my skills and apply the latest programming methodologies in the market.";
                 // ----- Sec4
                 h1Projetos.innerHTML = "Projects";
+
+                h1cdpc.innerHTML = "Center for Science Outreach and Popularization Mobile App";
+                pcdpc.innerHTML = "Final project for the Web Development Continuing Education course, conducted at the Poços de Caldas campus. The project involved the development of a complete website for a fictional restaurant, Sabor Brasileiro (Brazilian Flavor). This website was meticulously designed to provide an exceptional experience for visitors, focusing on usability, attractive design, and interactivity.";
+                checkcdpc.innerHTML = " Check out the Project";
+
+                h1restauranteSabor.innerHTML = " Brazilian Flavor Restaurant";
+                prestauranteSabor.innerHTML = "Final project for the Web Development Continuing Education course, conducted at the Poços de Caldas campus. The project involved the development of a complete website for a fictional restaurant, Sabor Brasileiro (Brazilian Flavor). This website was meticulously designed to provide an exceptional experience for visitors, focusing on usability, attractive design, and interactivity.";
+                checkrestauranteSabor.innerHTML = " Check out the Project";
+               
                 // ----- Sec5
                 h1contato.innerHTML = "Contact me";
                 h1contato2.innerHTML = "Contact me";
@@ -896,6 +915,17 @@
                     pSobre2.innerHTML = "Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as mais recentes metodologias de programação do mercado.";
                     // ----- Sec4
                     h1Projetos.innerHTML = "Projetos";
+
+                    h1cdpc.innerHTML = "Aplicativo Centro de Divulgação e Popularização da Ciência";
+                    pcdpc.innerHTML = "Aplicação mobile que atende a demanda do Centro de Divulgação e Popularização da Ciência (CDPC), do Instituto Federal, Campus Poços de Caldas. O projeto teve como intuito disponibilizar Kits portáteis de experimentos na área da ciências da natureza, que são reservador por um aplicativo para professores da rede pública de ensino de Poços de Caldas.";
+                    checkcdpc.innerHTML = "Confira o Projeto";
+
+                    h1restauranteSabor.innerHTML = "Restaurante Sabor Brasileiro";
+                    prestauranteSabor.innerHTML = "Projeto de conclusão do curso FIC de Desenvolvimento Web, realizado no campus de Poços de Caldas. O projeto consistiu no desenvolvimento de um site completo para um restaurante fictício, o Sabor Brasileiro. Este site foi cuidadosamente concebido para proporcionar uma experiência excepcional aos visitantes, com foco na usabilidade, design atraente e interatividade";
+                    checkrestauranteSabor.innerHTML = "Confira o Projeto";
+
+
+
                     // ----- Sec5
                     h1contato.innerHTML = "Contate-me";
                     h1contato2.innerHTML = "Contate-me";
