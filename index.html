@@ -277,7 +277,7 @@
                         </div>   
                         
                         <div class="conteudo-proj">
-                            <h1>Site Nike Collection</h1>
+                            <h1 id="h1nike">Site Nike Collection</h1>
 
                             <div class="icons-slide">
                                 <ul>
@@ -296,11 +296,11 @@
                                 </ul>
                             </div>
 
-                            <p>
+                            <p id="pnike">
                                 Este projeto é uma simulação de uma loja virtual de produtos Nike. Ele abrange desde a criação de páginas de produtos até a implementação de um carrinho de compras interativo e a criação de uma página de finalização de compra.
                             </p>
                         
-                            <a href="./nike.html" target="_Blank" class="btn-acesso-projeto">
+                            <a href="./nike.html" target="_Blank" class="btn-acesso-projeto" id="checknike">
                                 <i class="fas fa-external-link-alt"></i> Confira o Projeto
                             </a>
 
@@ -317,7 +317,7 @@
                         </div>   
                         
                         <div class="conteudo-proj">
-                            <h1>Site CarPoint</h1>
+                            <h1 id="h1carpoint">Site CarPoint</h1>
 
                             <div class="icons-slide">
                                 <ul>
@@ -336,11 +336,11 @@
                                 </ul>
                             </div>
 
-                            <p>
+                            <p id="pcarpoint">
                                 Este é um site automobilístico bem elaborado, construído com JavaScript, HTML e CSS, que disponibiliza informações sobre modelos de carros, peças e acessórios de forma profissional e concisa para entusiastas automobilísticos.
                             </p>
                         
-                            <a href="./carPoint.html" target="_Blank" class="btn-acesso-projeto">
+                            <a href="./carPoint.html" target="_Blank" class="btn-acesso-projeto" id="checkcarpoint">
                                 <i class="fas fa-external-link-alt"></i> Confira o Projeto
                             </a>
 
@@ -816,6 +816,15 @@
         const prestauranteSabor = document.getElementById('prestauranteSabor');
         const checkrestauranteSabor = document.getElementById('checkrestauranteSabor');
 
+        const h1nike = document.getElementById('h1nike');
+        const pnike = document.getElementById('pnike');
+        const checknike = document.getElementById('checknike');
+
+        const h1carpoint = document.getElementById('h1carpoint');
+        const pcarpoint = document.getElementById('pcarpoint');
+        const checkcarpoint = document.getElementById('h1carpoint');
+
+
 
 
         // ---------------------------------------------- Section Contato ---------------------------------------------- 
@@ -865,12 +874,26 @@
 
                 h1cdpc.innerHTML = "Center for Science Outreach and Popularization Mobile App";
                 pcdpc.innerHTML = "Mobile application that caters to the demand of the Center for Science Outreach and Popularization (CDPC) at the Federal Institute, Poços de Caldas Campus. The project aimed to provide portable experiment kits in the field of natural sciences, which are reserved through an application for public school teachers in Poços de Caldas.";
-                 checkcdpc.innerHTML = " Check out the Project";
+                checkcdpc.innerHTML = " Check out the Project";
 
                 h1restauranteSabor.innerHTML = " Brazilian Flavor Restaurant";
                 prestauranteSabor.innerHTML = "Final project for the Web Development Continuing Education course, conducted at the Poços de Caldas campus. The project involved the development of a complete website for a fictional restaurant, Sabor Brasileiro (Brazilian Flavor). This website was meticulously designed to provide an exceptional experience for visitors, focusing on usability, attractive design, and interactivity.";
                 checkrestauranteSabor.innerHTML = " Check out the Project";
                
+                h1nike.innerHTML = "Site Nike Collection"
+                pnike.innerHTML = "This project is a simulation of a virtual store for Nike products. It encompasses everything from creating product pages to implementing an interactive shopping cart and crafting a checkout page."
+                checknike.innerHTML = " Check out the Project";
+               
+                h1carpoint.innerHTML = "Site CarPoint"
+                pcarpoint.innerHTML = "This is a well-crafted automotive website, built with JavaScript, HTML, and CSS, providing professional and concise information about car models, parts, and accessories for automotive enthusiasts."
+                checkcarpoint.innerHTML = " Check out the Project";
+               
+
+                        
+
+
+
+
                 // ----- Sec5
                 h1contato.innerHTML = "Contact me";
                 h1contato2.innerHTML = "Contact me";
@@ -922,10 +945,16 @@
 
                     h1restauranteSabor.innerHTML = "Restaurante Sabor Brasileiro";
                     prestauranteSabor.innerHTML = "Projeto de conclusão do curso FIC de Desenvolvimento Web, realizado no campus de Poços de Caldas. O projeto consistiu no desenvolvimento de um site completo para um restaurante fictício, o Sabor Brasileiro. Este site foi cuidadosamente concebido para proporcionar uma experiência excepcional aos visitantes, com foco na usabilidade, design atraente e interatividade";
-                    checkrestauranteSabor.innerHTML = "Confira o Projeto";
+                    checkrestauranteSabor.innerHTML = "Confira o Projeto";        
+                   
+                    h1nike.innerHTML = "Site Nike Collection"
+                    pnike.innerHTML = "Este projeto é uma simulação de uma loja virtual de produtos Nike. Ele abrange desde a criação de páginas de produtos até a implementação de um carrinho de compras interativo e a criação de uma página de finalização de compra."
+                    checknike.innerHTML = "Confira o Projeto";
 
-
-
+                    h1carpoint.innerHTML = "Site CarPoint"
+                    pcarpoint.innerHTML = "Este é um site automobilístico bem elaborado, construído com JavaScript, HTML e CSS, que disponibiliza informações sobre modelos de carros, peças e acessórios de forma profissional e concisa para entusiastas automobilísticos."
+                    checkcarpoint.innerHTML = " Check out the Project";
+               
                     // ----- Sec5
                     h1contato.innerHTML = "Contate-me";
                     h1contato2.innerHTML = "Contate-me";
@@ -977,7 +1006,7 @@
 
                 h1cdpc.innerHTML = "Center for Science Outreach and Popularization Mobile App";
                 pcdpc.innerHTML = "Mobile application that caters to the demand of the Center for Science Outreach and Popularization (CDPC) at the Federal Institute, Poços de Caldas Campus. The project aimed to provide portable experiment kits in the field of natural sciences, which are reserved through an application for public school teachers in Poços de Caldas.";
-                 checkcdpc.innerHTML = " Check out the Project";
+                checkcdpc.innerHTML = " Check out the Project";
 
                 h1restauranteSabor.innerHTML = " Brazilian Flavor Restaurant";
                 prestauranteSabor.innerHTML = "Final project for the Web Development Continuing Education course, conducted at the Poços de Caldas campus. The project involved the development of a complete website for a fictional restaurant, Sabor Brasileiro (Brazilian Flavor). This website was meticulously designed to provide an exceptional experience for visitors, focusing on usability, attractive design, and interactivity.";
