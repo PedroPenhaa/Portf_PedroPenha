@@ -39,7 +39,7 @@
         </header>
     -->
 
-    <header>
+       <header id="js-header">
         <nav>
             <div class="logo">  <img src="./img/logo.png"> </div>
     
@@ -60,12 +60,9 @@
                 </div>
             </ul>
         </nav>
-      </header>
+       </header>
 
-
-
-
-        <section id="home">
+        <section id="home" id="js-home">
             <div class="descri">
                 <h1>Olá, eu sou <span>Pedro Afonso</span>
                     <h3>Especialista em desenvolvimento FrontEnd</h3>
@@ -86,7 +83,7 @@
             </div>
         </section>
 
-        <section id="competencia">
+        <section id="competencia" id="js-competencia">
             <div class="cabecalho-compe">
                 <h1 class="sub-title">Meus Diferenciais</h1>
                 <p id="animate-paragraph" class="hidden"><strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong></p>
@@ -173,7 +170,7 @@
             </div>
         </section>
 
-        <section id="sobre">
+        <section id="sobre" id="js-sobre">
             <div class="cabecalho-sobre">
                 <h1 class="sub-title">Sobre</h1>
             </div>
@@ -237,7 +234,7 @@
             </div> 
         </section>
 
-        <section id="projects">
+        <section id="projects" id="js-projects">
             <div class="cabecalho-proj">
                 <h1 class="sub-title">Projetos</h1>
             </div>
@@ -440,7 +437,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" id="js-contact">
             <div class="row">
                   <div class="contact-left">
                         <h1 class="sub-title">Contate-me</h1>
@@ -499,6 +496,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
 
     
 <!-- Table content -->
@@ -781,8 +780,57 @@ function menuShow() {
 }
 </script>
 
+<!-- Scroll Navegação -->
+<!-- Scroll Navegação -->
+<script>
+    const header = document.getElementById('js-header');
+    
+    // Inicialize o ScrollReveal para dispositivos com largura maior que 480px
+    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
+      origin: 'left',
+      distance: '100px',
+      duration: 2500,
+      delay: 200,
+      reset: true,
+      mobile: false,
+      useDelay: 'always',
+    });
+    /*
+    ScrollReveal().reveal('.cabecalho-compe p, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
+      origin: 'right',
+      distance: '100px',
+      duration: 2500,
+      delay: 200,
+      reset: true,
+      mobile: false,
+      useDelay: 'always',
+    });
+
+    ScrollReveal().reveal(' .sec-compe, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
+      origin: 'bottom',
+      distance: '100px',
+      duration: 2500,
+      delay: 200,
+      reset: true,
+      mobile: false,
+      useDelay: 'always',
+    });
+*/
 
 
+    // Inicialize o ScrollReveal para dispositivos com largura menor ou igual a 480px
+    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-compe p, .sec-compe, .cabecalho-sobre, .img-sobre, .sobre-col-2, .cabecalho-proj, .projetos_apresentation', {
+      origin: 'left',
+      distance: '100px',
+      duration: 2500,
+      delay: 200,
+      reset: true,
+      mobile: true, // Ative para dispositivos móveis
+      useDelay: 'always',
+    });
+    
+    </script>
+    
 
 
 
