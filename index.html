@@ -11,7 +11,7 @@
 <body>
 
     
-    <div class="container">
+    <div class="container" >
 
     <!--    
         <header>
@@ -49,9 +49,9 @@
             </div>
     
             <ul>
-                <li><a href="#sobre"  class="active">Sobre</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#sobre" class="active js-link">Sobre</a></li>
+                <li><a href="#projects" class="js-link">Projetos</a></li>
+                <li><a href="#contact" class="js-link">Contato</a></li>
 
                 <p>Selecione o idioma:</p>
                 <div class="language-selector">
@@ -744,54 +744,99 @@
     }
     </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Scroll Navegação -->
-    <script>
-    const header = document.getElementById('js-header');
+<script>
+const header = document.getElementById('js-header');
+
+ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .cabecalho-proj,.contact-left h1, .contact-right h1, .contact-left p, .contact-right p, .social-icons', {
+  origin: 'left',
+  distance: '200px',
+  duration: 2500,
+  delay: 200,
+  reset: true,
+  mobile: true,
+  useDelay: 'always',
+});
+
+ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progress-container, .contact-form', {
+  origin: 'right',
+  distance: '200px',
+  duration: 2500,
+  delay: 200,
+  reset: true,
+  mobile: true,
+  useDelay: 'always',
+});
+
+ScrollReveal().reveal('.sec-compe li, .img-proj ', {
+  origin: 'bottom',
+  distance: '200px',
+  duration: 2500,
+  delay: 200,
+  reset: true,
+  mobile: true,
+  useDelay: 'always',
+});
+</script>
+
     
-
-    // Inicialize o ScrollReveal para dispositivos com largura menor ou igual a 480px
-    ScrollReveal().reveal('.cabecalho-compe h1, .cabecalho-sobre, .img-sobre, .cabecalho-proj,.contact-left h1, .contact-right h1, .contact-left p, .contact-right p, .social-icons', {
-      origin: 'left',
-      distance: '200px',
-      duration: 2500,
-      delay: 200,
-      reset: true,
-      mobile: true, // Ative para dispositivos móveis
-      useDelay: 'always',
-    });
     
-    // Inicialize o ScrollReveal para dispositivos com largura menor ou igual a 480px
-    ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .conteudo-proj, .progress-container, .contact-form', {
-        origin: 'right',
-        distance: '200px',
-        duration: 2500,
-        delay: 200,
-        reset: true,
-        mobile: true, // Ative para dispositivos móveis
-        useDelay: 'always',
-    });
+<!--
 
-    ScrollReveal().reveal('.sec-compe li, .img-proj ', {
-        origin: 'bottom',
-        distance: '200px',
-        duration: 2500,
-        delay: 200,
-        reset: true,
-        mobile: true, // Ative para dispositivos móveis
-        useDelay: 'always',
-    });
+
+0           660
+660         569
+1320        598
+1889        
+2487
+
+-->
 
 
 
+<script>
+    let links = document.querySelectorAll('.js-link');
+    let sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+
+            let top = window.scrollY;
+            let offset = section.offsetTop - 80;
+            let heightSection = section.offsetHeight;
+            let idSection = section.getAttribute('id');
+
+            if(top >= offset && top < offset + heightSection){
+                links.forEach(link => {
+                    link.classList.remove('active');
+
+                    document.querySelector(`header nav a[href*='${idSection}']`).classList.add('active');
+
+                })
+            }
+
+        })
+    })
+
+</script>
 
 
 
-
-
-
-
-    </script>
-    
 
 
 
