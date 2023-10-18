@@ -1,4 +1,4 @@
-/* Estilos gerais */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,12 +6,11 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Estilos do cabeçalho */
 header {
     background-color: #333;
     color: #fff;
@@ -23,20 +22,62 @@ header h1 {
     font-size: 36px;
 }
 
-/* Estilos da seção de descrição do projeto */
+/* ------------------------------------- Descrição ------------------------------------- */
+
 .project-description {
-    padding: 20px 0;
+    padding: 0;
+    height: 100%;
+    border-bottom: 1px solid #D3D3D3;
+    padding-bottom: 50px;
 }
 
 .project-description h2 {
     font-size: 24px;
 }
 
+.project-description .conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.project-description .img {
+    width: 40%; /* Ajusta para 20% da largura da tela */
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    transition: all 1.1s;
+    overflow: hidden;
+   
+}
+
+.project-description .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 1.1s;
+}
+
+.project-description .img:hover img{
+    transform: scale(1.05); 
+}
+
 .project-description p {
+    flex: 1; /* Faz o elemento 'p' ocupar o espaço restante (80%) */
+    text-align: justify;
+    font-size: 14px;
     line-height: 1.5;
 }
 
-/* Estilos da seção de mídia do projeto */
+
+/* ------------------------------------- Mídia ------------------------------------- */
+
 .project-media {
     padding: 20px 0;
 }
@@ -51,7 +92,9 @@ header h1 {
     text-align: center;
 }
 
-/* Estilos da seção de detalhes do projeto */
+
+/* ------------------------------------- Detalhes ------------------------------------- */
+
 .project-details {
     padding: 20px 0;
 }
