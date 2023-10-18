@@ -1474,6 +1474,7 @@ form input, form textarea{
         #contact{
             height: 100%;
             width: 100%;
+            padding: 0 27px;
             max-width: 100vw;
             max-height: 174vh;
         }
