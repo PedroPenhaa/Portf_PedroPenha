@@ -222,8 +222,8 @@
      
 
          <!-- Slider main container -->
-         <swiper-container  class="mySwiper" navigation="true" pagination="true" effect="flip" grab-cursor="true" space-between="30"
-            centered-slides="true" autoplay-delay="9800" autoplay-disable-on-interaction="false">
+         <swiper-container class="mySwiper" pagination="true"  pagination-dynamic-bullets="true" pagination-clickable="true" effect="flip" grab-cursor="true" navigation="true" space-between="30"
+         centered-slides="true" autoplay-delay="9900" autoplay-disable-on-interaction="false">
            
             <!-- Slide 1 -->
             <swiper-slide>   
@@ -254,7 +254,7 @@
 
                     <p>Aplicação mobile que atendesse a demanda do Centro de Divulgação e Popularização da Ciência (CDPC), do Instituto Federal, Campus Poços de Caldas. O projeto teve como intuito disponibilizar Kits portáteis de experimentos na área da ciências da natureza, que são emprestados por um aplicativo para professores da rede pública de ensino de Poços de Caldas.</p>
                    
-                    <a href="URL_DO_SEU_PROJETO" class="btn-acesso-projeto">
+                    <a href="cdpc.html" class="btn-acesso-projeto">
                         <i class="fas fa-external-link-alt"></i> Confira o Projeto
                     </a>
 
@@ -1011,22 +1011,38 @@
     </script>
 
 
-
- 
- <script>
+<script>
     const progressCircle = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
 
-
-
-    
     const swiperEl = document.querySelector("swiper-container");
     swiperEl.addEventListener("autoplaytimeleft", (e) => {
       const [swiper, time, progress] = e.detail;
       progressCircle.style.setProperty("--progress", 1 - progress);
-     progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
     });
   </script>
+
+
+
+<script>
+    var mySwiper = new Swiper('.mySwiper', {
+      effect: 'flip',
+      grabCursor: true,
+      flipEffect: {
+        slideShadows: true,
+        limitRotation: false
+      },
+      speed: 800, // Ajuste o valor do 'speed' para controlar a velocidade da transição (em milissegundos)
+      // Outras opções personalizadas
+    });
+  </script>
+
+  
+  
+  
+  
+  
 
 
 </body>

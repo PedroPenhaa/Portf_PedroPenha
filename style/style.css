@@ -727,6 +727,7 @@ font-size: 14px;
     }
 
     .btn-acesso-projeto {
+        cursor: pointer;
         display: inline-block;
         padding: 10px 20px;
         background-color: #003840; /* Cor de fundo do botão, altere conforme desejado */
@@ -738,6 +739,7 @@ font-size: 14px;
         margin-top: 15px; /* Espaçamento superior para separá-lo do parágrafo */
         transition: background-color 0.3s ease;
         transition: transform 1s ease;
+ 
     }
     
     .btn-acesso-projeto i {
