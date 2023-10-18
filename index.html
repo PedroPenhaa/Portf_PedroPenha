@@ -221,14 +221,20 @@
             </div>
      
 
-         <!-- Slider main container -->
+         <!-- Slider main container 
          <swiper-container class="mySwiper" pagination="true"  pagination-dynamic-bullets="true" pagination-clickable="true" effect="flip" grab-cursor="true" navigation="true" space-between="30"
-         centered-slides="true" autoplay-delay="9900" loop="true" autoplay-disable-on-interaction="false">
+         centered-slides="true" autoplay-delay="9900" autoplay-disable-on-interaction="false">
+         -->
+
+         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+         centered-slides="true" autoplay-delay="9900" autoplay-disable-on-interaction="false">
+    
            
             <!-- Slide 1 -->
             <swiper-slide>   
 
                 <div class="img" >
+                    <h1>Projeto CDPC</h1>
                     <img src="./img/work1.jpg.png" alt="">
                 </div>   
                 
@@ -254,7 +260,7 @@
 
                     <p>Aplicação mobile que atendesse a demanda do Centro de Divulgação e Popularização da Ciência (CDPC), do Instituto Federal, Campus Poços de Caldas. O projeto teve como intuito disponibilizar Kits portáteis de experimentos na área da ciências da natureza, que são emprestados por um aplicativo para professores da rede pública de ensino de Poços de Caldas.</p>
                    
-                    <a href="cdpc.html" class="btn-acesso-projeto">
+                    <a href="cdpc.html" target="_Blank" class="btn-acesso-projeto">
                         <i class="fas fa-external-link-alt"></i> Confira o Projeto
                     </a>
 
@@ -942,7 +948,7 @@
     useDelay: 'always',
     });
 
-    ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .contact-form,', {
+    ScrollReveal().reveal(' .cabecalho-compe p, .sobre-col-2, .contact-form, .animate-paragraph, .mySwiper', {
     origin: 'right',
     distance: '200px',
     duration: 2500,
