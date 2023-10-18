@@ -289,7 +289,6 @@ span {
     animation: slideFromRightProfile 1.5s ease-in-out;
     animation-delay: 1s;
     animation-fill-mode: forwards; 
-
 }
 
 .images:hover .shape {
@@ -369,13 +368,11 @@ span {
     max-width: 110vw;
     padding: 20px;
 	margin-left: 160px;
-
 }
 
 .cabecalho-compe h1{
     font-size: 40px;
     max-width: 10%;
-
 }
 
 .cabecalho-compe p{
@@ -387,8 +384,6 @@ span {
     color: #78797a;
     text-align: justify;
     margin-right: 50px;
-
-
 }
 
 .cabecalho-compe strong{
@@ -429,7 +424,6 @@ span {
     display: flex;
     justify-content: left;
     padding: 10px 0;
-
 }
 
 .sec-compe .info-compe{
@@ -490,16 +484,13 @@ span {
     display: flex;
     gap: 80px;
     flex-direction: row;
- 
     justify-content: center;
     padding: 0 60px;
     margin-top: 20px;
     margin-bottom: 50px;
-
     width: 100%;
     max-width: 100vw;
     margin-left: 4%;
-
 }
 
 .img-sobre{
@@ -624,8 +615,9 @@ span {
     max-width: 110vw;
     padding: 20px;      
     height: 100%;
-    min-height: 80vh;
-    background-color: #E0E0E0  ;
+    min-height: 90vh;
+    background-color: #E0E0E0  ; 
+
     display: flex; 
     flex-direction: column;    
     justify-content: flex-start;
@@ -649,6 +641,172 @@ span {
     font-size: 45px;
 }
 
+
+swiper-container {
+    width: 100%;
+    max-width: 85vw;
+    height: 100%;
+    padding: 0;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 100%;
+    min-height: 70vh;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+
+  swiper-slide .img{
+    width: 38%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    margin-left: 30px;
+    max-height: 60vh;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  swiper-slide .conteudo-proj{
+    width: 50%;
+    height: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+  }
+
+  .conteudo-proj h1{
+    font-weight: 700;
+    margin-top: 30px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.icons-slide ul{
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.icons-slide ul li{
+display: flex;
+align-items: center;
+gap: 10px;
+justify-content: center;
+padding: 20px;
+border-radius: 20px;
+width: 60px;
+}
+
+.icons-slide ul li span{
+color: #262626;
+font-weight: 500;
+font-size: 14px;
+}
+
+
+
+    .conteudo-proj p{
+        text-align: justify;
+        font-size: 14px;
+        margin-bottom: 15px;
+        width: 90%;;
+    }
+
+    .btn-acesso-projeto {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #003840; /* Cor de fundo do botão, altere conforme desejado */
+        color: #fff; /* Cor do texto, altere conforme desejado */
+        text-decoration: none;
+        border: none;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-top: 15px; /* Espaçamento superior para separá-lo do parágrafo */
+        transition: background-color 0.3s ease;
+        transition: transform 1s ease;
+    }
+    
+    .btn-acesso-projeto i {
+        margin-right: 5px; /* Espaçamento à direita do ícone */
+    }
+    
+    .btn-acesso-projeto:hover {
+        transform: scale(1.1);
+        color: #003840;
+        border: 1px solid #78797a;
+        background-color: #fff; /* Cor de fundo do botão ao passar o mouse, altere conforme desejado */
+    }
+    
+    /* Estilo para o ícone de link externo (FontAwesome) */
+    .fas.fa-external-link-alt {
+        font-size: 14px; /* Tamanho do ícone, altere conforme desejado */
+        vertical-align: middle;
+    }
+
+
+
+
+  
+ 
+
+
+
+
+
+    .autoplay-progress {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--swiper-theme-color);
+      }
+  
+      .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+
+
+
+
+
+
+
+
+
+/*
 .projetos_apresentation{
     height: 100%;
     max-height: 75vh;
@@ -803,7 +961,7 @@ span {
 .btn-slide:hover {
     transform: scale(1.5); 
 }
-
+*/
 /* ---------------------------------------------- Contact ---------------------------------------------- */ 
 
 #contact{
@@ -1338,6 +1496,8 @@ form input, form textarea{
             max-width: 100vw;
         }
 
+       
+
         .sobre-col-2{
             margin-top: 10px;
             width: 90%;
@@ -1421,11 +1581,20 @@ form input, form textarea{
             margin-bottom: 15px;
             margin-top: 255px;
         }
-        
+
+        .img-proj{
+            width: 100%;
+            max-width: 50vw;
+            height: 100%;
+            max-width: 100vh;
+        }
+
+
         .slide .img img {
-            max-width: 100%;
-            max-height: auto;
-            object-fit: cover;
+               width: 100%;
+            max-width: 50vw;
+            height: 100%;
+            max-width: 100vh;
         }
       
         .slide.active-slide {
