@@ -82,11 +82,38 @@ header h1 {
     padding: 20px 0;
 }
 
+.image-gallery{
+    padding: 0;
+    height: 100%;
+    max-height: 100vh;
+}
+
 .image-gallery img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
+
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+
 
 .video {
     text-align: center;
