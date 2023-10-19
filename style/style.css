@@ -636,6 +636,8 @@ span {
 
 .cabecalho-proj h1{
     font-size: 45px;
+    text-align: center;
+    width: 285px;
 }
 
 swiper-container {
@@ -660,11 +662,11 @@ swiper-slide {
 swiper-slide .img{
     width: 38%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     height: 100%;
     margin-left: 30px;
-    max-height: 60vh;
+    min-height: 40vh;
 }
 
 swiper-slide img {
@@ -672,6 +674,7 @@ swiper-slide img {
     width: 100%;
     height: auto;
     object-fit: cover;
+
 }
 
 swiper-slide .conteudo-proj{
