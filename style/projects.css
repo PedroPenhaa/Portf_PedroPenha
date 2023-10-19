@@ -22,7 +22,7 @@ header h1 {
     font-size: 36px;
 }
 
-/* ------------------------------------- Descrição ------------------------------------- */
+/* ----------------------------------------- Descrição ----------------------------------------- */
 
 .project-description {
     padding: 0;
@@ -45,7 +45,7 @@ header h1 {
 }
 
 .project-description .img {
-    width: 40%; /* Ajusta para 20% da largura da tela */
+    width: 40%; 
     max-width: 100%;
     height: auto;
     display: flex;
@@ -55,7 +55,6 @@ header h1 {
     background-size: cover;
     transition: all 1.1s;
     overflow: hidden;
-   
 }
 
 .project-description .img img {
@@ -70,14 +69,14 @@ header h1 {
 }
 
 .project-description p {
-    flex: 1; /* Faz o elemento 'p' ocupar o espaço restante (80%) */
+    flex: 1; 
     text-align: justify;
     font-size: 14px;
     line-height: 1.5;
 }
 
 
-/* ------------------------------------- Mídia ------------------------------------- */
+/* ----------------------------------------- Mídia ----------------------------------------- */
 
 .project-media {
     padding: 20px 0;
@@ -116,8 +115,6 @@ swiper-container {
     width: 100%;
   }
 
-
-
 .video {
     width: 100%;
     max-width: 100vw ;
@@ -140,7 +137,7 @@ iframe{
 }
 
 
-/* ------------------------------------- Detalhes ------------------------------------- */
+/* ----------------------------------------- Detalhes ----------------------------------------- */
 
 .project-details {
     padding: 20px 0;
@@ -179,7 +176,8 @@ iframe{
     margin-bottom: 20px;
 }
 
-/* Estilos do rodapé */
+/* ----------------------------------------- Rodapé ----------------------------------------- */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -200,7 +198,9 @@ footer {
     background-color: #ff3300;
 }
 
-
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------- Responsivo 480px ---------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 480px) {
 
@@ -246,16 +246,12 @@ footer {
         font-size: 22px;
     }
    
-
     header h1{
         font-size: 22px;
         padding: 10px;
     }
 
-
-
-
-/* ------------------------------------- Descrição ------------------------------------- */
+/* ----------------------------------------- Descrição ----------------------------------------- */
 
     .project-description {
         width: 100%;
@@ -279,10 +275,9 @@ footer {
     }
 
     .project-description .img {
-        width: 90%; /* Ajusta para 20% da largura da tela */
+        width: 90%;
         max-width: 100vw;
         position: relative;
-    
         margin-top: 20px
     }
 
@@ -294,11 +289,9 @@ footer {
         align-items: flex-start;
         justify-content: center;
         position: relative;
-     
     }
 
-
-/* ------------------------------------- Mídia ------------------------------------- */
+/* ----------------------------------------- Mídia ----------------------------------------- */
 
     .project-media {
         width: 100%;
@@ -344,8 +337,7 @@ footer {
         position: relative;
     }
 
-
-/* ------------------------------------- Detalhes ------------------------------------- */
+/* ----------------------------------------- Detalhes ----------------------------------------- */
 
     .project-details {
         width: 100%;
@@ -362,14 +354,6 @@ footer {
         justify-content: center;
         text-align: center;
     }
-
-
-
-
-
-
-
-
 
 
 }
