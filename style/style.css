@@ -667,6 +667,7 @@ swiper-slide .img{
     height: 100%;
     margin-left: 30px;
     min-height: 40vh;
+    max-height: 40vh;
 }
 
 swiper-slide img {
