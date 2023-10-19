@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -343,7 +342,6 @@ span {
     }
 }
 
-
 /* ---------------------------------------------- Competência ---------------------------------------------- */
 
 #competencia{
@@ -617,7 +615,6 @@ span {
     height: 100%;
     min-height: 90vh;
     background-color: #E0E0E0  ; 
-
     display: flex; 
     flex-direction: column;    
     justify-content: flex-start;
@@ -791,164 +788,6 @@ swiper-slide .conteudo-proj{
     transform: rotate(-90deg);
 }
 
-
-
-/*
-.projetos_apresentation{
-    height: 100%;
-    max-height: 75vh;
-    width: 100%;
-    position: relative;
-    background-color: #E0E0E0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 30px;
-}
-
-.slider{
-    margin: 0 auto;
-    width: 1000px;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;  
-    position: relative;
-    top: -15px;
-}
-
-.slides{
-    width: 600%;
-    height: 550px;
-    display: flex;
-    transition: transform 2s ease; 
-}
-
-.slides input{
-    display: none;
-}
-
-.slide{
-    width: 1000px;
-    height: 90%;
-    position: relative;
-    transition: 2s;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    top: -50px;
-}
-
-.slide .img{
-    position: relative;
-    width: 60%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 40px;
-}
-
-.slide img{
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.slide .conteudo{
-    display: flex;
-    padding: 0 10px;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 70%;
-}
-
-.progress-sec{
-    width: 100%;
-    height: 10px;
-    display: flex;
-    align-items:center;
-    justify-content: flex-end;
-}
-
-.progress-container {
-    width: 70px;
-    height: 5px;
-    background-color: #ccc;
-    margin-right: 219px;
-    margin-top: 0;
-    border-radius: 20px;
-}
-
-.progress-bar {
-    width: 0%;
-    height: 100%;
-    background-color: #007bff;
-    border-radius: 20px;
-}
-
-.slide .conteudo h1{
-    font-weight: 700;
-    margin-bottom: 40px;
-}
-
-.slide .conteudo p{
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-.icons-slide ul li{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    width: 60px;
-}
-
-.icons-slide ul li span{
-    color: #262626;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.slide .conteudo a{
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.controle-slide{
-    margin-top: -94px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    z-index: 999;
-}
-
-
-.btn-slide {
-    font-size: 24px; 
-    transition: transform 0.3s ease; 
-}
-
-.btn-slide:hover {
-    transform: scale(1.5); 
-}
-*/
 /* ---------------------------------------------- Contact ---------------------------------------------- */ 
 
 #contact{
@@ -1186,6 +1025,7 @@ form input, form textarea{
         height: 100%;  
         max-height: 47px; 
     } 
+
     nav ul li a {
         font-size: 23px;
         width: 100%;
@@ -1196,6 +1036,7 @@ form input, form textarea{
         justify-content: center;
         padding: 10px 0;
     }
+    
     nav ul li.active,
     nav ul li:hover{
         background: #0B7285;
@@ -1204,7 +1045,6 @@ form input, form textarea{
         max-width: 100vw;
     } 
     
-   
     .language-selector{
         margin: 20px 0;
         width: 100%;
@@ -1242,7 +1082,7 @@ form input, form textarea{
 
    /* ---------------------------------------------- Home ---------------------------------------------- */
 
-         .menu-icon{
+        .menu-icon{
             width: 20px;
         }
 
@@ -1337,7 +1177,6 @@ form input, form textarea{
         .scroll-to-top{
             display: none;
         }
-
 
    /* ---------------------------------------------- Competência ---------------------------------------------- */
 
@@ -1481,9 +1320,7 @@ form input, form textarea{
         .img-sobre{
             width: 80%;
             max-width: 100vw;
-        }
-
-       
+        }   
 
         .sobre-col-2{
             margin-top: 10px;
@@ -1575,7 +1412,6 @@ form input, form textarea{
         .conteudo-proj h1{
             display: none;
         }
-
         
         .icons-slide ul{
             width: 90%;
@@ -1584,40 +1420,6 @@ form input, form textarea{
             position: relative;
             top: -10px;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
    /* ---------------------------------------------- Contact ---------------------------------------------- */
 
@@ -1703,8 +1505,6 @@ form input, form textarea{
             max-width: 100vw;
         }
 
-
-
         .btn-enviar {
             width: 100%;
             max-width: 100vw;
@@ -1729,8 +1529,6 @@ form input, form textarea{
            justify-content: center;
            align-items: center;
         }
-
-    
 }
 
 
