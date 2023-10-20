@@ -1385,13 +1385,15 @@ form input, form textarea{
         swiper-slide  {
             width: 100%;
             max-width: 100vw;
-            height: 100%;
+            height: 90%;
             margin: 0 auto;
             padding: 0;
             gap: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: -15px;    
+
         }
 
         swiper-slide .img h1{
@@ -1430,6 +1432,19 @@ form input, form textarea{
             margin: 0 auto;
             position: relative;
             top: -10px;
+            gap: 0px;
+        }
+
+        .icons-slide ul li{
+           padding: 0;
+           margin:18px auto;
+            width: 60px;
+            gap: 0;
+        }
+
+        .icons-slide ul li span{
+            font-weight: 0;
+            font-size: 12px;
         }
 
    /* ---------------------------------------------- Contact ---------------------------------------------- */
