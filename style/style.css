@@ -937,6 +937,17 @@ form input, form textarea{
 /* -------------------------------------------------------------------------------------------------------------- */ 
 
 @media (max-width: 480px) {
+
+    #languageMessage{
+        width: 100%;
+        max-width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+
     body {
         margin: 0;
         padding: 0;
