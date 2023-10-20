@@ -194,7 +194,9 @@ span {
     color: #555;
     line-height: 22px;
     white-space: pre-wrap; 
-    animation: slideInLeft 1.2s ease-in-out 0.5s forwards; 
+    animation: slideInLeft 1.2s ease-in-out 0.5s forwards;
+    width: 100%;
+    max-width: 72vh; 
 }
 
 .btn-home-link{

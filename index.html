@@ -27,14 +27,20 @@
                 </div>
         
                 <ul>
-                    <li><a href="#sobre" class="js-link">Sobre</a></li>
-                    <li><a href="#projects" class="js-link">Projetos</a></li>
-                    <li><a href="#contact" class="js-link">Contato</a></li>
+                    <li><a href="#sobre" class="js-link" id="menuSobre"></a></li>
+                    <li><a href="#projects" class="js-link" id="menuProjetos"></a></li>
+                    <li><a href="#contact" class="js-link" id="menuContato"></a></li>
 
-                    <p>Selecione o idioma:</p>
+                    <p  id="menuSelecioneIdioma"></p>
+
+                    
                     <div class="language-selector">
-                        <a href="#" class="language-option"><img src="./img/brazil-flag.png" alt="Português"></a>
-                        <a href="#" class="language-option"><img src="./img/usa-flag.png" alt="English"></a>
+                        <select id="language" style="display: none;">
+                            <option value="en">English</option>
+                            <option value="pt">Português</option>
+                          </select>
+                        <a href="#" class="language-option"><img  id="br-flag" src="./img/brazil-flag.png" alt="Brazil Flag"></a>
+                        <a href="#" class="language-option"><img  id="us-flag" src="./img/usa-flag.png" alt="US Flag"></a>
                     </div>
                 </ul>
             </nav>
@@ -42,8 +48,8 @@
 
         <section id="home" id="js-home">
             <div class="descri">
-                <h1>Olá, eu sou <span>Pedro Afonso</span>
-                    <h3>Especialista em desenvolvimento FrontEnd</h3>
+                <h1 id="h1Home"><span>Pedro Afonso</span>
+                    <h3 id="h3Home"></h3>
               
                     <p class="text" id="textWithBreak"></p>
 
@@ -63,10 +69,13 @@
 
         <section id="competencia" id="js-competencia">
             <div class="cabecalho-compe">
-                <h1 class="sub-title">Meus Diferenciais</h1>
-                <p id="animate-paragraph" class="hidden"><strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong></p>
+                <h1 class="sub-title" id="h1Competencia">Meus Diferenciais</h1>
+                <p id="pCompetencia">
+                                  
+                </p>
             </div>
 
+            <!--
             <div class="sec-compe">
                 <ul>
                     <li>
@@ -146,11 +155,96 @@
                     </li>
                 </ul>
             </div>
+            -->
+
+
+            <div class="sec-compe">
+                <ul>
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-laptop-code fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3 id="h3competitle1"></h3>
+                                <p id="pcompe1"></p>
+                            </div>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3 id="h3competitle2"></h3>
+                                <p id="pcompe2"></p>
+                            </div>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-mobile fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3 id="h3competitle3"></h3>
+                                <p id="pcompe3"></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sec-compe">
+                <ul>
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-tools fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3 id="h3competitle4"></h3>
+                                <p id="pcompe4"></p>
+                            </div>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-puzzle-piece fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3 id="h3competitle5"></h3>
+                                <p id="pcompe5"></p>
+                            </div>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <div>
+                            <div class="icon-compe">
+                                <i class="fas fa-brain fa-2x"></i>
+                            </div>
+                            <div class="info-compe">
+                                <h3 id="h3competitle6"></h3>
+                                <p id="pcompe6"></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+
+
         </section>
 
         <section id="sobre" id="js-sobre">
             <div class="cabecalho-sobre">
-                <h1 class="sub-title">Sobre</h1>
+                <h1 class="sub-title" id="h1Sobre"></h1>
             </div>
 
             <div class="row-s">
@@ -160,21 +254,11 @@
 
                 <div class="sobre-col-2">
 
-                    <p>
-                        Sou um profissional com formação em informática e atualmente sou graduando do curso de Engenharia de 
-                        Computação. Iniciei minha trajetória profissional no atendimento e suporte ao usuário, onde desenvolvi 
-                        habilidades fundamentais de comunicação. Com o tempo, essa jornada me levou ao universo do desenvolvimento 
-                        de aplicações web e ao suporte de sistemas ERP.
-                    </p>
+                    <p id="pSobre1"></p>
 
                     <br>
 
-                    <p>
-                        Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, 
-                        adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor 
-                        full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as 
-                        mais recentes metodologias de programação do mercado.
-                    </p>
+                    <p id="pSobre2"></p>
                     
                 </div>
             </div> 
@@ -182,7 +266,7 @@
 
         <section id="projects" id="js-projects">
             <div class="cabecalho-proj">
-                <h1 class="sub-title">Projetos</h1>
+                <h1 class="sub-title" id="h1Projetos"></h1>
             </div>
      
             <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
@@ -437,10 +521,10 @@
         <section id="contact" id="js-contact">
             <div class="row">
                   <div class="contact-left">
-                        <h1 class="sub-title">Contate-me</h1>
+                        <h1 class="sub-title" id="h1contato">Contate-me</h1>
                   
-                        <p>
-                            Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.
+                        <p id="pContato">
+                           
                         </p>
 
                         <div class="social-icons">
@@ -452,7 +536,7 @@
                 
                   </div>
                   <div class="contact-right">
-                    <h1 class="sub-title">Contate-me</h1>
+                    <h1 class="sub-title"></h1>
 
                     <div class="social-icons">
                         <a href=""><i class="fab fa-facebook"></i></a>
@@ -465,11 +549,11 @@
                         Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.
                     </p>
                     <form id="contact-form" class="contact-form">
-                        <input type="text" name="Name" placeholder="Seu nome" required>
-                        <input type="text" name="email" placeholder="Seu email" required>
-                        <input type="text" name="Phone" placeholder="Seu celular" required>
-                        <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
-                        <button type="submit" class="btn-enviar">Enviar</button>
+                        <input type="text" id="nameinput" name="Name" placeholder="Seu nome" required>
+                        <input type="text" id="emailinput" name="email" placeholder="Seu email" required>
+                        <input type="text"  id="phoneinput" name="Phone" id="message-input" placeholder="Seu celular" required>
+                        <textarea name="Message" rows="6"  id="messageinput" placeholder="Sua Mensagem"></textarea>
+                        <button type="submit" class="btn-enviar" id="btnenviar">Enviar</button>
                     </form>
                 </div>
             </div>    
@@ -759,6 +843,165 @@
         });
 
     </script>
+
+<!-- Translater -->
+<script>
+    const languageSelector = document.getElementById('language');
+    const brFlag = document.getElementById('br-flag');
+    const usFlag = document.getElementById('us-flag');
+    let currentLanguage = 'pt';
+
+    // ---------------------------------------------- Header ---------------------------------------------- 
+    const menuSobre = document.getElementById('menuSobre');
+    const menuProjetos = document.getElementById('menuProjetos');
+    const menuContato = document.getElementById('menuContato');
+    const menuSelecioneIdioma = document.getElementById('menuSelecioneIdioma');
+
+    // ---------------------------------------------- Section Home ---------------------------------------------- 
+    const h1Home = document.getElementById('h1Home');
+    const h3Home = document.getElementById('h3Home');
+    const textElement = document.getElementById('textWithBreak');
+
+    // ---------------------------------------------- Section Competência ---------------------------------------------- 
+    const h1Competencia = document.getElementById('h1Competencia');
+    const pCompetencia = document.getElementById('pCompetencia');
+    const h3competitle1 = document.getElementById('h3competitle1');
+    const h3competitle2 = document.getElementById('h3competitle2');
+    const h3competitle3 = document.getElementById('h3competitle3');
+    const h3competitle4 = document.getElementById('h3competitle4');
+    const h3competitle5 = document.getElementById('h3competitle5');
+    const h3competitle6 = document.getElementById('h3competitle6');
+    const pcompe1 = document.getElementById('pcompe1');
+    const pcompe2 = document.getElementById('pcompe2');
+    const pcompe3 = document.getElementById('pcompe3');
+    const pcompe4 = document.getElementById('pcompe4');
+    const pcompe5 = document.getElementById('pcompe5');
+    const pcompe6 = document.getElementById('pcompe6');
+ 
+    // ---------------------------------------------- Section Sobre ---------------------------------------------- 
+    const h1Sobre = document.getElementById('h1Sobre');
+    const pSobre1 = document.getElementById('pSobre1');
+    const pSobre2 = document.getElementById('pSobre2');
+
+    // ---------------------------------------------- Section Projetos ---------------------------------------------- 
+    const h1Projetos = document.getElementById('h1Projetos');
+
+
+    // ---------------------------------------------- Section Contato ---------------------------------------------- 
+    const h1contato = document.getElementById('h1contato');
+    const pContato = document.getElementById('pContato');
+    const btnenviar = document.getElementById('btnenviar');
+
+
+
+    function updateLanguage() {
+        if (currentLanguage === 'en') {
+            // ----- Header
+            menuSobre.innerHTML = "About";
+            menuProjetos.innerHTML = "Projects";
+            menuContato.innerHTML = "Contact";
+            menuSelecioneIdioma.innerHTML = "Select the language:";
+            // ----- Sec1
+            h1Home.innerHTML = "Hello, I am <span>Pedro Afonso</span>";
+            h3Home.innerHTML = "FrontEnd Development Specialist";
+            textElement.innerHTML = "This is my official portfolio website to showcase all the details and work experiences in web development.";
+            // ----- Sec2 
+            h1Competencia.innerHTML = "My Differentiators";
+            pCompetencia.innerHTML = "<strong>My commitment</strong> is to deliver high-quality services with speed and exceptional performance in converting <strong>designs into web pages.</strong>";
+            h3competitle1.innerHTML = "Modern Web Development";
+            h3competitle2.innerHTML = "Performance Optimization";
+            h3competitle3.innerHTML = "Responsive Mobile Applications";
+            h3competitle4.innerHTML = "Advanced Tools";
+            h3competitle5.innerHTML = "Seamless Integration";
+            h3competitle6.innerHTML = "Creative Thinking";
+            pcompe1.innerHTML = "Creating web applications with the latest and most practical development technologies.";
+            pcompe2.innerHTML = "Improving site speed and performance for a superior user experience.";
+            pcompe3.innerHTML = "Developing mobile applications that adapt seamlessly to different devices and screen sizes.";
+            pcompe4.innerHTML = "Utilizing the latest development tools for efficiency and quality.";
+            pcompe5.innerHTML = "Creating integrated web solutions that streamline processes and enhance productivity.";
+            pcompe6.innerHTML = "Addressing complex problems with innovative solutions and creativity.";
+
+            // ----- Sec3
+            h1Sobre.innerHTML = "About";
+            pSobre1.innerHTML = "I am a professional with a background in computer science, and I am currently pursuing a degree in Computer Engineering. I began my professional journey in user support and assistance, where I developed essential communication skills. Over time, this path led me into the world of web application development and ERP system support.";
+            pSobre2.innerHTML = "My experiences in the programming field have turned this activity into my favorite hobby. Additionally, I have gained experience in mobile development and am committed to expanding my knowledge as a full-stack developer. I am always seeking new courses and projects to enhance my skills and apply the latest programming methodologies in the market.";
+            // ----- Sec4
+            h1Projetos.innerHTML = "Projects";
+            // ----- Sec5
+            h1contato.innerHTML = "Contact me";
+            pContato.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
+            document.getElementById('nameinput').setAttribute('placeholder', 'Your name');
+            document.getElementById('emailinput').setAttribute('placeholder', 'Your email');
+            document.getElementById('phoneinput').setAttribute('placeholder', 'Your phone');
+            document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
+            btnenviar.innerHTML = "Send";
+
+        } else if (currentLanguage === 'pt') {
+            // ----- Header
+            menuSobre.innerHTML = "Sobre";
+            menuProjetos.innerHTML = "Projetos";
+            menuContato.innerHTML = "Contato";
+            menuSelecioneIdioma.innerHTML = "Selecione o idioma:";
+            // ----- Sec1
+            h1Home.innerHTML = "Olá, eu sou <span>Pedro Afonso</span> ";
+            h3Home.innerHTML = "Especialista em desenvolvimento FrontEnd";
+            textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
+            // ----- Sec2 
+            h1Competencia.innerHTML = "Meus Diferenciais";
+            pCompetencia.innerHTML = "<strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong>";
+       
+            h3competitle1.innerHTML = "Desenvolvimento Web Moderno";
+            h3competitle2.innerHTML = "Otimização de Desempenho";
+            h3competitle3.innerHTML = "Aplicativos Móveis Responsivos";
+            h3competitle4.innerHTML = "Ferramentas Avançadas";
+            h3competitle5.innerHTML = "Integração Perfeita";
+            h3competitle6.innerHTML = "Pensamento Criativo";
+
+            pcompe1.innerHTML = "Criando aplicações web com as tecnologias mais recentes e práticas de desenvolvimento.";
+            pcompe2.innerHTML = "Melhorando a velocidade e o desempenho de sites para uma experiência superior do usuário.";
+            pcompe3.innerHTML = "Desenvolvendo aplicativos móveis que se adaptam perfeitamente a diferentes dispositivos e tamanhos de tela.";
+            pcompe4.innerHTML = "Utilizando as mais recentes ferramentas de desenvolvimento para eficiência e qualidade.";
+            pcompe5.innerHTML = "Criando soluções web integradas que simplificam processos e melhoram a produtividade.";
+            pcompe6.innerHTML = "Abordando problemas complexos com soluções inovadoras e criatividade.";
+
+
+            // ----- Sec3
+            h1Sobre.innerHTML = "Sobre";
+            pSobre1.innerHTML = "Sou um profissional com formação em informática e atualmente sou graduando do curso de Engenharia de Computação. Iniciei minha trajetória profissional no atendimento e suporte ao usuário, onde desenvolvi habilidades fundamentais de comunicação. Com o tempo, essa jornada me levou ao universo do desenvolvimento de aplicações web e ao suporte de sistemas ERP.";
+            pSobre2.innerHTML = "Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as mais recentes metodologias de programação do mercado.";
+            // ----- Sec4
+            h1Projetos.innerHTML = "Projetos";
+            // ----- Sec5
+            h1contato.innerHTML = "Contate-me";
+            pContato.innerHTML = " Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.";
+            document.getElementById('nameinput').setAttribute('placeholder', 'Seu nome');
+            document.getElementById('emailinput').setAttribute('placeholder', 'Seu email');
+            document.getElementById('phoneinput').setAttribute('placeholder', 'Seu celular');
+            document.getElementById('messageinput').setAttribute('placeholder', 'Sua Mensagem');
+            btnenviar.innerHTML = "Enviar";
+
+        }
+    }
+
+    brFlag.addEventListener('click', () => {
+        console.log('Cliquei na bandeira do Brasil');
+        currentLanguage = 'pt';
+        updateLanguage();
+    });
+
+    usFlag.addEventListener('click', () => {
+        console.log('Cliquei na bandeira dos EUA');
+        currentLanguage = 'en';
+        updateLanguage();
+    });
+
+    languageSelector.value = 'pt';
+    updateLanguage();
+</script>
+
+  
+
+
 
 </body>
 </html>
