@@ -55,8 +55,13 @@
 
                 
                 <div class="btn-home-link">
-                    <button class="link-home">Download CV</button>
-                    <button class="link-home btn-linkedin">Linkedin</button>
+                    <a href="./img/Pedro Afonso da Costa Penha.pdf" download>
+                        <button class="link-home">Download CV</button>
+                    </a>
+                   
+                    <a href="https://www.linkedin.com/in/pedro-afonso98/" target="_blank">
+                        <button class="link-home btn-linkedin">Linkedin</button>
+                    </a>
                 </div>           
                    
             </div>
@@ -443,26 +448,27 @@
                         </p>
 
                         <div class="social-icons">
-                            <a href=""><i class="fab fa-facebook"></i></a>
-                            <a href=""><i class="fa-brands fa-github"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/pedr0penha98/" target="_Blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://github.com/PedroPenhaa" target="_Blank"><i class="fab fa-git"></i></a>
+                            <a href="https://www.instagram.com/pedro.dev98/" target="_Blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/pedro-afonso98/" target="_Blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                 
                   </div>
                   <div class="contact-right">
-                    <h1 class="sub-title"></h1>
-
+                    <h1 class="sub-title" id="h1contato2">Contate-me</h1>
+                  
                     <div class="social-icons">
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-github"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/pedr0penha98/" target="_Blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/PedroPenhaa" target="_Blank"><i class="fab fa-git"></i></a>
+                        <a href="https://www.instagram.com/pedro.dev98/" target="_Blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/pedro-afonso98/" target="_Blank"><i class="fab fa-linkedin"></i></a>
                     </div>
 
-                    <p>
-                        Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.
+                    <p id="pContato2">
+                       
                     </p>
+
                     <form id="contact-form" class="contact-form">
                         <input type="text" id="nameinput" name="Name" placeholder="Seu nome" required>
                         <input type="text" id="emailinput" name="email" placeholder="Seu email" required>
@@ -807,16 +813,15 @@
 
         // ---------------------------------------------- Section Contato ---------------------------------------------- 
         const h1contato = document.getElementById('h1contato');
+        const h1contato2 = document.getElementById('h1contato2');
         const pContato = document.getElementById('pContato');
+        const pContato2 = document.getElementById('pContato2');
         const btnenviar = document.getElementById('btnenviar');
 
         function updateLanguage() {
 
             if (window.innerWidth >= 480) {
 
-
-
-
                 if (currentLanguage === 'en') {
                 // ----- Header
                 menuSobre.innerHTML = "About";
@@ -850,152 +855,150 @@
                 h1Projetos.innerHTML = "Projects";
                 // ----- Sec5
                 h1contato.innerHTML = "Contact me";
+                h1contato2.innerHTML = "Contact me";
                 pContato.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
+                pContato2.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
                 document.getElementById('nameinput').setAttribute('placeholder', 'Your name');
                 document.getElementById('emailinput').setAttribute('placeholder', 'Your email');
                 document.getElementById('phoneinput').setAttribute('placeholder', 'Your phone');
                 document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
                 btnenviar.innerHTML = "Send";
 
-            } else if (currentLanguage === 'pt') {
-                // ----- Header
-                menuSobre.innerHTML = "Sobre";
-                menuProjetos.innerHTML = "Projetos";
-                menuContato.innerHTML = "Contato";
-                menuSelecioneIdioma.innerHTML = "Selecione o idioma:";
-                // ----- Sec1
-                h1Home.innerHTML = "Olá, eu sou <span>Pedro Afonso</span> ";
-                h3Home.innerHTML = "Especialista em desenvolvimento FrontEnd";
-                textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
-                // ----- Sec2 
-                h1Competencia.innerHTML = "Meus Diferenciais";
-                pCompetencia.innerHTML = "<strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong>";
-                h3competitle1.innerHTML = "Desenvolvimento Web Moderno";
-                h3competitle2.innerHTML = "Otimização de Desempenho";
-                h3competitle3.innerHTML = "Aplicativos Móveis Responsivos";
-                h3competitle4.innerHTML = "Ferramentas Avançadas";
-                h3competitle5.innerHTML = "Integração Perfeita";
-                h3competitle6.innerHTML = "Pensamento Criativo";
-                pcompe1.innerHTML = "Criando aplicações web com as tecnologias mais recentes e práticas de desenvolvimento.";
-                pcompe2.innerHTML = "Melhorando a velocidade e o desempenho de sites para uma experiência superior do usuário.";
-                pcompe3.innerHTML = "Desenvolvendo aplicativos móveis que se adaptam perfeitamente a diferentes dispositivos e tamanhos de tela.";
-                pcompe4.innerHTML = "Utilizando as mais recentes ferramentas de desenvolvimento para eficiência e qualidade.";
-                pcompe5.innerHTML = "Criando soluções web integradas que simplificam processos e melhoram a produtividade.";
-                pcompe6.innerHTML = "Abordando problemas complexos com soluções inovadoras e criatividade.";
+                } else if (currentLanguage === 'pt') {
+                    // ----- Header
+                    menuSobre.innerHTML = "Sobre";
+                    menuProjetos.innerHTML = "Projetos";
+                    menuContato.innerHTML = "Contato";
+                    menuSelecioneIdioma.innerHTML = "Selecione o idioma:";
+                    // ----- Sec1
+                    h1Home.innerHTML = "Olá, eu sou <span>Pedro Afonso</span> ";
+                    h3Home.innerHTML = "Especialista em desenvolvimento FrontEnd";
+                    textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
+                    // ----- Sec2 
+                    h1Competencia.innerHTML = "Meus Diferenciais";
+                    pCompetencia.innerHTML = "<strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong>";
+                    h3competitle1.innerHTML = "Desenvolvimento Web Moderno";
+                    h3competitle2.innerHTML = "Otimização de Desempenho";
+                    h3competitle3.innerHTML = "Aplicativos Móveis Responsivos";
+                    h3competitle4.innerHTML = "Ferramentas Avançadas";
+                    h3competitle5.innerHTML = "Integração Perfeita";
+                    h3competitle6.innerHTML = "Pensamento Criativo";
+                    pcompe1.innerHTML = "Criando aplicações web com as tecnologias mais recentes e práticas de desenvolvimento.";
+                    pcompe2.innerHTML = "Melhorando a velocidade e o desempenho de sites para uma experiência superior do usuário.";
+                    pcompe3.innerHTML = "Desenvolvendo aplicativos móveis que se adaptam perfeitamente a diferentes dispositivos e tamanhos de tela.";
+                    pcompe4.innerHTML = "Utilizando as mais recentes ferramentas de desenvolvimento para eficiência e qualidade.";
+                    pcompe5.innerHTML = "Criando soluções web integradas que simplificam processos e melhoram a produtividade.";
+                    pcompe6.innerHTML = "Abordando problemas complexos com soluções inovadoras e criatividade.";
 
 
-                // ----- Sec3
-                h1Sobre.innerHTML = "Sobre";
-                pSobre1.innerHTML = "Sou um profissional com formação em informática e atualmente sou graduando do curso de Engenharia de Computação. Iniciei minha trajetória profissional no atendimento e suporte ao usuário, onde desenvolvi habilidades fundamentais de comunicação. Com o tempo, essa jornada me levou ao universo do desenvolvimento de aplicações web e ao suporte de sistemas ERP.";
-                pSobre2.innerHTML = "Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as mais recentes metodologias de programação do mercado.";
-                // ----- Sec4
-                h1Projetos.innerHTML = "Projetos";
-                // ----- Sec5
-                h1contato.innerHTML = "Contate-me";
-                pContato.innerHTML = " Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.";
-                document.getElementById('nameinput').setAttribute('placeholder', 'Seu nome');
-                document.getElementById('emailinput').setAttribute('placeholder', 'Seu email');
-                document.getElementById('phoneinput').setAttribute('placeholder', 'Seu celular');
-                document.getElementById('messageinput').setAttribute('placeholder', 'Sua Mensagem');
-                btnenviar.innerHTML = "Enviar";
+                    // ----- Sec3
+                    h1Sobre.innerHTML = "Sobre";
+                    pSobre1.innerHTML = "Sou um profissional com formação em informática e atualmente sou graduando do curso de Engenharia de Computação. Iniciei minha trajetória profissional no atendimento e suporte ao usuário, onde desenvolvi habilidades fundamentais de comunicação. Com o tempo, essa jornada me levou ao universo do desenvolvimento de aplicações web e ao suporte de sistemas ERP.";
+                    pSobre2.innerHTML = "Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as mais recentes metodologias de programação do mercado.";
+                    // ----- Sec4
+                    h1Projetos.innerHTML = "Projetos";
+                    // ----- Sec5
+                    h1contato.innerHTML = "Contate-me";
+                    h1contato2.innerHTML = "Contate-me";
+                    pContato.innerHTML = " Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.";
+                    pContato2.innerHTML = " Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.";
+                    document.getElementById('nameinput').setAttribute('placeholder', 'Seu nome');
+                    document.getElementById('emailinput').setAttribute('placeholder', 'Seu email');
+                    document.getElementById('phoneinput').setAttribute('placeholder', 'Seu celular');
+                    document.getElementById('messageinput').setAttribute('placeholder', 'Sua Mensagem');
+                    btnenviar.innerHTML = "Enviar";
 
-                
-
-            }
-
-
-
-
-
+                }
 
             }else{
 
-
-
-
                 if (currentLanguage === 'en') {
-                // ----- Header
-                menuSobre.innerHTML = "About";
-                menuProjetos.innerHTML = "Projects";
-                menuContato.innerHTML = "Contact";
-                menuSelecioneIdioma.innerHTML = "Select the language:";
-                // ----- Sec1
-                h1Home.innerHTML = "Hello, I am <span>Pedro Afonso</span>";
-                h3Home.innerHTML = "FrontEnd Development Specialist";
-                textElement.innerHTML = "This is my official portfolio website to showcase all the details and work experiences in web development.";
-                // ----- Sec2 
-                h1Competencia.innerHTML = "My Differentiators";
-                pCompetencia.innerHTML = "<strong>My commitment</strong> is to deliver high-quality services with speed and exceptional performance in converting <strong>designs into web pages.</strong>";
-                h3competitle1.innerHTML = "Modern Web Development";
-                h3competitle2.innerHTML = "Performance Optimization";
-                h3competitle3.innerHTML = "Responsive Mobile Applications";
-                h3competitle4.innerHTML = "Advanced Tools";
-                h3competitle5.innerHTML = "Seamless Integration";
-                h3competitle6.innerHTML = "Creative Thinking";
-                pcompe1.innerHTML = "Creating web applications with the latest and most practical development technologies.";
-                pcompe2.innerHTML = "Improving site speed and performance for a superior user experience.";
-                pcompe3.innerHTML = "Developing mobile applications that adapt seamlessly to different devices and screen sizes.";
-                pcompe4.innerHTML = "Utilizing the latest development tools for efficiency and quality.";
-                pcompe5.innerHTML = "Creating integrated web solutions that streamline processes and enhance productivity.";
-                pcompe6.innerHTML = "Addressing complex problems with innovative solutions and creativity.";
-                // ----- Sec3
-                h1Sobre.innerHTML = "About";
-                pSobre1.innerHTML = "I am a professional with a background in computer science, and I am currently pursuing a degree in Computer Engineering. I began my professional journey in user support and assistance, where I developed essential communication skills. Over time, this path led me into the world of web application development and ERP system support.";
-                pSobre2.innerHTML = "My experiences in the programming field have turned this activity into my favorite hobby. Additionally, I have gained experience in mobile development and am committed to expanding my knowledge as a full-stack developer. I am always seeking new courses and projects to enhance my skills and apply the latest programming methodologies in the market.";
-                // ----- Sec4
-                h1Projetos.innerHTML = "Projects";
-                // ----- Sec5
-                h1contato.innerHTML = "Contact me";
-                pContato.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
-                document.getElementById('nameinput').setAttribute('placeholder', 'Your name');
-                document.getElementById('emailinput').setAttribute('placeholder', 'Your email');
-                document.getElementById('phoneinput').setAttribute('placeholder', 'Your phone');
-                document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
-                btnenviar.innerHTML = "Send";
+                    // ----- Header
+                    menuSobre.innerHTML = "About";
+                    menuProjetos.innerHTML = "Projects";
+                    menuContato.innerHTML = "Contact";
+                    menuSelecioneIdioma.innerHTML = "Select the language:";
+                    // ----- Sec1
+                    h1Home.innerHTML = "Hello, I am <span>Pedro Afonso</span>";
+                    h3Home.innerHTML = "FrontEnd Development Specialist";
+                    textElement.innerHTML = "This is my official portfolio website to showcase all the details and work experiences in web development.";
+                    // ----- Sec2 
+                    h1Competencia.innerHTML = "My Differentiators";
+                    pCompetencia.innerHTML = "<strong>My commitment</strong> is to deliver high-quality services with speed and exceptional performance in converting <strong>designs into web pages.</strong>";
+                    h3competitle1.innerHTML = "Modern Web Development";
+                    h3competitle2.innerHTML = "Performance Optimization";
+                    h3competitle3.innerHTML = "Responsive Mobile Applications";
+                    h3competitle4.innerHTML = "Advanced Tools";
+                    h3competitle5.innerHTML = "Seamless Integration";
+                    h3competitle6.innerHTML = "Creative Thinking";
+                    pcompe1.innerHTML = "Creating web applications with the latest and most practical development technologies.";
+                    pcompe2.innerHTML = "Improving site speed and performance for a superior user experience.";
+                    pcompe3.innerHTML = "Developing mobile applications that adapt seamlessly to different devices and screen sizes.";
+                    pcompe4.innerHTML = "Utilizing the latest development tools for efficiency and quality.";
+                    pcompe5.innerHTML = "Creating integrated web solutions that streamline processes and enhance productivity.";
+                    pcompe6.innerHTML = "Addressing complex problems with innovative solutions and creativity.";
+                    // ----- Sec3
+                    h1Sobre.innerHTML = "About";
+                    pSobre1.innerHTML = "I am a professional with a background in computer science, and I am currently pursuing a degree in Computer Engineering. I began my professional journey in user support and assistance, where I developed essential communication skills. Over time, this path led me into the world of web application development and ERP system support.";
+                    pSobre2.innerHTML = "My experiences in the programming field have turned this activity into my favorite hobby. Additionally, I have gained experience in mobile development and am committed to expanding my knowledge as a full-stack developer. I am always seeking new courses and projects to enhance my skills and apply the latest programming methodologies in the market.";
+                    // ----- Sec4
+                    h1Projetos.innerHTML = "Projects";
+                    // ----- Sec5
+                    h1contato.innerHTML = "Contact me";
+                    h1contato2.innerHTML = "Contact me";
+                    pContato.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
+                    pContato2.innerHTML = "I'm looking forward to hearing from you. If you have any questions, inquiries, or wish to discuss a project, please don't hesitate to get in touch. Fill out the form below, and your message will go directly to my inbox. I will respond as soon as possible. Alternatively, you can also reach me through my social media channels. I'm here to turn your ideas into reality.";
+                    document.getElementById('nameinput').setAttribute('placeholder', 'Your name');
+                    document.getElementById('emailinput').setAttribute('placeholder', 'Your email');
+                    document.getElementById('phoneinput').setAttribute('placeholder', 'Your phone');
+                    document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
+                    btnenviar.innerHTML = "Send";
 
-            } else if (currentLanguage === 'pt') {
-                // ----- Header
-                menuSobre.innerHTML = "Sobre";
-                menuProjetos.innerHTML = "Projetos";
-                menuContato.innerHTML = "Contato";
-                menuSelecioneIdioma.innerHTML = "Selecione o idioma:";
-                // ----- Sec1
-                h1Home.innerHTML = "Olá, eu sou <span>Pedro Afonso</span> ";
-                h3Home.innerHTML = "Especialista em desenvolvimento FrontEnd";
-                textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
-                // ----- Sec2 
-                h1Competencia.innerHTML = "Meus Diferenciais";
-                pCompetencia.innerHTML = "<strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong>";
-                h3competitle1.innerHTML = "Desenvolvimento Web Moderno";
-                h3competitle2.innerHTML = "Otimização de Desempenho";
-                h3competitle3.innerHTML = "Aplicativos Móveis Responsivos";
-                h3competitle4.innerHTML = "Ferramentas Avançadas";
-                h3competitle5.innerHTML = "Integração Perfeita";
-                h3competitle6.innerHTML = "Pensamento Criativo";
-                pcompe1.innerHTML = "Criando aplicações web com as tecnologias mais recentes e práticas de desenvolvimento.";
-                pcompe2.innerHTML = "Melhorando a velocidade e o desempenho de sites para uma experiência superior do usuário.";
-                pcompe3.innerHTML = "Desenvolvendo aplicativos móveis que se adaptam perfeitamente a diferentes dispositivos e tamanhos de tela.";
-                pcompe4.innerHTML = "Utilizando as mais recentes ferramentas de desenvolvimento para eficiência e qualidade.";
-                pcompe5.innerHTML = "Criando soluções web integradas que simplificam processos e melhoram a produtividade.";
-                pcompe6.innerHTML = "Abordando problemas complexos com soluções inovadoras e criatividade.";
+                } else if (currentLanguage === 'pt') {
+                    // ----- Header
+                    menuSobre.innerHTML = "Sobre";
+                    menuProjetos.innerHTML = "Projetos";
+                    menuContato.innerHTML = "Contato";
+                    menuSelecioneIdioma.innerHTML = "Selecione o idioma:";
+                    // ----- Sec1
+                    h1Home.innerHTML = "Olá, eu sou <span>Pedro Afonso</span> ";
+                    h3Home.innerHTML = "Especialista em desenvolvimento FrontEnd";
+                    textElement.innerHTML = "Este é o meu site oficial de portfólio para mostrar todos<br> os detalhes e experiências de trabalho em desenvolvimento web.";
+                    // ----- Sec2 
+                    h1Competencia.innerHTML = "Meus Diferenciais";
+                    pCompetencia.innerHTML = "<strong>Meu compromisso</strong> é entregar serviços de alto padrão, com agilidade e desempenho excepcional na conversão de <strong>designs em páginas web.</strong>";
+                    h3competitle1.innerHTML = "Desenvolvimento Web Moderno";
+                    h3competitle2.innerHTML = "Otimização de Desempenho";
+                    h3competitle3.innerHTML = "Aplicativos Móveis Responsivos";
+                    h3competitle4.innerHTML = "Ferramentas Avançadas";
+                    h3competitle5.innerHTML = "Integração Perfeita";
+                    h3competitle6.innerHTML = "Pensamento Criativo";
+                    pcompe1.innerHTML = "Criando aplicações web com as tecnologias mais recentes e práticas de desenvolvimento.";
+                    pcompe2.innerHTML = "Melhorando a velocidade e o desempenho de sites para uma experiência superior do usuário.";
+                    pcompe3.innerHTML = "Desenvolvendo aplicativos móveis que se adaptam perfeitamente a diferentes dispositivos e tamanhos de tela.";
+                    pcompe4.innerHTML = "Utilizando as mais recentes ferramentas de desenvolvimento para eficiência e qualidade.";
+                    pcompe5.innerHTML = "Criando soluções web integradas que simplificam processos e melhoram a produtividade.";
+                    pcompe6.innerHTML = "Abordando problemas complexos com soluções inovadoras e criatividade.";
 
 
-                // ----- Sec3
-                h1Sobre.innerHTML = "Sobre";
-                pSobre1.innerHTML = "Sou um profissional com formação em informática e atualmente sou graduando do curso de Engenharia de Computação. Iniciei minha trajetória profissional no atendimento e suporte ao usuário, onde desenvolvi habilidades fundamentais de comunicação. Com o tempo, essa jornada me levou ao universo do desenvolvimento de aplicações web e ao suporte de sistemas ERP.";
-                pSobre2.innerHTML = "Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as mais recentes metodologias de programação do mercado.";
-                // ----- Sec4
-                h1Projetos.innerHTML = "Projetos";
-                // ----- Sec5
-                h1contato.innerHTML = "Contate-me";
-                pContato.innerHTML = " Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.";
-                document.getElementById('nameinput').setAttribute('placeholder', 'Seu nome');
-                document.getElementById('emailinput').setAttribute('placeholder', 'Seu email');
-                document.getElementById('phoneinput').setAttribute('placeholder', 'Seu celular');
-                document.getElementById('messageinput').setAttribute('placeholder', 'Sua Mensagem');
-                btnenviar.innerHTML = "Enviar";
+                    // ----- Sec3
+                    h1Sobre.innerHTML = "Sobre";
+                    pSobre1.innerHTML = "Sou um profissional com formação em informática e atualmente sou graduando do curso de Engenharia de Computação. Iniciei minha trajetória profissional no atendimento e suporte ao usuário, onde desenvolvi habilidades fundamentais de comunicação. Com o tempo, essa jornada me levou ao universo do desenvolvimento de aplicações web e ao suporte de sistemas ERP.";
+                    pSobre2.innerHTML = "Minhas experiências na área de programação transformaram essa atividade em meu hobby favorito. Além disso, adquiri experiência em desenvolvimento mobile e estou empenhado em expandir meu conhecimento como desenvolvedor full-stack. Estou sempre em busca de novos cursos e projetos para aprimorar minhas habilidades e aplicar as mais recentes metodologias de programação do mercado.";
+                    // ----- Sec4
+                    h1Projetos.innerHTML = "Projetos";
+                    // ----- Sec5
+                    h1contato.innerHTML = "Contate-me";
+                    h1contato2.innerHTML = "Contate-me";
+                    pContato.innerHTML = " Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.";
+                    pContato2.innerHTML = " Estou ansioso para receber o seu contato. Caso tenha alguma dúvida, consulta ou deseje discutir um projeto, por favor, não hesite em entrar em contato. Preencha o formulário abaixo, e sua mensagem chegará diretamente à minha caixa de entrada. Responderei com a maior brevidade possível. Se preferir, você também pode me contatar por meio das minhas redes sociais. Estou à disposição para transformar suas ideias em realidade.";
+                    document.getElementById('nameinput').setAttribute('placeholder', 'Seu nome');
+                    document.getElementById('emailinput').setAttribute('placeholder', 'Seu email');
+                    document.getElementById('phoneinput').setAttribute('placeholder', 'Seu celular');
+                    document.getElementById('messageinput').setAttribute('placeholder', 'Sua Mensagem');
+                    btnenviar.innerHTML = "Enviar";
 
-            }
+                }
 
 
 
