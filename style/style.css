@@ -100,6 +100,7 @@ nav ul li a {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
+    width: 90%;
     letter-spacing: 1px;
     transition: all 0.5s ease;
 }
@@ -127,7 +128,6 @@ nav .menu-btn i{
 .language-selector {
     display: flex;
     align-items: center;
-
     margin-right: 20px;
     margin-left: 50px;
 }
@@ -1559,7 +1559,7 @@ form input, form textarea{
         }
 
         .copyright p {
-           width: 100%;
+           width: 50%;
            max-width: 90vw;
            font-size: 14px;
            display: flex;

@@ -485,7 +485,7 @@
         </div>
 
         <div class="copyright">
-            <p>
+            <p id="pcopyrigth">
                 Copyright 2023 - Todos direitos reservados a Pedro Penha
             </p>
         </div>
@@ -818,6 +818,8 @@
         const pContato2 = document.getElementById('pContato2');
         const btnenviar = document.getElementById('btnenviar');
 
+        const pcopyrigth = document.getElementById('pcopyrigth');
+
         function updateLanguage() {
 
             if (window.innerWidth >= 480) {
@@ -864,6 +866,8 @@
                 document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
                 btnenviar.innerHTML = "Send";
 
+                pcopyrigth.innerHTML = "Copyright 2023 - All rights reserved to Pedro Penha";
+          
                 } else if (currentLanguage === 'pt') {
                     // ----- Header
                     menuSobre.innerHTML = "Sobre";
@@ -907,6 +911,8 @@
                     document.getElementById('phoneinput').setAttribute('placeholder', 'Seu celular');
                     document.getElementById('messageinput').setAttribute('placeholder', 'Sua Mensagem');
                     btnenviar.innerHTML = "Enviar";
+
+                    pcopyrigth.innerHTML = "Copyright 2023 - Todos direitos reservados a Pedro Penha";
 
                 }
 
@@ -954,6 +960,8 @@
                     document.getElementById('messageinput').setAttribute('placeholder', 'Your message');
                     btnenviar.innerHTML = "Send";
 
+                    pcopyrigth.innerHTML = "Copyright 2023 - All rights reserved to Pedro Penha";
+
                 } else if (currentLanguage === 'pt') {
                     // ----- Header
                     menuSobre.innerHTML = "Sobre";
@@ -997,6 +1005,8 @@
                     document.getElementById('phoneinput').setAttribute('placeholder', 'Seu celular');
                     document.getElementById('messageinput').setAttribute('placeholder', 'Sua Mensagem');
                     btnenviar.innerHTML = "Enviar";
+
+                    pcopyrigth.innerHTML = "Copyright 2023 - Todos direitos reservados a Pedro Penha";
 
                 }
 
