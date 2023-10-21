@@ -944,9 +944,7 @@ form input, form textarea{
         display: flex;
         align-items: center;
         justify-content: center;
-       
     }
-
 
     body {
         margin: 0;
@@ -1404,7 +1402,6 @@ form input, form textarea{
             flex-direction: column;
             align-items: center;
             margin-top: -15px;    
-
         }
 
         swiper-slide .img h1{
