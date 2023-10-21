@@ -50,7 +50,7 @@ header {
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 1000000000000000000000;
+    z-index: 10000000000000;
 }
 
 nav{
@@ -641,7 +641,6 @@ span {
     text-align: center;
     width: 285px;
     overflow-y: hidden;
-
 }
 
 swiper-container {
@@ -680,7 +679,6 @@ swiper-slide img {
     width: 100%;
     height: auto;
     object-fit: cover;
-
 }
 
 swiper-slide .conteudo-proj{
@@ -927,10 +925,6 @@ form input, form textarea{
     justify-content: center;
     align-items: center;
 }
-
-
-
-
 
 /* -------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------- Responsivo 480px ---------------------------------------------- */
