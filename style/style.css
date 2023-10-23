@@ -9,7 +9,9 @@ body{
   padding: 0;
   background-color: #1F2F46 ;
   overflow-x: hidden;
+  font-family: 'Roboto Mono', monospace;
 }
+
 
 .container{
     width: 100%;
@@ -926,6 +928,19 @@ form input, form textarea{
     align-items: center;
 }
 
+     
+.config-titles {
+    font-size: 45px !important;
+}
+
+.config-titles-2{
+    font-size: 18px !important;
+}
+
+.config-text{
+    font-size: 16px;
+}
+
 /* -------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------- Responsivo 480px ---------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------------- */ 
@@ -1557,4 +1572,7 @@ form input, form textarea{
            justify-content: center;
            align-items: center;
         }
+
+
+   
 }
