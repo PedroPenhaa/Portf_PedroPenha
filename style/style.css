@@ -725,8 +725,7 @@ swiper-slide .conteudo-proj{
 
 .icons-slide ul li span{
     color: #262626;
-    font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .conteudo-proj p{
@@ -938,7 +937,7 @@ form input, form textarea{
 }
 
 .config-text{
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 /* -------------------------------------------------------------------------------------------------------------- */
@@ -1288,6 +1287,9 @@ form input, form textarea{
             padding: 20px 25px;
             overflow-y: hidden;
             text-align: center; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .sec-compe li .icon-compe {
@@ -1565,14 +1567,29 @@ form input, form textarea{
         }
 
         .copyright p {
-           width: 50%;
+           width: 52%;
            max-width: 90vw;
            font-size: 14px;
            display: flex;
            justify-content: center;
            align-items: center;
+           text-align: center;
         }
 
 
+        .config-titles {
+            font-size: 28px !important;
+        }
+        
+        .config-titles-2{
+            font-size: 16px !important;
+        }
+        
+        .config-text{
+            font-size: 14px !important;
+        }
+        
+}    
+
+
    
-}
