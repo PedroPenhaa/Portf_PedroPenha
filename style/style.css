@@ -798,8 +798,10 @@ swiper-slide .conteudo-proj{
 
 /* ---------------------------------------------- Contact ---------------------------------------------- */ 
 
+
 #contact{
-    width: 100%;
+    width: 110%;
+    max-width: 110vw;
     height: 100vh;
     padding: 20px;
     background-color: #FFFFFF  ;
@@ -916,7 +918,8 @@ form input, form textarea{
 }
 
 .copyright{
-    min-width: 100%;
+    width: 120%;
+    max-width: 140vw;
     padding: 20px 0;
     background: black;
     color: white;
