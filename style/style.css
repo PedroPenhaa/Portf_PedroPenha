@@ -872,7 +872,7 @@ swiper-slide .conteudo-proj{
 }
 
 .social-icons a:hover{
-    color: #ff004f;
+    color: #3498DB ;
     transform: translateY(-5px);
 }
 
@@ -902,6 +902,7 @@ form input, form textarea{
     background-color: #0B7285; 
     color: #fff; 
     border: none;
+    font-weight: bold;
     width: 100%;
     max-width: 145px;
     padding: 15px 20px; 
@@ -914,7 +915,7 @@ form input, form textarea{
 }
 
 .btn-enviar:hover {
-    background-color: #0056b3; 
+    background-color: #3498DB; 
 }
 
 .copyright{
